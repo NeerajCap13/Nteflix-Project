@@ -1,0 +1,230 @@
+/* Header styles */
+header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Vertically center items */
+  width: 86%; /* Set header width */
+  margin: 0 auto; /* Center header horizontally */
+  z-index: 1; /* Layer above other elements */
+}
+
+/* Logo image styles */
+img {
+  width: 12.5rem; /* Set image width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Language selector styles */
+#language {
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  opacity: 0.7; /* Slightly transparent */
+  color: white; /* White text */
+}
+
+/* Sign In container styles */
+.SignIn {
+  width: 6.25rem; /* Set width */
+  height: 1.875rem; /* Set height */
+}
+
+/* Sign In button styles */
+.SignInBtn {
+  width: 6.25rem; /* Set width */
+  height: 2rem; /* Set height */
+  margin-right: 2rem; /* Space to the right */
+  background-color: #e50914; /* Netflix red */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 0.1875rem; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-weight: 800; /* Bold text */
+  font-size: 0.9rem; /* Set font size */
+}
+
+/* Main heading styles */
+h1 {
+  color: white; /* White text */
+  font-size: 3.6rem; /* Large font size */
+  text-align: center; /* Center text */
+  margin-top: 5rem; /* Space above */
+  margin-bottom: 1.5rem; /* Space below */
+  font-weight: 900; /* Extra bold */
+  font-family: "Nunito", sans-serif; /* Font family */
+  line-height: 1.2; /* Line height */
+}
+
+/* Paragraph styles */
+#p {
+  margin-bottom: 2rem; /* Space below */
+  font-family: "Nunito", sans-serif; /* Font family */
+  font-size: 1.2rem; /* Font size */
+  font-weight: 800; /* Bold */
+}
+
+/* Banner content container */
+.banner-content {
+  width: 38.125rem; /* Set width */
+  margin: 0 auto; /* Center horizontally */
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Section container styles */
+.section {
+  display: flex; /* Flexbox layout */
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  text-align: center; /* Center text */
+  height: 37rem; /* Set height */
+}
+
+/* Subheading styles */
+h3 {
+  font-size: 1rem; /* Font size */
+  margin-bottom: 0.9375rem; /* Space below */
+}
+
+/* Input field container */
+.inputField {
+  display: flex; /* Flexbox layout */
+  justify-content: center; /* Center horizontally */
+  width: 37.5rem; /* Set width */
+  height: 4.5rem; /* Set height */
+  gap: 0.5rem; /* Space between children */
+}
+
+/* Email input styles */
+#emailTxt {
+  width: 25rem; /* Set width */
+  height: 3.5rem; /* Set height */
+  padding: 0.75rem 1rem 0.5rem; /* Padding: top, sides, bottom */
+  opacity: 0.7; /* Slightly transparent */
+  border-radius: 0.1875rem; /* Rounded corners */
+  color: white; /* White text */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  border: 1px solid white; /* White border */
+  transition: all 0.3s ease; /* Smooth transitions */
+}
+
+/* Get Started button styles */
+#getStartedBtn {
+  width: 13.75rem; /* Set width */
+  height: 3.5rem; /* Set height */
+  background-color: #e50914; /* Netflix red */
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 0.1875rem; /* Rounded corners */
+  cursor: pointer; /* Pointer on hover */
+  font-size: 1.5rem; /* Font size */
+  font-weight: 800; /* Bold */
+}
+
+/* ---------------------- */
+/* Responsive styles for Mobile Devices */
+@media (max-width : 400px) {
+
+  /* Header styles for mobile */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Full width */
+    margin: 0 10px 0 10px; /* Side margins */
+    z-index: 1;
+    height: 80px; /* Set height */
+  }
+
+  /* Logo styles for mobile */
+  #logo {
+    width: 8rem; /* Smaller logo */
+    height: auto;
+  }
+
+  /* Sign In container for mobile */
+  #SignIn {
+    display: flex;
+    width: 15rem;
+  }
+
+  /* Language select for mobile */
+  select {
+    width: 62px;
+    height: 32px;
+  }
+
+  /* Language selector for mobile */
+  #language {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+    color: white;
+  }
+
+  /* Sign In button for mobile */
+  .SignInBtn {
+    width: 4rem; /* Smaller width */
+    height: 2rem;
+    margin-right: 2rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  /* Section height for mobile */
+  .section {
+    height: 26rem;
+  }
+
+  /* Banner content for mobile */
+  .banner-content {
+    width: 100%;
+  }
+
+  /* Heading for mobile */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Paragraph for mobile */
+  #p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* Subheading for mobile */
+  h3 {
+    width: 300px;
+    height: 48px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  /* Input field container for mobile */
+  .inputField {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+  }
+
+  /* Email input for mobile */
+  #emailTxt {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  /* Get Started button for mobile */
+  #getStartedBtn {
+    height: 50px;
+    width: 160px;
+  }
+}

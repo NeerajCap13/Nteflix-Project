@@ -120,7 +120,16 @@ h3 {
   cursor: pointer; /* Pointer on hover */
   font-size: 1.5rem; /* Font size */
   font-weight: 800; /* Bold */
+  
 }
+#getStartedBtn:hover{
+  background-color: #c7112d; 
+  color: white;
+  transition: background-color ease-out 0.1ms ;
+}
+
+
+
 
 /* ---------------------- */
 /* Responsive styles for Mobile Devices */

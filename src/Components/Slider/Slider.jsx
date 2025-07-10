@@ -1,51 +1,87 @@
 // import { useState } from "react";
+import { useState } from "react";
 import "../Slider/Slider.css";
 
-import 'swiper/css';
-
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import { Navigation } from "swiper/modules";
-
-import 'swiper/css/navigation';
 
 
 
 
+const Images = [
+  "src/assets/IMG1.webp",
+  "src/assets/IMG2.webp",
+  "src/assets/IMG3.webp",
+  "src/assets/IMG4.webp",
+  "src/assets/IMG5.webp",
+  "src/assets/IMG6.webp",
+  "src/assets/IMG7.webp",
+  "src/assets/IMG8.webp",
+  "src/assets/IMG9.webp",
+  "src/assets/IMG10.webp",
+];
 
-function Slider() {
+const Slider = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCount = 6;
+
+  // const nextSlide = () => {
+  //   if (currentIndex - visibleCount < Images.length) {
+  //     setCurrentIndex(currentIndex + 1);
+  //   }
+  //   if (currentIndex >= 9) {
+  //     setCurrentIndex(0);
+  //   }
+  // };
+
+  // const prevSlide = () => {
+  //   if (currentIndex > 0) {
+  //     setCurrentIndex(currentIndex - 1);
+  //   }
+  // };
+
   return (
     <>
+    
       <div className="slider">
         <div className="slider-container">
           <h2>Trending Now</h2>
-          <div className="customSlider">
-            <Swiper
-              navigation={true}
-              modules={[Navigation]}
-              className="mySwiper"
-              slidesPerView={6}
-              scrollbar={true}
+          {/* <div className="customSlider"> */}
+
+          <div className="image-slider">
+            {/* <button className="leftBtn" onClick={prevSlide}>
+              &lt;
+            </button> */}
+            <div
+              className="imageTrack"
               style={{
-                marginTop:"22px",
+                transform: `translateX(-${
+                  (100 / visibleCount) * currentIndex
+                }%)`,
               }}
             >
-              <SwiperSlide style={{width:"140px",height:"196px"}}><img src="src/assets/IMG1.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG2.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG3.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG4.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG5.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG6.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG7.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG8.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG9.webp"></img></SwiperSlide>
-              <SwiperSlide><img src="src/assets/IMG10.webp"></img></SwiperSlide>
-            </Swiper>
+              {Images.map((src, index) => (
+                <div className="carouselImage" key={index}>
+                  <img src={src} alt={`${index}`} />
+                </div>
+              ))}
+            </div>
+            {/* {currentIndex <=2 ? (
+              <button className="rightBtn" onClick={nextSlide}>
+                &gt;
+              </button>
+            ) : (
+              <button style={{ display: "hidden" }}></button>
+            )} */}
           </div>
         </div>
+       
       </div>
+      {/* </div> */}
+    
+    
+      
     </>
+    
   );
-}
+};
 
 export default Slider;

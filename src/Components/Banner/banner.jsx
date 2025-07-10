@@ -2,7 +2,7 @@ import React from 'react'
 import '../../Components/Banner/banner.css'
 import logo from '../../assets/Netflix_Logo_PMS.png'
 import Bg from '../../assets/Netflix_banner.jpg'
-import arrow from '../../assets/ArrowForward.svg'
+// import arrow from '../../assets/ArrowForward.svg'
 
 
 function Banner() {
@@ -38,7 +38,7 @@ function Banner() {
             zIndex: -1,
           }}
         />
-      </div>
+      
       {/* Header with logo and sign-in */}
       <header>
         <img src={logo} alt="" id='logo' />
@@ -82,8 +82,9 @@ function Banner() {
         {/* Email input field and button */}
         <div className='inputField'>
           <input type="email" name="" id="emailTxt" placeholder="Email address" />
-          <button type="submit" id='getStartedBtn'>Get Started</button>
+          <button type="submit" id='getStartedBtn'>Get Started<span>  &gt;</span></button>
         </div>
+      </div>
       </div>
     </>
   );

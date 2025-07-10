@@ -1,0 +1,51 @@
+
+.title{
+    width: 83%;
+    margin: 0 auto;
+    margin-top: 2rem;
+   
+}
+.container{
+    width: 83%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    
+}
+
+.flex-container{
+    
+    width: 21rem;
+    height: 16rem;
+    background-color: blue;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #140131, #1e0126, #26061e);
+   
+}
+
+.svg{
+    display: flex;
+    justify-content: end;
+}
+
+
+/* For Mobile Devices */
+
+@media(max-width:400px){
+
+    .container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;        
+    }
+
+}

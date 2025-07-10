@@ -136,11 +136,17 @@ h3 {
 @media (max-width : 400px) {
 
   /* Header styles for mobile */
+.banner{
+  
+  
+  overflow: hidden;
+}
+
   header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%; /* Full width */
+    width: 100%;
     margin: 0 10px 0 10px; /* Side margins */
     z-index: 1;
     height: 80px; /* Set height */
@@ -151,6 +157,8 @@ h3 {
     width: 8rem; /* Smaller logo */
     height: auto;
   }
+
+ 
 
   /* Sign In container for mobile */
   #SignIn {
@@ -188,6 +196,7 @@ h3 {
   /* Section height for mobile */
   .section {
     height: 26rem;
+    width: 100%;
   }
 
   /* Banner content for mobile */

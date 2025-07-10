@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../Components/Banner/banner.css'
 import logo from '../../assets/Netflix_Logo_PMS.png'
-import Bg from '../../assets/Netflix_banner.jpg'
+import Bg from '../../assets/BannerNew.jpg'
 // import arrow from '../../assets/ArrowForward.svg'
 
 

@@ -1,4 +1,11 @@
 /* Header styles */
+
+.banner{
+  position: relative;
+  height: auto;
+  object-fit: cover;
+  
+}
 header {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space out children */
@@ -46,7 +53,6 @@ h1 {
   color: white; /* White text */
   font-size: 3.6rem; /* Large font size */
   text-align: center; /* Center text */
-  margin-top: 5rem; /* Space above */
   margin-bottom: 1.5rem; /* Space below */
   font-weight: 900; /* Extra bold */
   font-family: "Nunito", sans-serif; /* Font family */
@@ -55,7 +61,7 @@ h1 {
 
 /* Paragraph styles */
 #p {
-  margin-bottom: 2rem; /* Space below */
+  margin-bottom: 2rem; 
   font-family: "Nunito", sans-serif; /* Font family */
   font-size: 1.2rem; /* Font size */
   font-weight: 800; /* Bold */
@@ -78,7 +84,7 @@ h1 {
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
   text-align: center; /* Center text */
-  height: 37rem; /* Set height */
+  height: 45rem; /* Set height */
 }
 
 /* Subheading styles */
@@ -137,8 +143,6 @@ h3 {
 
   /* Header styles for mobile */
 .banner{
-  
-  
   overflow: hidden;
 }
 
@@ -242,7 +246,31 @@ h3 {
 
   /* Get Started button for mobile */
   #getStartedBtn {
+    font-size: 1.1rem;
     height: 50px;
     width: 160px;
   }
+}
+
+
+
+@media (min-width : 768px) and (max-width:1024px){
+  h1{
+    font-size: 2.8rem;
+    margin-top:1rem;
+    margin-bottom: 1rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+
+  #emailTxt{
+    width:260px;
+  }
+
+  #getStartedBtn{
+    width:170px;
+    font-size: 1.1rem;
+  }
+
 }

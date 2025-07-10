@@ -19,6 +19,7 @@ function Banner() {
             height: "100%",
             objectFit: "cover",
             position: "absolute",
+
             top: 0,
             left: 0,
             zIndex: -1,
@@ -44,6 +45,7 @@ function Banner() {
         <img src={logo} alt="" id='logo' />
         {/* Sign-in section */}
         <div id="SignIn">
+          
           <select
             name="language"
             id="language"
@@ -55,6 +57,7 @@ function Banner() {
               borderRadius: "3px",
             }}
           >
+           <span><img src="src/assets/Language.svg" style={{color:"white",fontSize:"5px"}}/></span> 
             <option value="English">English</option>
             <option value="Hindi">Hindi</option>
           </select>
@@ -82,7 +85,7 @@ function Banner() {
         {/* Email input field and button */}
         <div className='inputField'>
           <input type="email" name="" id="emailTxt" placeholder="Email address" />
-          <button type="submit" id='getStartedBtn'>Get Started<span>  &gt;</span></button>
+          <button type="submit" id='getStartedBtn'>Get Started<span>&gt;</span></button>
         </div>
       </div>
       </div>

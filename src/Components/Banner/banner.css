@@ -139,7 +139,7 @@ h3 {
 
 /* ---------------------- */
 /* Responsive styles for Mobile Devices */
-@media (max-width : 400px) {
+@media (max-width : 400px){
 
   /* Header styles for mobile */
 .banner{
@@ -154,6 +154,7 @@ h3 {
     margin: 0 10px 0 10px; /* Side margins */
     z-index: 1;
     height: 80px; /* Set height */
+    overflow: hidden;
   }
 
   /* Logo styles for mobile */
@@ -201,6 +202,7 @@ h3 {
   .section {
     height: 26rem;
     width: 100%;
+    padding: 30px;
   }
 
   /* Banner content for mobile */
@@ -235,6 +237,7 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 130px;
+   
   }
 
   /* Email input for mobile */
@@ -251,6 +254,8 @@ h3 {
     width: 160px;
   }
 }
+
+
 
 
 

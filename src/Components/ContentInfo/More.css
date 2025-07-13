@@ -19,14 +19,20 @@
 
     width: 21rem;
     height: 16rem;
-    background-color: blue;
+  
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
     justify-content: space-between;
-    background: linear-gradient(135deg, #140131, #1e0126, #26061e);
+    padding: 20px;
+    background: linear-gradient(149deg, rgb(25, 34, 71) 0%, rgb(33, 14, 23) 96.86%);
+  
 
+}
+
+
+p{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .svg {
@@ -40,12 +46,13 @@
 @media(max-width:400px) {
 
     .container {
-        width: 100%;
+        width: 90%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
+     
     }
 
 }

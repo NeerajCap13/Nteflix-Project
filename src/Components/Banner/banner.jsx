@@ -57,7 +57,6 @@ function Banner() {
               borderRadius: "3px",
             }}
           >
-           <span><img src="src/assets/Language.svg" style={{color:"white",fontSize:"5px"}}/></span> 
             <option value="English">English</option>
             <option value="Hindi">Hindi</option>
           </select>
@@ -84,7 +83,7 @@ function Banner() {
         </h3>
         {/* Email input field and button */}
         <div className='inputField'>
-          <input type="email" name="" id="emailTxt" placeholder="Email address" />
+          <input type="email" name="" id="emailTxt" placeholder="Email address" required/>
           <button type="submit" id='getStartedBtn'>Get Started<span>&gt;</span></button>
         </div>
       </div>

@@ -56,7 +56,7 @@ function Accordion() {
                 style={{ width: "50px", height: "50px", cursor: "pointer" }}
               />
               <div className="context">
-                  <p>{item.content}</p>
+                  {item.content}
               </div>
               
             </>

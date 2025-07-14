@@ -256,8 +256,352 @@ h3 {
 }
 
 
+@media (max-width : 414px){
 
+  /* Header styles for mobile */
+.banner{
+  overflow: hidden;
+}
 
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 10px 0 10px; /* Side margins */
+    z-index: 1;
+    height: 80px; /* Set height */
+    overflow: hidden;
+  }
+
+  /* Logo styles for mobile */
+  #logo {
+    width: 8rem; /* Smaller logo */
+    height: auto;
+  }
+
+ 
+
+  /* Sign In container for mobile */
+  #SignIn {
+    display: flex;
+    width: 15rem;
+  }
+
+  /* Language select for mobile */
+  select {
+    width: 62px;
+    height: 32px;
+  }
+
+  /* Language selector for mobile */
+  #language {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+    color: white;
+  }
+
+  /* Sign In button for mobile */
+  .SignInBtn {
+    width: 4rem; /* Smaller width */
+    height: 2rem;
+    margin-right: 2rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  /* Section height for mobile */
+  .section {
+    height: 26rem;
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Banner content for mobile */
+  .banner-content {
+    width: 100%;
+  }
+
+  /* Heading for mobile */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Paragraph for mobile */
+  #p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* Subheading for mobile */
+  h3 {
+    width: 300px;
+    height: 48px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  /* Input field container for mobile */
+  .inputField {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+   
+  }
+
+  /* Email input for mobile */
+  #emailTxt {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  /* Get Started button for mobile */
+  #getStartedBtn {
+    font-size: 1.1rem;
+    height: 50px;
+    width: 160px;
+  }
+}
+@media (max-width : 430px){
+
+  /* Header styles for mobile */
+.banner{
+  overflow: hidden;
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 10px 0 10px; /* Side margins */
+    z-index: 1;
+    height: 80px; /* Set height */
+    overflow: hidden;
+  }
+
+  /* Logo styles for mobile */
+  #logo {
+    width: 8rem; /* Smaller logo */
+    height: auto;
+  }
+
+ 
+
+  /* Sign In container for mobile */
+  #SignIn {
+    display: flex;
+    width: 15rem;
+  }
+
+  /* Language select for mobile */
+  select {
+    width: 62px;
+    height: 32px;
+  }
+
+  /* Language selector for mobile */
+  #language {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+    color: white;
+  }
+
+  /* Sign In button for mobile */
+  .SignInBtn {
+    width: 4rem; /* Smaller width */
+    height: 2rem;
+    margin-right: 2rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  /* Section height for mobile */
+  .section {
+    height: 26rem;
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Banner content for mobile */
+  .banner-content {
+    width: 100%;
+  }
+
+  /* Heading for mobile */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Paragraph for mobile */
+  #p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* Subheading for mobile */
+  h3 {
+    width: 300px;
+    height: 48px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  /* Input field container for mobile */
+  .inputField {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+   
+  }
+
+  /* Email input for mobile */
+  #emailTxt {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  /* Get Started button for mobile */
+  #getStartedBtn {
+    font-size: 1.1rem;
+    height: 50px;
+    width: 160px;
+  }
+}
+
+@media (max-width : 540px){
+
+  /* Header styles for mobile */
+.banner{
+  overflow: hidden;
+}
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 10px 0 10px; /* Side margins */
+    z-index: 1;
+    height: 80px; /* Set height */
+    overflow: hidden;
+  }
+
+  /* Logo styles for mobile */
+  #logo {
+    width: 8rem; /* Smaller logo */
+    height: auto;
+  }
+
+ 
+
+  /* Sign In container for mobile */
+  #SignIn {
+    display: flex;
+    width: 15rem;
+  }
+
+  /* Language select for mobile */
+  select {
+    width: 62px;
+    height: 32px;
+  }
+
+  /* Language selector for mobile */
+  #language {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0.7;
+    color: white;
+  }
+
+  /* Sign In button for mobile */
+  .SignInBtn {
+    width: 4rem; /* Smaller width */
+    height: 2rem;
+    margin-right: 2rem;
+    background-color: #e50914;
+    color: white;
+    border: none;
+    border-radius: 0.1875rem;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 0.9rem;
+  }
+
+  /* Section height for mobile */
+  .section {
+    height: 26rem;
+    width: 100%;
+    padding: 30px;
+  }
+
+  /* Banner content for mobile */
+  .banner-content {
+    width: 100%;
+  }
+
+  /* Heading for mobile */
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  /* Paragraph for mobile */
+  #p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  /* Subheading for mobile */
+  h3 {
+    width: 300px;
+    height: 48px;
+    font-size: .9rem;
+    font-weight: 500;
+  }
+
+  /* Input field container for mobile */
+  .inputField {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+   
+  }
+
+  /* Email input for mobile */
+  #emailTxt {
+    width: 336px;
+    height: 50px;
+    margin-bottom: 5px;
+  }
+
+  /* Get Started button for mobile */
+  #getStartedBtn {
+    font-size: 1.1rem;
+    height: 50px;
+    width: 160px;
+  }
+}
 
 @media (min-width : 768px) and (max-width:1024px){
   h1{

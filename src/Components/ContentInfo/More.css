@@ -56,7 +56,53 @@ p{
     }
 
 }
+@media(max-width:414px) {
 
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+     
+    }
+
+}
+@media(max-width:430px) {
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+     
+    }
+
+}
+@media(max-width:540px) {
+
+    .container {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+
+    }
+
+
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     /* styles between 600px and 1024px */
 

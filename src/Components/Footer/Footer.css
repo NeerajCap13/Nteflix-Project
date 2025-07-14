@@ -148,6 +148,159 @@ a {
     }
 }
 
+@media (max-width:414px) {
+
+    .footer {
+        width: 100%;
+
+    }
+
+    .subscribe {
+        width: 100%;
+        padding: 20px;
+        align-items: start;
+
+
+    }
+
+    .inputField2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    #emailTxt2 {
+        width: 100%;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: .8rem;
+    }
+
+    .details {
+        width: 100%;
+        padding: 25px;
+        line-height: 10px;
+    }
+
+    .line {
+        font-size: 0.7rem;
+        height: 148px;
+    }
+
+    .footerBtn {
+        width: 100%;
+        height: 40px;
+        
+        display: block;
+
+        position: sticky 0.5 ease;
+
+        background-color: #e50914;
+        /* Netflix red */
+        color: white;
+        /* White text */
+        border: none;
+        /* Remove border */
+        border-radius: 0.1875rem;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Pointer on hover */
+        font-size: 1.2rem;
+        /* Font size */
+        font-weight: 800;
+
+        
+    }
+}
+@media (max-width:430px) {
+
+    .footer {
+        width: 100%;
+
+    }
+
+    .subscribe {
+        width: 100%;
+        padding: 20px;
+        align-items: start;
+
+
+    }
+
+    .inputField2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    #emailTxt2 {
+        width: 100%;
+        height: 3.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .list {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        font-size: .8rem;
+    }
+
+    .details {
+        width: 100%;
+        padding: 25px;
+        line-height: 10px;
+    }
+
+    .line {
+        font-size: 0.7rem;
+        height: 148px;
+    }
+
+    .footerBtn {
+        width: 100%;
+        height: 40px;
+        
+        display: block;
+
+        position: sticky 0.5 ease;
+
+        background-color: #e50914;
+        /* Netflix red */
+        color: white;
+        /* White text */
+        border: none;
+        /* Remove border */
+        border-radius: 0.1875rem;
+        /* Rounded corners */
+        cursor: pointer;
+        /* Pointer on hover */
+        font-size: 1.2rem;
+        /* Font size */
+        font-weight: 800;
+
+        
+    }
+}
+
+@media (min-width : 540px) and (max-width:720px){
+    .list{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .line3{
+        width: 100%;
+        font-size: 16px;
+    }
+}
+
+
 @media (min-width : 768px) and (max-width:1024px){
     .list{
         display: grid;

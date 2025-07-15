@@ -65,6 +65,7 @@ a {
 
 .info2 {
     margin-top: 2rem;
+    background-color: rgb(22, 22, 22);
 }
 
 .line {
@@ -75,6 +76,11 @@ a {
 .footerBtn{
     display: none;
 }
+
+.bottomContainer{
+    height: 300px;
+}
+
 
 
 @media (max-width:400px) {
@@ -117,9 +123,9 @@ a {
         line-height: 10px;
     }
 
-    .line {
+    .line{
         font-size: 0.7rem;
-        height: 148px;
+        
     }
 
     .footerBtn {
@@ -190,7 +196,7 @@ a {
 
     .line {
         font-size: 0.7rem;
-        height: 148px;
+        /* height: 148px; */
     }
 
     .footerBtn {
@@ -258,19 +264,17 @@ a {
         line-height: 10px;
     }
 
-    .line {
+    .line{
         font-size: 0.7rem;
-        height: 148px;
+        /* height: 148px; */background-color: black;
     }
 
     .footerBtn {
         width: 100%;
         height: 40px;
-        
+        margin-top: 3rem;
         display: block;
-
         position: sticky 0.5 ease;
-
         background-color: #e50914;
         /* Netflix red */
         color: white;
@@ -298,6 +302,9 @@ a {
         width: 100%;
         font-size: 16px;
     }
+    .line{
+        background-color: black;
+    }
 }
 
 
@@ -306,11 +313,17 @@ a {
         display: grid;
         grid-template-columns: repeat(2,1fr);
     }
+    .line{
+        background-color: black;
+    }
 }
 
 @media (min-width : 1024px) and (max-width:1280px){
     .list{
         display: grid;
         grid-template-columns: repeat(3,1fr);
+    }
+    .line{
+        background-color: black;
     }
 }

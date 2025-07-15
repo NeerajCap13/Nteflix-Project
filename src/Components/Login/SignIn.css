@@ -1,118 +1,263 @@
-.bgc{
+.bgc {
     width: 100%;
-    height: 85vh;
+    height: 100%;
     object-fit: cover;
     position: absolute;
     z-index: -1;
 }
 
-.logoNetflix{
+.logoNetflix {
     width: 83%;
     margin: 0 auto;
     z-index: 1;
-  
+
 }
 
-#NetLogo{
+#NetLogo {
     width: 200px;
     margin: 10px 0px 0px 25px;
-   
+
 }
-.Container{
+
+.Container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.signBox{
+
+.signBox {
     width: 480px;
     height: 690px;
     color: #fff;
-    background-color:rgb(0, 0, 0,0.7);
+    background-color: rgb(0, 0, 0, 0.7);
     border-radius: 5px;
-    
+
 }
 
-.item-container{
+.item-container {
     display: flex;
     flex-direction: column;
     padding: 50px;
     align-content: center;
     margin-bottom: 0px;
 }
-#head{
+
+#head {
     margin-bottom: 1rem;
+    font-size: 32px;
 }
-#p1,#a1{
+
+#p1,
+#a1 {
     text-align: center;
     margin-top: .6rem;
     margin-bottom: .6rem;
 }
-#EmailID,#Pwd{
+
+#EmailID,
+#Pwd {
     height: 56px;
     /* opacity: 1; */
-    background-color:rgb(0, 0, 0,0 );
+    background-color: rgba(0, 0, 0, 0);
     border: 1px solid white;
     outline: none;
     /* padding: 10px; */
     border-radius: 5px;
-    margin: 8px;
+    margin: 8px 0px;
     opacity: 0.6;
     padding-left: 20px;
     padding-right: 20px;
-    color: white;
-    
+    color: rgb(255, 255, 255)
 }
 
-.SignBtn1{
+.SignBtn1 {
     background-color: rgb(229, 9, 20);
     height: 40px;
     color: white;
     outline: none;
     border: none;
     border-radius: 5px;
-    margin: 8px;
+    margin: 8px 0px;
     font-size: 1rem;
 }
 
-.codeSign{
-    background-color:rgba(128, 128, 128, 0.4);
+.codeSign {
+    background-color: rgba(128, 128, 128, 0.4);
     height: 40px;
     color: white;
     outline: none;
     border: none;
     border-radius: 5px;
-    margin: 8px;
+    margin: 8px 0px;
     font-size: 1rem;
 }
 
-.dev2{
+.dev2 {
     margin: 8px;
     padding: 0px 50px 0px 50px;
 }
 
-.div3{
+.div3 {
     display: flex;
     gap: 10px;
     margin-bottom: 0.9rem;
 }
 
-#new{
+#new {
     margin-bottom: 0.9rem;
 }
 
-#p3{
+#p3 {
     font-size: 0.8rem;
     color: #FFFFFF80;
     margin-bottom: 0.8rem;
 }
 
-#a4{
+#a4 {
     font-size: 0.7rem;
     color: blue;
 }
 
-#checkbox{
-    color:rgba(128, 128, 128);
+#checkbox {
+    color: rgba(128, 128, 128);
     opacity: 0.6;
-    
+
 }
+
+.SignInPage{
+    height: 80vh;
+}
+
+.bottomContainer {
+    height: 20vh;
+    background-color: rgb(22, 22, 22);
+    border-color: 1px solid rgb(35, 35, 35);
+    padding: 50px;
+   
+}
+
+.bottomItems {
+    width: 83%;
+    margin: 0 auto;
+    color: #FFFFFFB3;
+}
+
+.itemList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 3rem;
+
+}
+
+#language2 {
+    margin-top: 3rem;
+    background-color: rgb(22, 22, 22);
+    opacity: 0.7;
+    color: white;
+}
+
+@media (min-width:360px) and (max-width:430px) {
+
+
+    .SignInPage {
+        margin: 0;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    #NetLogo {
+        width: 120px;
+
+        margin: 10px;
+
+    }
+
+    .logoNetflix {
+        margin-left: 0;
+    }
+
+    .bgc {
+        display: none;
+    }
+
+    .item-container {
+        padding: 20px;
+        
+    }
+
+    #head {
+        margin-left: 2px;
+        font-size: 32px;
+    }
+
+    #EmailID,
+    #Pwd {
+        margin: 8px 0px 8px 0px;
+    }
+
+    .SignBtn1,
+    .codeSign {
+        margin: 10px 0px;
+    }
+
+    .dev2 {
+        width: 100%;
+        padding: 17px;
+    }
+
+    #new {
+        font-size: 16px;
+    }
+
+    #a5 {
+        text-decoration: none;
+        padding: 2px;
+    }
+
+
+
+    .bottomContainer {
+        width: 100%;
+        padding: 17px;
+       
+
+    }
+
+    .bottomItems {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .itemList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-size: 14px;
+    }
+}
+
+@media (min-width:768px) and (max-width:1280px) {
+
+    .bottomContainer {
+        margin-top: 20rem;
+    }
+
+    .bottomItems {
+        margin: 0 0;
+    }
+
+    .itemList {
+        column-gap: 5px;
+        row-gap: 15px;
+    }
+}
+
+
+@media (min-width:768px) {
+    .bottomContainer {
+        margin-top: 5.1rem;
+    }
+}
+
+
+

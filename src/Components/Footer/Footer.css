@@ -68,9 +68,10 @@ a {
     background-color: rgb(22, 22, 22);
 }
 
-.line {
+#line {
     color: #FFFFFF80;
     font-size: 0.9rem;
+    background-color: black;
 }
 
 .footerBtn{
@@ -264,9 +265,9 @@ a {
         line-height: 10px;
     }
 
-    .line{
+    #line{
         font-size: 0.7rem;
-        /* height: 148px; */background-color: black;
+      
     }
 
     .footerBtn {

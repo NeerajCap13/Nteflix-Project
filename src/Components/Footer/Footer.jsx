@@ -72,7 +72,7 @@ function Footer() {
           </div>
 
           <div className="info2">
-            <p className="line">
+            <p id="line">
               This page is protected by Google reCAPTCHA to ensure you're not a
               bot. <a>Learn more.</a>
             </p>

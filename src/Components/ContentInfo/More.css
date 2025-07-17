@@ -1,3 +1,5 @@
+
+
 .title {
     width: 83%;
     margin: 0 auto;
@@ -11,15 +13,14 @@
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
-
-
+    
+    
 }
 
 .flex-container {
 
     width: 21rem;
     height: 16rem;
-  
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -43,7 +44,7 @@ p{
 
 /* For Mobile Devices */
 
-@media(max-width:400px) {
+@media(min-width:360px) and (max-width:430px) {
 
     .container {
         width: 90%;
@@ -52,11 +53,21 @@ p{
         justify-content: center;
         align-items: center;
         gap: 10px;
-     
+    
     }
+        svg{
+            height: 30px;
+            width: 40px;
+            
+        }
 
+        .flex-container{
+            width: 100%;
+        display: flex;
+        flex-direction: column;
+        }
 }
-@media(max-width:414px) {
+/* @media(max-width:414px) {
 
     .container {
         width: 90%;
@@ -81,7 +92,7 @@ p{
      
     }
 
-}
+} */
 @media(max-width:540px) {
 
     .container {
@@ -143,4 +154,45 @@ p{
        
     }
      
+}
+
+
+@media(max-width:800px){
+
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .flex-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 182px;
+    }
+}
+
+@media (max-width:344px){
+    .container {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: 900px;
+    
+    }
+        
+
+        .flex-container{
+            width: 100%;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        }
 }

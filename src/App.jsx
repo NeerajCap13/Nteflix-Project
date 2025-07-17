@@ -7,6 +7,7 @@ import MoreInfo from "./Components/ContentInfo/MoreInfo.jsx";
 import Footer from "./Components/Footer/Footer.jsx";
 import Slider from "./Components/Slider/Slider.jsx";
 import SignIn from "./Components/Login/SignIn.jsx";
+import ForgetPass from "./Components/ForgetPassword/ForgetPass.jsx";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           }
         />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/loginHelp" element={<ForgetPass/>}/>
       </Routes>
    
   );

@@ -4,77 +4,116 @@ import "../Login/SignIn.css";
 import { Link } from "react-router-dom";
 
 function SignIn() {
+  const [change, SetOnChange] = useState(false);
 
-  const [change,SetOnChange] = useState(false)
-
-  const handleChange = () => SetOnChange(!change)
+  const handleChange = () => SetOnChange(!change);
 
   return (
-    <>
-      <div className="SignInPage">
-        <img src="src/assets/BannerNew.jpg" className="bgc"/>
-         
-        <div className="logoNetflix">
-          <img src="src/assets/Netflix_Logo_PMS.png" id="NetLogo" />
-          
+    <div className="SignInPageContainer">
+      <img
+                src="src/assets/BannerNew.jpg"
+                alt="Netflix Banner"
+                id="SignInBackground"
+              />
+      <div id="card-overlay1"/>
+      
+      <div className="SignInContainer">
+        <div className="headContainer">
+          <div className="logoBar">
+            <img src="src/assets/Netflix_Logo_PMS.png" alt="" id="navLogo" />
+          </div>
         </div>
-       <div className="overlap"
-            id="card-overlay"
-            style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            background: "rgba(0,0,0,0.5)",
-            zIndex: -1,
-          }}
-        />
-        <div className="Container">
 
-            <div className="signBox">
+        <div className="contentBox">
+          <div className="signBox">
+            {change ? (
+              <div className="item-container">
+                <h2 id="head">Sign In</h2>
+                <input
+                  type="email"
+                  name=""
+                  id="EmailID"
+                  placeholder="Email or Mobile Number"
+                />
+                {/* <input type="password" name="" id="Pwd" placeholder="Password"/> */}
+                <p
+                  id="pp"
+                  style={{
+                    textAlign: "center",
+                    margin: "5px 0px",
+                    fontSize: "13px",
+                  }}
+                >
+                  Message and data rates may apply
+                </p>
+                <button className="SignBtn1">Send sign-in code</button>
+                <p id="p1">OR</p>
+                <button className="codeSign" onClick={handleChange}>
+                  Use password
+                </button>
+                <a id="a1" href="#">
+                  Forgot Email or phone number?
+                </a>
+              </div>
+            ) : (
+              <div className="item-container">
+                <h2 id="head">Sign In</h2>
+                <input
+                  type="email"
+                  name=""
+                  id="EmailID"
+                  placeholder="Email or Mobile Number"
+                />
+                <input
+                  type="password"
+                  name=""
+                  id="Pwd"
+                  placeholder="Password"
+                />
+                <button className="SignBtn1">Sign In</button>
+                <p id="p1">OR</p>
+                <button className="codeSign" onClick={handleChange}>
+                  Use a sign-in code
+                </button>
+                <Link to={"/loginHelp"} >
+                <p id="a1" href="#">
+                  Forgot Password?
+                </p>
+                </Link>
+              </div>
+            )}
 
-            {
-              !change ? (<div className="item-container">
-                    <h2 id="head">Sign In</h2>
-                    <input type="email" name="" id="EmailID" placeholder="Email or Mobile Number" />
-                    {/* <input type="password" name="" id="Pwd" placeholder="Password"/> */}
-                    <p id="pp" style={{textAlign:"center",margin:"5px 0px",fontSize:"13px"}}>Message and data rates may apply</p>
-                    <button className="SignBtn1">Send sign-in code</button>
-                    <p id="p1">OR</p>
-                    <button className="codeSign" onClick={handleChange}>Use password</button>
-                    <a id="a1" href="#">Forgot Email or phone number?</a>
-                </div>):(<div className="item-container">
-                    <h2 id="head">Sign In</h2>
-                    <input type="email" name="" id="EmailID" placeholder="Email or Mobile Number" />
-                    <input type="password" name="" id="Pwd" placeholder="Password"/>
-                    <button className="SignBtn1">Sign In</button>
-                    <p id="p1">OR</p>
-                    <button className="codeSign" onClick={handleChange}>Use a sign-in code</button>
-                    <a id="a1" href="#">Forgot Password?</a>
-                </div>)
-            }
+            <div className="dev2">
+              <div className="div3">
+                <input
+                  id="checkbox"
+                  type="checkbox"
+                  value=""
+                  style={{ height: "20px", width: "20px" }}
+                />
+                <p id="p2">Remember Me</p>
+              </div>
 
-                
-                <div className="dev2">
-                    <div className="div3">
-                        <input  id="checkbox" type="checkbox" value="" style={{height:"20px",width:"20px"}}/>
-                        <p id="p2">Remember Me</p>
-                    </div>
-                    
-                    <h4 id="new">New to Netflix?<Link to={'/'} id="a5">Sign up Now</Link></h4>
-                    <p id="p3">This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
-                    <a id="a4">Learn more</a>
-                </div>
+              <h4 id="new">
+                New to Netflix?
+                <Link to={"/"} id="a5">
+                  Sign up Now
+                </Link>
+              </h4>
+              <p id="p3">
+                This page is protected by Google reCAPTCHA to ensure you're not
+                a bot.
+              </p>
+              <a id="a4">Learn more</a>
             </div>
-            
+          </div>
         </div>
-        
       </div>
-      <div className="bottomContainer">
+      <div className="downContainer">
+        
           <div className="bottomItems">
             <h3 id="head1">Questions? Call 000-800-919-1743 (Toll-Free)</h3>
-            <li className="itemList">
+            <li className="itemList1">
               <a href="#">FAQ</a>
               <a href="#">Help Center</a>
               <a href="#">Terms of Use</a>
@@ -99,7 +138,8 @@ function SignIn() {
             </select>
           </div>
         </div>
-    </>
+      </div>
+    
   );
 }
 

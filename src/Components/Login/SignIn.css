@@ -1,263 +1,358 @@
-.bgc {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    z-index: -1;
+
+.SignInContainer{ 
+    height: 90vh;
+   
 }
 
-.logoNetflix {
-    width: 83%;
+
+.headContainer{
+    width: 80%;
     margin: 0 auto;
-    z-index: 1;
-
+    
 }
 
-#NetLogo {
-    width: 200px;
-    margin: 10px 0px 0px 25px;
 
-}
 
-.Container {
+.contentBox{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.signBox {
+.signBox{
+    height: 710px;
     width: 480px;
-    height: 690px;
-    color: #fff;
-    background-color: rgb(0, 0, 0, 0.7);
-    border-radius: 5px;
-
-}
-
-.item-container {
+    background-color: rgba(0,0, 0,0.7);
+    padding: 40px;
     display: flex;
     flex-direction: column;
-    padding: 50px;
-    align-content: center;
-    margin-bottom: 0px;
+    border-radius: 10px;
+    z-index: 1 ;
+    
 }
 
-#head {
-    margin-bottom: 1rem;
+#head{
     font-size: 32px;
 }
 
-#p1,
-#a1 {
-    text-align: center;
-    margin-top: .6rem;
-    margin-bottom: .6rem;
-}
-
-#EmailID,
-#Pwd {
+#EmailID,#Pwd{
+    width: 100%;
     height: 56px;
-    /* opacity: 1; */
-    background-color: rgba(0, 0, 0, 0);
-    border: 1px solid white;
-    outline: none;
-    /* padding: 10px; */
-    border-radius: 5px;
-    margin: 8px 0px;
-    opacity: 0.6;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: rgb(255, 255, 255)
-}
-
-.SignBtn1 {
-    background-color: rgb(229, 9, 20);
-    height: 40px;
+    margin: 20px 0px 8px 0px;
+    padding-left: 10px;
+    background-color: rgba(22, 22, 22);
     color: white;
-    outline: none;
-    border: none;
+    border: 0.02rem solid ;
+    border-color: white;
     border-radius: 5px;
-    margin: 8px 0px;
-    font-size: 1rem;
-}
-
-.codeSign {
-    background-color: rgba(128, 128, 128, 0.4);
-    height: 40px;
-    color: white;
     outline: none;
-    border: none;
-    border-radius: 5px;
-    margin: 8px 0px;
-    font-size: 1rem;
-}
-
-.dev2 {
-    margin: 8px;
-    padding: 0px 50px 0px 50px;
-}
-
-.div3 {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 0.9rem;
-}
-
-#new {
-    margin-bottom: 0.9rem;
-}
-
-#p3 {
-    font-size: 0.8rem;
-    color: #FFFFFF80;
-    margin-bottom: 0.8rem;
-}
-
-#a4 {
-    font-size: 0.7rem;
-    color: blue;
-}
-
-#checkbox {
-    color: rgba(128, 128, 128);
-    opacity: 0.6;
-
-}
-
-.SignInPage{
-    height: 80vh;
-}
-
-.bottomContainer {
-    height: 20vh;
-    background-color: rgb(22, 22, 22);
-    border-color: 1px solid rgb(35, 35, 35);
-    padding: 50px;
    
 }
 
-.bottomItems {
-    width: 83%;
-    margin: 0 auto;
-    color: #FFFFFFB3;
+
+
+
+.SignBtn1{
+    width: 100%;
+    background-color: rgb(229, 9, 20);
+    color: white;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    height: 40px;
+    margin: 15px 0px;
+    border-radius: 3px;
+}
+#p1{
+    text-align: center;
 }
 
-.itemList {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 3rem;
-
-}
-
-#language2 {
-    margin-top: 3rem;
-    background-color: rgb(22, 22, 22);
-    opacity: 0.7;
+.codeSign{
+    width: 100%;
+    border-radius: 3px;
+    height: 40px;
+    margin: 15px 0px;
+    border: none;
+    outline: none;
+    background-color: rgba(128, 128, 128, 0.4);
     color: white;
 }
 
-@media (min-width:360px) and (max-width:430px) {
+#a1{
+    text-align: center;
+    width: 100%;
+
+    margin-bottom: 20px;
+}
+
+.div3{
+    display: flex;
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+}
+
+#p2{
+    padding-left: 10px;
+    
+}
+
+#new{
+    margin: 25px 0px;
+}
+#p3,#a4{
+    font-size: 13px;
+    color: #FFFFFF80;
+    margin-top: 2rem;
+}
+
+.downContainer{
+    background-color: #161616;
+    height:310px;
+
+  
+}
 
 
-    .SignInPage {
-        margin: 0;
+.bottomItems{
+width: 83%;
+  margin: 0 auto;
+  padding: 25px;
+}
+
+#head1{
+    margin-top: 2rem;
+    font-size: 16px;
+    color: #FFFFFFB3;
+}
+
+.itemList1{
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+    font-size: 14px;
+}
+
+#language2{
+    background-color: #161616;
+    color: white;
+}
+
+#SignInBackground{
+
+width: 100%;
+height: 100%;
+background-size: cover;
+position: absolute;
+top: 0;
+left: 0;
+z-index:-1;
+opacity:1;
+            
+}
+
+#card-overlay1{
+        position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.75);
+      opacity: 0.7;
+      z-index: -1;
+}
+
+
+@media (min-width:344px) and (max-width:430px){
+    .SignInContainer{
+    background: black;
+    width: 100%;
+    height: 100%;
+    }
+
+    .signBox{
+    height: 100%;
+    padding: 20px;
+}
+
+#card-overlay1{
+    display:none;
+}
+.downContainer{
+    height: 100%;
+    
+}
+.bottomItems{
+    width: 100%;
+    padding: 20px;
+}
+.headContainer{
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+   
+}
+.logoBar{
+    width: 100%;
+    padding-left: 10px;
+}
+
+#navLogo{
+    margin-top: 1rem;
+    margin-left: 0px;
+}
+}
+
+@media (min-width:768px) and (max-width:1280px){
+    
+    .SignInContainer{
+     width: 100%;
+     height: 100%;
+     
+    }
+   #SignInBackground {
+    
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 1;
+        }
+
+    .headContainer{
+        width: 100%;
         height: 100%;
-        overflow: hidden;
+    }
+    .downContainer{
+        height: 100%;
+        margin: 0;
+    }
+    .bottomItems{
+        width: 100%;
+        margin-top: 5rem;
+    }
+}
+
+
+@media (min-width:850px) and (max-width:1024px){
+
+    .SignInPageContainer{
+       height: 100%;
     }
 
-    #NetLogo {
-        width: 120px;
-
-        margin: 10px;
-
+    .SignInContainer{
+     width: 100%;
+     height: 90vh;
+     display: flex;
+     flex-direction: column;
+     
     }
-
-    .logoNetflix {
-        margin-left: 0;
-    }
-
-    .bgc {
-        display: none;
-    }
-
-    .item-container {
-        padding: 20px;
+   
+    .contentBox{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       height: 100%;
+        
         
     }
-
-    #head {
-        margin-left: 2px;
-        font-size: 32px;
-    }
-
-    #EmailID,
-    #Pwd {
-        margin: 8px 0px 8px 0px;
-    }
-
-    .SignBtn1,
-    .codeSign {
-        margin: 10px 0px;
-    }
-
-    .dev2 {
+    .headContainer{
         width: 100%;
-        padding: 17px;
+        height: 100px;
     }
-
-    #new {
-        font-size: 16px;
+    .downContainer{
+        height: 100%;
+        margin: 0;
+    
     }
-
-    #a5 {
-        text-decoration: none;
-        padding: 2px;
+    .bottomItems{
+        margin-top: 0;
     }
-
-
-
-    .bottomContainer {
-        width: 100%;
-        padding: 17px;
-       
-
-    }
-
-    .bottomItems {
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    .itemList {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        font-size: 14px;
-    }
+    #SignInBackground {
+    
+            width: 100%;
+            height: 100;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 1;
+        }
+    
+        #card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.75);
+            opacity: 0.7;
+            z-index: -1;
+            overflow: hidden;
 }
-
-@media (min-width:768px) and (max-width:1280px) {
-
-    .bottomContainer {
-        margin-top: 20rem;
-    }
-
-    .bottomItems {
-        margin: 0 0;
-    }
-
-    .itemList {
-        column-gap: 5px;
-        row-gap: 15px;
-    }
 }
 
 
-@media (min-width:768px) {
-    .bottomContainer {
-        margin-top: 5.1rem;
+@media (min-width:540px) and (max-width:540px){
+
+   
+ .SignInContainer{
+    background: black;
+    width: 100%;
+    height: 100%;
     }
+
+    .signBox{
+    height: 100%;
+    padding: 20px;
 }
 
+#card-overlay1{
+    display:none;
+}
+.downContainer{
+    height: 100%;
+    width: 100%;
+    margin-top: 3rem;
+}
+.bottomItems{
+    width: 100%;
+    padding: 20px;
 
+    
+}
+#head1{
+    width: 100%;
 
+    margin: 0;
+}
+
+.itemList1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.headContainer{
+    width: 100%;
+}
+.logoBar{
+   padding-left: 10px; 
+   height: 80px;
+   width: 88%;
+   margin: 0 auto;
+
+}
+#navLogo{
+    margin-top: 1rem;
+    padding-left: 0px; 
+    height: 50px; 
+    width: 110px;
+}
+
+#SignInBackground{
+    display: none;  
+}
+}

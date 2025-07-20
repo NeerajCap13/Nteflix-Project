@@ -1,0 +1,269 @@
+.mainReg {
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.regContainer {
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+    border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+}
+
+.regNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 40px;
+
+
+
+}
+
+.regBtn {
+
+    height: 32px;
+    width: 76px;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: white;
+}
+
+.regContainer2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* height: 80vh; */
+
+
+}
+
+.regContent {
+    width: 350px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#deviceImg {
+
+    height: 60px;
+    width: 260px;
+    margin: 10px 0px;
+}
+
+.regH1 {
+    font-size: 32px;
+    margin: 10px 0px;
+}
+
+.regP {
+    font-size: 13px;
+    margin: 10px 0px;
+
+}
+
+.regP2 {
+    font-size: 18px;
+    padding: 0px 30px;
+    margin: 10px 0px;
+}
+
+.regNextBtn {
+    height: 72px;
+    width: 100%;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: rgb(229, 9, 20);
+    margin: 10px 0px;
+}
+
+.regFooter {
+    width: 100%;
+    height: 214px;
+    background-color: #F3F3F3;
+    padding: 30px;
+}
+
+.regItems {
+    background-color: #F3F3F3;
+    color: #737373;
+    width: 70%;
+    margin-left: 20px;
+}
+
+.regHead {
+    color: #737373;
+    font-size: 16px;
+    margin-bottom: 2rem;
+}
+
+.regList {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+
+    margin-bottom: 1rem;
+}
+
+.regList a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 13px;
+
+}
+
+
+/* For Mobile devices */
+
+@media (min-width:344px) and (max-width:430px) {
+
+    .mainReg {
+        width: 100%;
+        overflow: none;
+    }
+
+    .regNav {
+        margin: 5px;
+    }
+
+    .regBtn {
+        font-size: 15px;
+    }
+
+    .regLogo {
+        width: 90px;
+        height: 40px;
+
+    }
+
+    .regContainer2 {
+        margin: 20px;
+        padding: 10px;
+        background-color: white;
+        
+    }
+
+    .regContent {
+        padding-left: 0;
+        width: 100%;
+        height: 100%;   
+    }
+
+
+    .deviceImg {
+        margin-top: 3rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .regP {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    .regH1 {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .regP2 {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .regFooter {
+        margin-top: 2rem;
+        padding: 20px;
+
+    }
+
+    .regItems {
+        width: 100%;
+        margin: 0;
+    }
+
+    .regList {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width:768px) and (max-width:1024px) {
+
+    .regNav {
+        margin-left: 0;
+        margin-right: 5px;
+    }
+
+    .regItems {
+        width: 100%;
+    }
+}
+
+@media (max-width:540px) {
+    .regNav {
+        margin: 0px 0px;
+    }
+
+    .regContainer2 {
+        padding: 30px;
+    }
+
+    .deviceImg {
+        margin-top: 3rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: left;
+    }
+
+    .regP {
+        text-align: left;
+        width: 100%;
+        margin: 0;
+    }
+
+    .regH1 {
+        text-align: left;
+        margin-top: 0;
+    }
+
+    .regP2 {
+        text-align: left;
+        padding-left: 0;
+    }
+
+    .regItems{
+        width: 100%;
+        margin: 0;
+        
+    }
+    .regList{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+}

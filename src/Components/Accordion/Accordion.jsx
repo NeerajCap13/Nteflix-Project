@@ -5,7 +5,7 @@ import "./Accordion.css";
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggler = () => setIsOpen(!isOpen);
+  const toggler = () => setIsOpen(!isOpen)
 
   return (
     <div className="accordionData">
@@ -16,7 +16,7 @@ const AccordionItem = ({ title, content }) => {
         <h2>{title}</h2>
         {!isOpen ? (
           <span>
-            <img
+            <img className="img"
               src="src/assets/Plus.svg"
               alt="Open"
               onClick={toggler}
@@ -29,26 +29,16 @@ const AccordionItem = ({ title, content }) => {
               src="src/assets/Close.svg"
               alt="Close"
               onClick={toggler}
-              style={{ width: "50px", height: "50px" }}
+              style={{ width: "50px", height: "50px"}}
             />
           </span>
         )}
       </div>
-      {isOpen && (
-        <div id="Content"
-          className="accordion-Content"
-          style={{
-            maxHeight: isOpen ? "400px" : 0,
-            padding: isOpen ? "20px" : 0,
-            fontSize: isOpen ? "24px" : 0,
-            color: "#FFFFFF",
-             
-            
-          }}
-        >
-          <p id="ContentAcc">{content}</p>
-        </div>
-      )}
+
+        <div className={`accordion-Content ${isOpen ? "open" : ""}`}>
+        <p className="ContentAcc">{content}</p>
+
+      </div>
     </div>
   );
 };

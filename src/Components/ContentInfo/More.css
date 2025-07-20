@@ -196,3 +196,17 @@ p{
         height: 100%;
         }
 }
+
+@media (min-width:1280px){
+    .container{
+        width: 83%;
+       display: flex;
+       gap:10px;
+      
+    }
+
+    .flex-container{
+        width:300px;
+        height: 300px;
+    }
+}

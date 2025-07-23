@@ -143,15 +143,15 @@ width: 100%;
 .basicPlan::before{
     content: "Most Popular";
     position: absolute;
-    transform: translateY(-35px)translateX(-7px);
+    transform: translateY(-35px)translateX(-7.5px);
     background-color: #000000B3;
     width: 100%;
     font-size: 12px;
     color: white;
     text-align: center;
     height: 27px;
-    border-top-left-radius: 18px;
-    border-top-right-radius: 18px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
     display: flex;
     justify-content: center;
     align-items: center;

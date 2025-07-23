@@ -1,0 +1,97 @@
+.SVG{
+    width: 100%;
+}
+
+.tickSvg{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+   
+}
+
+.userP{
+    text-align: center;
+    width: 100%;
+
+    font-size: 13px;
+    margin: 10px 0px;
+}
+
+.userH1{
+    text-align: center;
+    width: 100%;
+
+    font-size: 2em;
+    margin: 0px 0px 10px 0px;
+}
+
+.userSignOut{
+    height: 32px;
+    width: 76px;
+    color: black;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: 8px 0px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: white;
+}
+
+.userContent{
+    width: 340px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+
+.checkList{
+    display: flex;
+    margin: 10px 0px;
+    width: 300px;
+ 
+}
+
+.listCheck{
+    color: black;
+    font-size: 18px;
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+@media (min-width:344px) and (max-width:430px){
+
+.SVG{
+    text-align: left;
+}
+
+
+.userP{
+    text-align: left;
+    width: 100%;
+
+    font-size: 13px;
+    margin: 10px 0px;
+}
+
+.userH1{
+    text-align: left;
+    width: 100%;
+
+    font-size: 2em;
+    margin: 0px 0px 10px 0px;
+}
+
+.userSignOut{
+    margin-right: 10px;
+    font-size: 16px;
+}
+}

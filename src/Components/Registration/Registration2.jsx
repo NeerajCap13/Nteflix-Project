@@ -3,9 +3,10 @@ import React from "react";
 import "../Registration/Registration.css";
 import { Link } from "react-router-dom";
 
-function Registration() {
+// import email from "./../Banner/banner.jsx"
 
-
+function Registration2() {
+  
   return (
     <div className="mainReg">
       <div className="regContainer">
@@ -14,26 +15,26 @@ function Registration() {
           <button className="regBtn">Sign In</button>
         </div>
       </div>
-
       <div className="regContainer2">
-        <div className="regContent">
-            <div className="deviceImg"><img src="src/assets/Devices.png" alt="" id="deviceImg" /></div>
-          
+        <div className="regContent2">
+
           <p className="regP" style={{ color: "#333333" }}>
-            STEP 1 OF 4
+            STEP 2 OF 4
           </p>
-          <h1 className="regH1" style={{ color: "#333333" }}>
-            Finish setting up your account
+          <h1 className="regH2" style={{ color: "#333333" }}>
+            Create a password to start your membership
           </h1>
-          <p className="regP2" style={{ color: "#000000" }}>
-            Netflix is personalised for you. Create a password to watch on any
-            device at any time.
+          <p className="regP3" style={{ color: "#000000" }}>
+            Just a few more steps and you're done!
+            We hate paperwork, too.
           </p>
 
-          <Link to={"/nextPage"} className="regNextBtn">Next</Link>
-          
-        
-         
+          <input type="Email" placeholder="Email" className="emailTxt2"/>
+          <input type="Password" placeholder="Add a password" className="passTxt2" />
+
+          <Link to={"/userOne"} className="regNextBtn2" > 
+          <button className="regNextBtn2">Next</button>
+          </Link>
           
         </div>   
       </div>
@@ -69,4 +70,4 @@ function Registration() {
   );
 }
 
-export default Registration;
+export default Registration2;

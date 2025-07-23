@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "../../Components/Banner/banner.css";
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import Bg from "../../assets/BannerNew.jpg";
-// import SignIn from "../Login/SignIn";
+
 import { Link, useNavigate } from "react-router-dom";
-// import arrow from '../../assets/ArrowForward.svg'
+
 
 function Banner() {
   const [email, setEmail] = useState("");
@@ -12,9 +12,6 @@ function Banner() {
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
-  // useEffect(() => {
-  //   console.log(email);
-  // }, [email]);
 
   const handleError = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -25,7 +22,7 @@ function Banner() {
       setError("Not a valid email");
     } else {
       setError("");
-      navigate("./newUser")
+      navigate("./newUser");
     }
   };
 
@@ -111,6 +108,8 @@ function Banner() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
+
+           
 
             
               {" "}

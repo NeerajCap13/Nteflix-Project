@@ -9,6 +9,9 @@ import Slider from "./Components/Slider/Slider.jsx";
 import SignIn from "./Components/Login/SignIn.jsx";
 import ForgetPass from "./Components/ForgetPassword/ForgetPass.jsx";
 import Registration from "./Components/Registration/Registration.jsx";
+import Registration2 from "./Components/Registration/Registration2.jsx";
+import UserOne from "./Components/RegisteredUser/UserOne.jsx";
+import ChoosePlan from "./Components/RegisteredUser/ChoosePlan.jsx";
 
 function App() {
   return (
@@ -29,6 +32,9 @@ function App() {
         <Route path="/signin" element={<SignIn />} />
         <Route path="/loginHelp" element={<ForgetPass/>}/>
         <Route path="/newUser" element={<Registration/>}/>
+        <Route path="/nextPage" element={<Registration2 />}/>
+        <Route path="/userOne" element={<UserOne/>}/>
+        <Route path="/newPlan" element={<ChoosePlan/>}/>
       </Routes>
    
   );

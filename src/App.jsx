@@ -12,6 +12,7 @@ import Registration from "./Components/Registration/Registration.jsx";
 import Registration2 from "./Components/Registration/Registration2.jsx";
 import UserOne from "./Components/RegisteredUser/UserOne.jsx";
 import ChoosePlan from "./Components/RegisteredUser/ChoosePlan.jsx";
+import ChoosePlanMobile from "./Components/RegisteredUser/ChoosePlanMobile.jsx";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/nextPage" element={<Registration2 />}/>
         <Route path="/userOne" element={<UserOne/>}/>
         <Route path="/newPlan" element={<ChoosePlan/>}/>
+        <Route path="/mobileView" element={<ChoosePlanMobile/>}/>
       </Routes>
    
   );

@@ -1,0 +1,375 @@
+@media (min-width : 344px) and (max-width:430px){
+    .mobileView{
+        height: 100dvh;
+    }
+    .mHeader{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+    }
+    .planHeader{
+        padding: 0px 10px;
+        margin-top: 0;
+    }
+
+    .mHeading{
+        width: 100%;
+        color: black;
+        margin-bottom: 0;
+        height: 20px;
+        font-size: 12px;
+    }
+    .subHeading{
+        width: 100%;
+        color: black;
+        font-size: 10px;
+        
+    }
+    .circleSVG{
+        display: flex;
+        justify-content: end;
+        
+       
+    }
+
+    .circle{
+        height: 17px;
+        width: 17px;
+    }
+
+   
+    .mobileViewCards{
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 2rem;
+
+        
+    }
+
+    .mobile{
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+  
+    .mobile.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+       
+    }
+
+   
+    
+    .notSelected{
+        color: #676767;
+    }
+
+     .basic{
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .basic.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+        color: white;
+    }
+    .basic.selected::before{
+        background-color: #6D3BE3;
+    }
+     .standard{
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+    .standard.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+     .premium{
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+    
+    .premium.selected{
+        background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .basic::before{
+       
+        content: "Most Popular";
+        position: absolute;
+        font-size: 8px;
+        color: white;
+        background-color: #000000B3;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transform: translateY(-35px)translateX(-14px);
+        padding: 5px;
+        width: 89%;
+       text-align: center;
+    }
+
+    .contentDetail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    }
+
+
+    .div1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+        height: 70px;
+    }
+    .duration{
+        width:156px;
+        font-size: 13px;
+        color: #767676;
+    }
+    .rupee{
+        font-size: 16px;
+        color: #000000B3;
+    }
+
+    .cardBottomBtn{
+        padding: 10px;
+    }
+
+    .mCardBtn{
+    width: 100%;
+    height: 72px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: rgb(229, 9, 20);
+    margin: 10px 0px;
+    text-decoration: none;
+    }
+
+}
+
+@media (min-width:768px) and (max-width:1080px){
+    .mobileView{
+        height: 100dvh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobileContainer{
+        height: 100%;
+        width: 540px;
+    }
+    .mHeader{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+    }
+    .planHeader{
+        padding: 0px 10px;
+        margin-top: 0;
+    }
+
+
+    
+    .mHeading{
+        width: 100%;
+        color: black;
+        margin-bottom: 0;
+        height: 20px;
+        font-size: 12px;
+    }
+    .subHeading{
+        width: 100%;
+        color: black;
+        font-size: 10px;
+        
+    }
+    .circleSVG{
+        display: flex;
+        justify-content: end;
+        
+       
+    }
+
+    .circle{
+        height: 17px;
+        width: 17px;
+    }
+
+   
+    .mobileViewCards{
+        display: flex;
+        gap: 10px;
+        padding: 20px;
+        margin-top: 2rem;
+
+        
+    }
+
+    .mobile{
+        width: 134px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+  
+    .mobile.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+       
+    }
+
+    
+    
+    .notSelected{
+        color: #676767;
+    }
+
+     .basic{
+        width: 134px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+    }
+    .basic.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+        color: white;
+    }
+    .basic.selected::before{
+        background-color: #6D3BE3;
+    }
+     .standard{
+        width: 134px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        border-radius: 12px;
+    }
+    .standard.selected{
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+     .premium{
+        width: 134px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+    
+    .premium.selected{
+        background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .basic::before{
+       
+        content: "Most Popular";
+        position: absolute;
+        font-size: 8px;
+        color: white;
+        background-color: #000000B3;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        transform: translateY(-35px)translateX(-14px);
+        padding: 5px;
+        width: 89%;
+       text-align: center;
+    }
+
+    .contentDetail{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+    }
+
+
+    .div1{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+        height: 70px;
+    }
+    .duration{
+        width:156px;
+        font-size: 13px;
+        color: #767676;
+    }
+    .rupee{
+        font-size: 16px;
+        color: #000000B3;
+    }
+
+    .cardBottomBtn{
+        padding: 10px;
+    }
+
+    .mCardBtn{
+    width: 100%;
+    height: 72px;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+    background-color: rgb(229, 9, 20);
+    margin: 10px 0px;
+    text-decoration: none;
+    }
+
+    
+}

@@ -1,224 +1,183 @@
-import React from 'react'
+import React, { useState } from "react";
 
-import '../RegisteredUser/ChoosePlan.css'
+import "../RegisteredUser/ChoosePlan.css";
+
+import CheckCircleIcon from "../../assets/check_circle.svg?react";
+import { Link } from "react-router-dom";
+
+const PLAN_DETAILS = {
+  mobile: {
+    price: "₹149",
+    quality: "Fair",
+    resolution: "480p",
+    devices: "Mobile phone, tablet",
+    household: "1",
+    downloadDevices: "1",
+  },
+  basic: {
+    price: "₹199",
+    quality: "Good",
+    resolution: "720p",
+    devices: "TV, computer, mobile phone, tablet",
+    household: "1",
+    downloadDevices: "1",
+  },
+  standard: {
+    price: "₹499",
+    quality: "Great",
+    resolution: "1080p",
+    devices: "TV, computer, mobile phone, tablet",
+    household: "2",
+    downloadDevices: "2",
+  },
+  premium: {
+    price: "₹649",
+    quality: "Best",
+    resolution: "4K + HDR",
+    devices: "TV, computer, mobile phone, tablet",
+    household: "4",
+    downloadDevices: "6",
+  },
+};
+
+const CARD_DETAILS = [
+  { id: "mobile", label: "Mobile", subLabel: "480p" },
+  { id: "basic", label: "Basic", subLabel: "720p" },
+  { id: "standard", label: "Standard", subLabel: "1080p(HD)" },
+  { id: "premium", label: "Premium", subLabel: "4K + HDR" },
+];
 
 function ChoosePlan() {
+  const [selectedPlan, setSelectedPlan] = useState("basic");
+  // Helper to check if plan is selected
+  const isSelected = (card) => selectedPlan === card.id;
+
   return (
     <div className="userMain">
+      <div className="userNav">
+        <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+        <button className="userSignOut">Sign Out</button>
+      </div>
 
-        <div className="userNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
-          <button className="userSignOut">Sign Out</button>
-        </div>
+      <div className="plan-Container">
+        <div className="planHeader">
+          <p
+            style={{ color: "#333333", fontSize: "14px" }}
+            className="headPara"
+          >
+            STEP 3 OF 4
+          </p>
+          <h1 className="userHeader">Choose the plan that’s right for you</h1>
 
-        <div className="plan-Container">
-            <div className="planHeader">
-                <p style={{color:"#333333",fontSize:"14px"}} className='headPara'>STEP 3 OF 4</p>
-                <h1 className='userHeader'>
-                    Choose the plan that’s right for you
-                </h1>
+          <div className="planCard">
+            {CARD_DETAILS.map((card, index) => {
+              const planKey = card.id;
+              const plan = PLAN_DETAILS[planKey];
+              return (
+                <div
+                  key={index}
+                  className={`${planKey}Plan ${
+                    isSelected(card) ? "selected" : ""
+                  }`}
+                  onClick={() => setSelectedPlan(planKey)}
+                >
+                  <div className="planHeading">
+                    <h3 className="heading1">{card.label}</h3>
+                    <p className="subHeading">{card.subLabel}</p>
 
-               <div className="planCard">
-
-                    <div className="mobilePlan">
-
-                        <div className="planHeading">
-                            <h3 className='heading1'>Mobile</h3>
-                            <p className='subHeading'>480p</p>
-                        </div>
-
-                        <div className="planDetails">
-
-                            <div className="specificDetails">
-                                <p className='headTitle'>Monthly price</p>
-                                <p className='rupees'>₹149</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Video and sound quality</p>
-                                <p className='rupees'>Fair</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Resolution</p>
-                                <p className='rupees'>480p</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Supported devices</p>
-                                <p className='rupees'>Mobile phone, tablet</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Devices your household can watch at the same time</p>
-                                <p className='rupees'>1</p>
-                            </div>
-                            <div className="specificDetail">
-                                <p className='headTitle'>Download devices</p>
-                                <p className='rupees'>1</p>
-                            </div>
-                            
-
-                        </div>
-
+                    {isSelected(card) && (
+                      <div className="checkCircle">
+                        <CheckCircleIcon className="circle" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="planDetails">
+                    <div className="specificDetails">
+                      <p className="headTitle">Monthly price</p>
+                      <p className="rupees">{plan.price}</p>
                     </div>
-
-                    <div className="basicPlan">
-                        <div className="planHeading1">
-                            <h3 className='heading1'>Basic</h3>
-                            <p className='subHeading'>720p</p>
-                        </div>
-
-                        <div className="planDetails">
-
-                            <div className="specificDetails">
-                                <p className='headTitle'>Monthly price</p>
-                                <p className='rupees'>₹199</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Video and sound quality</p>
-                                <p className='rupees'>Good</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Resolution</p>
-                                <p className='rupees'>720p(HD)</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Supported devices</p>
-                                <p className='rupees'>TV, computer, mobile phone, tablet</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Devices your household can watch at the same time</p>
-                                <p className='rupees'>1</p>
-                            </div>
-                            <div className="specificDetail">
-                                <p className='headTitle'>Download devices</p>
-                                <p className='rupees'>1</p>
-                            </div>
-                            
-
-                        </div>
+                    <div className="specificDetails">
+                      <p className="headTitle">Video and sound quality</p>
+                      <p className="rupees">{plan.quality}</p>
                     </div>
-
-                     <div className="standardPlan">
-                        <div className="planHeading2">
-                            <h3 className='heading1'>Standard</h3>
-                            <p className='subHeading'>1080p</p>
-                        </div>
-
-                        <div className="planDetails">
-
-                            <div className="specificDetails">
-                                <p className='headTitle'>Monthly price</p>
-                                <p className='rupees'>₹499</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Video and sound quality</p>
-                                <p className='rupees'>Great</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Resolution</p>
-                                <p className='rupees'>1080p(Full HD)</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Supported devices</p>
-                                <p className='rupees'>TV, computer, mobile phone, tablet</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Devices your household can watch at the same time</p>
-                                <p className='rupees'>2</p>
-                            </div>
-                            <div className="specificDetail">
-                                <p className='headTitle'>Download devices</p>
-                                <p className='rupees'>2</p>
-                            </div>
-                            
-
-                        </div>
+                    <div className="specificDetails">
+                      <p className="headTitle">Resolution</p>
+                      <p className="rupees">{plan.resolution}</p>
                     </div>
-
-                     <div className="premiumPlan">
-                        <div className="planHeading3">
-                            <h3 className='heading1'>Premium</h3>
-                            <p className='subHeading'>4K + HDR</p>
-                        </div>
-
-                        <div className="planDetails">
-
-                            <div className="specificDetails">
-                                <p className='headTitle'>Monthly price</p>
-                                <p className='rupees'>₹649</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Video and sound quality</p>
-                                <p className='rupees'>Best</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Resolution</p>
-                                <p className='rupees'>4K (Ultra HD) + HDR</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Spatial audio (immersive sound)</p>
-                                <p className='rupees'>Included</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Supported devices</p>
-                                <p className='rupees'>TV, computer, mobile phone, tablet</p>
-                            </div>
-                            <div className="specificDetails">
-                                <p className='headTitle'>Devices your household can watch at the same time</p>
-                                <p className='rupees'>4</p>
-                            </div>
-                            <div className="specificDetail">
-                                <p className='headTitle'>Download devices</p>
-                                <p className='rupees'>6</p>
-                            </div>
-                            
-
-                        </div>
+                    <div className="specificDetails">
+                      <p className="headTitle">Supported devices</p>
+                      <p className="rupees">{plan.devices}</p>
                     </div>
-
-               </div>
-
-               <div className="bottomContainer">
-                <p className='P1'>HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability subject to your internet service and device capabilities. Not all content is available in all resolutions. See our <a className='terms'>Terms of Use</a> for more details.</p>
-                <p className='P1'>Only people who live with you may use your account. Watch on 4 different devices at the same time with Premium, 2 with Standard, and 1 with Basic and Mobile.</p>
-                <p className='P1'>Live events are included with any Netflix plan and contain ads.</p>
-               </div>
-                <div className="bottomBtn">
-                    <button className='cardBtn'>Next</button>
+                    <div className="specificDetails">
+                      <p className="headTitle">
+                        Devices your household can watch at the same time
+                      </p>
+                      <p className="rupees">{plan.household}</p>
+                    </div>
+                    <div className="specificDetail">
+                      <p className="headTitle">Download devices</p>
+                      <p className="rupees">{plan.downloadDevices}</p>
+                    </div>
+                  </div>
                 </div>
-            
-            </div>
-        </div>
-        <div className="regFooter">
-          <div className="regItems">
-            <p className="regHead">Questions? Call 000-800-919-1743</p>
-            <li className="regList">
-              <a href="#">FAQ</a>
-              <a href="#">Help Center</a>
-              <a href="#">Terms of Use</a>
-              <a href="#">Privacy</a>
-              <a href="#">Cookie Preferences</a>
-              <a href="#">Corporate Information</a>
-            </li>
+              );
+            })}
+          </div>
 
-            <select
-              name="language"
-              className="regLang"
-              style={{
-                width: "130px",
-                height: "32px",
-                padding: "0 10px 0 10px",
-                marginRight: "10px",
-                borderRadius: "3px",
-              }}
-            >
-              <option value="English">English</option>
-              <option value="Hindi">Hindi</option>
-            </select>
+          <div className="bottomContainer">
+            <p className="P1">
+              HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability
+              subject to your internet service and device capabilities. Not all
+              content is available in all resolutions. See our{" "}
+              <a className="terms">Terms of Use</a> for more details.
+            </p>
+            <p className="P1">
+              Only people who live with you may use your account. Watch on 4
+              different devices at the same time with Premium, 2 with Standard,
+              and 1 with Basic and Mobile.
+            </p>
+            <p className="P1">
+              Live events are included with any Netflix plan and contain ads.
+            </p>
+          </div>
+          <div className="bottomBtn">
+            <Link to={"/mobileView"} className="cardBtn">
+              {" "}
+              <button className="cardBtn">Next</button>
+            </Link>
           </div>
         </div>
+      </div>
+      <div className="regFooter">
+        <div className="regItems">
+          <p className="regHead">Questions? Call 000-800-919-1743</p>
+          <li className="regList">
+            <a href="#">FAQ</a>
+            <a href="#">Help Center</a>
+            <a href="#">Terms of Use</a>
+            <a href="#">Privacy</a>
+            <a href="#">Cookie Preferences</a>
+            <a href="#">Corporate Information</a>
+          </li>
 
-
+          <select
+            name="language"
+            className="regLang"
+            style={{
+              width: "130px",
+              height: "32px",
+              padding: "0 10px 0 10px",
+              marginRight: "10px",
+              borderRadius: "3px",
+            }}
+          >
+            <option value="English">English</option>
+            <option value="Hindi">Hindi</option>
+          </select>
+        </div>
+      </div>
     </div>
-  )
+  );
 }
 
-export default ChoosePlan
+export default ChoosePlan;

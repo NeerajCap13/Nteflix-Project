@@ -6,6 +6,7 @@
   object-fit: cover;
   
 }
+
 header {
   display: flex; /* Use flexbox for layout */
   justify-content: space-between; /* Space out children */
@@ -85,6 +86,8 @@ h1 {
   align-items: center; /* Center horizontally */
   text-align: center; /* Center text */
   height: 45rem; /* Set height */
+  
+  
 }
 
 /* Subheading styles */

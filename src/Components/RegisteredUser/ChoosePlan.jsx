@@ -34,6 +34,7 @@ const PLAN_DETAILS = {
     price: "₹649",
     quality: "Best",
     resolution: "4K + HDR",
+    audio: "Included",
     devices: "TV, computer, mobile phone, tablet",
     household: "4",
     downloadDevices: "6",
@@ -94,29 +95,39 @@ function ChoosePlan() {
                   <div className="planDetails">
                     <div className="specificDetails">
                       <p className="headTitle">Monthly price</p>
-                      <p className="rupees">{plan.price}</p>
+                      <p className="subHeading1">{plan.price}</p>
                     </div>
                     <div className="specificDetails">
                       <p className="headTitle">Video and sound quality</p>
-                      <p className="rupees">{plan.quality}</p>
+                      <p className="subHeading1">{plan.quality}</p>
                     </div>
                     <div className="specificDetails">
                       <p className="headTitle">Resolution</p>
-                      <p className="rupees">{plan.resolution}</p>
+                      <p className="subHeading1">{plan.resolution}</p>
                     </div>
+
+                    {planKey === 'premium' && (
+                      <div className="specificDetails">
+                        <p className="headTitle">
+                          Spatial audio (immersive sound)
+                        </p>
+                        <p className="subHeading1">{plan.audio}</p>
+                      </div>
+                    )}
+
                     <div className="specificDetails">
                       <p className="headTitle">Supported devices</p>
-                      <p className="rupees">{plan.devices}</p>
+                      <p className="subHeading1">{plan.devices}</p>
                     </div>
                     <div className="specificDetails">
                       <p className="headTitle">
                         Devices your household can watch at the same time
                       </p>
-                      <p className="rupees">{plan.household}</p>
+                      <p className="subHeading1">{plan.household}</p>
                     </div>
                     <div className="specificDetail">
                       <p className="headTitle">Download devices</p>
-                      <p className="rupees">{plan.downloadDevices}</p>
+                      <p className="subHeading1">{plan.downloadDevices}</p>
                     </div>
                   </div>
                 </div>

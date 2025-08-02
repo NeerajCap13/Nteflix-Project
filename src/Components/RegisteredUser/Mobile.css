@@ -1,55 +1,66 @@
-@media (min-width : 344px) and (max-width:430px){
-    .mobileView{
-        height: 100dvh;
+@media (min-width : 344px) and (max-width:430px) {
+
+    .mobileView {
+        background-color: white;
     }
-    .mHeader{
+
+    .mobileContainer {
+        background-color: white;
+        color: black;
+        width: 100%;
+        padding: 0px 15px !important;
+
+    }
+
+    .mHeader {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
     }
-    .planHeader{
-        padding: 0px 10px;
+
+    .planHeader {
         margin-top: 0;
     }
 
-    .mHeading{
+    .mHeading {
         width: 100%;
-        color: black;
         margin-bottom: 0;
         height: 20px;
         font-size: 12px;
-    }
-    .subHeading{
-        width: 100%;
-        color: black;
-        font-size: 10px;
-        
-    }
-    .circleSVG{
-        display: flex;
-        justify-content: end;
-        
-       
+
     }
 
-    .circle{
+    .subHeading2 {
+        width: 100%;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .mHeading,
+    .subHeading,
+    .selected {
+        color: white;
+    }
+
+    .circleSVG {
+        display: flex;
+        justify-content: end;
+    }
+
+    .circle {
         height: 17px;
         width: 17px;
     }
 
-   
-    .mobileViewCards{
+    .mobileViewCards {
         display: flex;
         gap: 10px;
-        padding: 20px;
         margin-top: 2rem;
-
-        
     }
 
-    .mobile{
+    .mobileCard {
         width: 87px;
         height: 106px;
         border: 1px solid rgba(128, 128, 128, 0.7);
@@ -59,19 +70,8 @@
         justify-content: space-between;
         border-radius: 12px;
     }
-  
-    .mobile.selected{
-        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-       
-    }
 
-   
-    
-    .notSelected{
-        color: #676767;
-    }
-
-     .basic{
+    .basicCard {
         width: 87px;
         height: 106px;
         border: 1px solid rgba(128, 128, 128, 0.7);
@@ -83,65 +83,71 @@
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
     }
-    .basic.selected{
-        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-        color: white;
-    }
-    .basic.selected::before{
-        background-color: #6D3BE3;
-    }
-     .standard{
-        width: 87px;
-        height: 106px;
-        border: 1px solid rgba(128, 128, 128, 0.7);
-        padding: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 12px;
-    }
-    .standard.selected{
-        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-    }
-     .premium{
-        width: 87px;
-        height: 106px;
-        border: 1px solid rgba(128, 128, 128, 0.7);
-        padding: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 12px;
-    }
-    
-    .premium.selected{
-        background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-    }
-
-    .basic::before{
-       
+    .basicCard::before{
         content: "Most Popular";
         position: absolute;
-        font-size: 8px;
-        color: white;
+        width: 90%;
         background-color: #000000B3;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        transform: translateY(-35px)translateX(-14px);
+        color: white;
+        font-size:10px;
+        text-align: center;
         padding: 5px;
-        width: 89%;
-       text-align: center;
+        transform: translateY(-37px) translateX(-14px);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
-    .contentDetail{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
+    .standardCard {
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
     }
 
+    .premiumCard {
+        width: 87px;
+        height: 106px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
 
-    .div1{
+    .mobileCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+        color: white;
+
+    }
+
+    .basicCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+    .basicCard.selected::before{
+        background-color: #6D3BE3;
+    }
+
+    .standardCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .premiumCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .contentDetail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+       padding: 0 5px !important;
+    }
+
+    .div1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -149,100 +155,111 @@
         border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
         height: 70px;
     }
-    .duration{
-        width:156px;
+
+    .duration {
+        width: 156px;
         font-size: 13px;
         color: #767676;
     }
-    .rupee{
+
+    .rupee {
         font-size: 16px;
         color: #000000B3;
+        text-align: right;
+        font-weight: 600;
     }
 
-    .cardBottomBtn{
+    .cardBottomBtn {
         padding: 10px;
     }
 
-    .mCardBtn{
-    width: 100%;
-    height: 72px;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: 700;
-    background-color: rgb(229, 9, 20);
-    margin: 10px 0px;
-    text-decoration: none;
+    .mCardBtn {
+        width: 100%;
+        height: 72px;
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: rgb(229, 9, 20);
+        margin: 10px 0px;
+        text-decoration: none;
     }
 
 }
 
-@media (min-width:768px) and (max-width:1080px){
-    .mobileView{
-        height: 100dvh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+@media (min-width:768px) and (max-width:1080px) {
+    .mobileView {
+
+        background-color: white;
     }
 
-    .mobileContainer{
-        height: 100%;
-        width: 540px;
+    .userSignOut {
+        font-size: 19px;
+
     }
-    .mHeader{
+
+    .mobileContainer {
+        background-color: white;
+        color: black;
+        margin: 0 auto;
+        width: 600px;
+        height: 78vh;
+        padding: 0px 40px
+    }
+
+    .mHeader {
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
     }
-    .planHeader{
-        padding: 0px 10px;
+
+    .planHeader {
         margin-top: 0;
     }
 
-
-    
-    .mHeading{
+    .mHeading {
         width: 100%;
-        color: black;
         margin-bottom: 0;
         height: 20px;
         font-size: 12px;
-    }
-    .subHeading{
-        width: 100%;
-        color: black;
-        font-size: 10px;
-        
-    }
-    .circleSVG{
-        display: flex;
-        justify-content: end;
-        
-       
+
     }
 
-    .circle{
+    .subHeading2 {
+        width: 100%;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .mHeading,
+    .subHeading,
+    .selected {
+        color: white;
+    }
+
+    .circleSVG {
+        display: flex;
+        justify-content: end;
+    }
+
+    .circle {
         height: 17px;
         width: 17px;
     }
 
-   
-    .mobileViewCards{
+    .mobileViewCards {
         display: flex;
         gap: 10px;
-        padding: 20px;
         margin-top: 2rem;
-
-        
     }
 
-    .mobile{
-        width: 134px;
+    .mobileCard {
+        width: 135px;
         height: 107px;
         border: 1px solid rgba(128, 128, 128, 0.7);
         padding: 13px;
@@ -251,20 +268,207 @@
         justify-content: space-between;
         border-radius: 12px;
     }
-  
-    .mobile.selected{
+
+    .basicCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-bottom-left-radius: 12px;
+        border-bottom-right-radius: 12px;
+        position: relative;
+    }
+
+    .basicCard::before{
+        content: "Most Popular";
+        position: absolute;
+        width: 93%;
+        background-color: #000000B3;
+        color: white;
+        font-size:10px;
+        text-align: center;
+        padding: 5px;
+        transform: translateY(-37px) translateX(-14px);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    .standardCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+
+    .premiumCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+
+    .mobileCard.selected {
         background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-       
+        color: white;
+
     }
 
-    
-    
-    .notSelected{
-        color: #676767;
+    .basicCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+    .basicCard.selected::before{
+        background-color: #6D3BE3;
     }
 
-     .basic{
-        width: 134px;
+    .standardCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .premiumCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .contentDetail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .div1 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+        height: 70px;
+    }
+
+    .duration {
+        width: 156px;
+        font-size: 13px;
+        color: #767676;
+    }
+
+    .rupee {
+        font-size: 16px;
+        color: #000000B3;
+        text-align: right;
+        font-weight: 600;
+    }
+
+    .cardBottomBtn {
+        padding: 10px;
+    }
+
+    .mCardBtn {
+        width: 100%;
+        height: 72px;
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: rgb(229, 9, 20);
+        margin: 10px 0px;
+        text-decoration: none;
+    }
+
+
+}
+
+
+@media (max-width:540px) {
+    .mobileView {
+        background-color: white;
+    }
+
+    .userSignOut {
+        font-size: 19px;
+    }
+
+    .mobileContainer {
+        background-color: white;
+        color: black;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0px 40px
+    }
+
+    .mHeader {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+    }
+
+    .planHeader {
+        margin-top: 0;
+    }
+
+    .mHeading {
+        width: 100%;
+        margin-bottom: 0;
+        height: 20px;
+        font-size: 12px;
+
+    }
+
+    .subHeading2 {
+        width: 100%;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .mHeading,
+    .subHeading,
+    .selected {
+        color: white;
+    }
+
+    .circleSVG {
+        display: flex;
+        justify-content: end;
+    }
+
+    .circle {
+        height: 17px;
+        width: 17px;
+    }
+
+    .mobileViewCards {
+        display: flex;
+        gap: 10px;
+        margin-top: 2rem;
+    }
+
+    .mobileCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
+
+    .basicCard {
+        width: 135px;
         height: 107px;
         border: 1px solid rgba(128, 128, 128, 0.7);
         padding: 13px;
@@ -274,67 +478,73 @@
         position: relative;
         border-bottom-left-radius: 12px;
         border-bottom-right-radius: 12px;
-    }
-    .basic.selected{
-        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-        color: white;
-    }
-    .basic.selected::before{
-        background-color: #6D3BE3;
-    }
-     .standard{
-        width: 134px;
-        height: 107px;
-        border: 1px solid rgba(128, 128, 128, 0.7);
-        padding: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
 
-        border-radius: 12px;
     }
-    .standard.selected{
-        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-    }
-     .premium{
-        width: 134px;
-        height: 107px;
-        border: 1px solid rgba(128, 128, 128, 0.7);
-        padding: 13px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        border-radius: 12px;
-    }
-    
-    .premium.selected{
-        background:radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
-    }
-
-    .basic::before{
-       
+    .basicCard::before{
         content: "Most Popular";
         position: absolute;
-        font-size: 8px;
-        color: white;
+        width: 92%;
         background-color: #000000B3;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
-        transform: translateY(-35px)translateX(-14px);
+        color: white;
+        font-size:10px;
+        text-align: center;
         padding: 5px;
-        width: 89%;
-       text-align: center;
+        transform: translateY(-37px) translateX(-14px);
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
     }
 
-    .contentDetail{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
+    .standardCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
     }
 
+    .premiumCard {
+        width: 135px;
+        height: 107px;
+        border: 1px solid rgba(128, 128, 128, 0.7);
+        padding: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+    }
 
-    .div1{
+    .mobileCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(33, 114, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+        color: white;
+
+    }
+
+    .basicCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(109, 59, 227) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+    .basicCard.selected::before{
+        background-color: #6D3BE3;
+    }
+
+    .standardCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(176, 56, 220) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .premiumCard.selected {
+        background: radial-gradient(140.76% 131.96% at 100% 100%, rgb(229, 9, 20) 0%, rgba(74, 42, 150, 0.5) 73.57%, rgba(74, 42, 150, 0) 100%), rgb(29, 82, 157);
+    }
+
+    .contentDetail {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .div1 {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -342,34 +552,38 @@
         border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
         height: 70px;
     }
-    .duration{
-        width:156px;
+
+    .duration {
+        width: 156px;
         font-size: 13px;
         color: #767676;
     }
-    .rupee{
+
+    .rupee {
         font-size: 16px;
         color: #000000B3;
+        text-align: right;
+        font-weight: 600;
     }
 
-    .cardBottomBtn{
+    .cardBottomBtn {
         padding: 10px;
     }
 
-    .mCardBtn{
-    width: 100%;
-    height: 72px;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    font-weight: 700;
-    background-color: rgb(229, 9, 20);
-    margin: 10px 0px;
-    text-decoration: none;
+    .mCardBtn {
+        width: 100%;
+        height: 72px;
+        color: white;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        font-weight: 700;
+        background-color: rgb(229, 9, 20);
+        margin: 10px 0px;
+        text-decoration: none;
     }
 
-    
+
 }

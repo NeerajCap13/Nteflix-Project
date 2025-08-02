@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 
@@ -32,20 +31,23 @@ const PLAN_DETAILS = {
     price: "₹649",
     quality: "Best",
     resolution: "4K + HDR",
+    audio :"Included",
     devices: "TV, computer, mobile phone, tablet",
     household: "4",
     downloadDevices: "6",
   },
 };
+const CARD_DETAILS = [
+  { id: "mobile", label: "Mobile", subLabel: "480p" },
+  { id: "basic", label: "Basic", subLabel: "720p" },
+  { id: "standard", label: "Standard", subLabel: "1080p(HD)" },
+  { id: "premium", label: "Premium", subLabel: "4K + HDR" },
+];
 
 function ChoosePlanMobile() {
-  
   const [selectedPlan, setSelectedPlan] = useState("basic");
-
-  const isSelected = (plan) => selectedPlan === plan;
-
+  const isSelected = (card) => selectedPlan === card.id;
   const content = PLAN_DETAILS[selectedPlan];
-
   return (
     <div className="mobileView">
       <div className="mHeader">
@@ -67,58 +69,38 @@ function ChoosePlanMobile() {
         </div>
 
         <div className="mobileViewCards">
-          <div className={`mobile ${isSelected('mobile')? "selected" : "notSelected"}`}
-          onClick={() => setSelectedPlan("mobile")}>
-            <div className="cardContent">
-              <h3 className="mHeading">Mobile</h3>
-              <p className="subHeading">480p</p>
-            </div>
-
-            {isSelected("mobile") && (
-              <div className="circleSVG">
-                <CheckCircleIcon className="circle" />
+          {CARD_DETAILS.map((card, index) => {
+            const planKey = card.id;
+            return (
+              <div
+                key={index}
+                className={`${planKey}Card ${
+                    isSelected(card) ? "selected" : "notSelected"
+                }`}
+                onClick={() => setSelectedPlan(planKey)}
+              >
+                <div className="cardContent">
+                  <h3
+                    className="mHeading"
+                    style={{ color: isSelected(card) ? "white" : "black" }}
+                  >
+                    {card.label}
+                  </h3>
+                  <p
+                    className="subHeading2"
+                    style={{ color: isSelected(card) ? "white" : "black" }}
+                  >
+                    {card.subLabel}
+                  </p>
+                </div>
+                {isSelected(card) && (
+                  <div className="circleSVG">
+                    <CheckCircleIcon className="circle" />
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-          <div className={`basic ${isSelected('basic')?"selected" : "notSelected"}`}
-          onClick={() => setSelectedPlan("basic")}>
-            <div className="cardContent">
-              <h3 className="mHeading">Basic</h3>
-              <p className="subHeading">720p</p>
-            </div>
-
-            {isSelected("basic") && (
-              <div className="circleSVG">
-                <CheckCircleIcon className="circle" />
-              </div>
-            )}
-          </div>
-          <div className={`standard ${isSelected('standard')?"selected" : "notSelected"}`}
-          onClick={() => setSelectedPlan("standard")}>
-            <div className="cardContent">
-              <h3 className="mHeading">Standard</h3>
-              <p className="subHeading">1080p</p>
-            </div>
-
-            {isSelected("standard") && (
-              <div className="circleSVG">
-                <CheckCircleIcon className="circle" />
-              </div>
-            )}
-          </div>
-          <div className={`premium ${isSelected('premium')? "selected" : "notSelected"}`}
-           onClick={() => setSelectedPlan("premium")}>
-            <div className="cardContent">
-              <h3 className="mHeading">Premium</h3>
-              <p className="subHeading">4K + HDR</p>
-            </div>
-
-            {isSelected("premium") && (
-              <div className="circleSVG">
-                <CheckCircleIcon className="circle" />
-              </div>
-            )}
-          </div>
+            );
+          })}
         </div>
 
         <div className="contentDetail">
@@ -134,6 +116,14 @@ function ChoosePlanMobile() {
             <p className="duration">Resolution</p>
             <p className="rupee">{content.resolution}</p>
           </div>
+          {content.audio  && (
+                      <div className="div1">
+                        <p className="duration">
+                          Spatial audio (immersive sound)
+                        </p>
+                        <p className="rupee">{content.audio}</p>
+                      </div>
+                    )}
           <div className="div1">
             <p className="duration">Supported devices</p>
             <p className="rupee">{content.devices}</p>
@@ -169,7 +159,6 @@ function ChoosePlanMobile() {
         <div className="cardBottomBtn">
           <button className="mCardBtn">Next</button>
         </div>
-        
       </div>
       <div className="regFooter">
         <div className="regItems">

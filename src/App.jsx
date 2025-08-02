@@ -11,8 +11,7 @@ import ForgetPass from "./Components/ForgetPassword/ForgetPass.jsx";
 import Registration from "./Components/Registration/Registration.jsx";
 import Registration2 from "./Components/Registration/Registration2.jsx";
 import UserOne from "./Components/RegisteredUser/UserOne.jsx";
-import ChoosePlan from "./Components/RegisteredUser/ChoosePlan.jsx";
-import ChoosePlanMobile from "./Components/RegisteredUser/ChoosePlanMobile.jsx";
+import Plans from "./Components/RegisteredUser/Plans.jsx";
 
 function App() {
   return (
@@ -35,8 +34,8 @@ function App() {
         <Route path="/newUser" element={<Registration/>}/>
         <Route path="/nextPage" element={<Registration2 />}/>
         <Route path="/userOne" element={<UserOne/>}/>
-        <Route path="/newPlan" element={<ChoosePlan/>}/>
-        <Route path="/mobileView" element={<ChoosePlanMobile/>}/>
+        <Route path="/newPlan" element={<Plans/>}/>
+        
       </Routes>
    
   );

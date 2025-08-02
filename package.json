@@ -17,6 +17,7 @@
     "react-responsive": "^10.0.1",
     "react-router-dom": "^7.6.3",
     "swiper": "^11.2.10"
+
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
@@ -30,4 +31,6 @@
     "vite": "^7.0.0",
     "vite-plugin-svgr": "^4.3.0"
   }
+
+  
 }

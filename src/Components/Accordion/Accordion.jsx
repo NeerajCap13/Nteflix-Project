@@ -1,12 +1,9 @@
 import { useState } from "react";
-
 import "./Accordion.css";
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggler = () => setIsOpen(!isOpen)
-
   return (
     <div className="accordionData">
       <div
@@ -34,10 +31,8 @@ const AccordionItem = ({ title, content }) => {
           </span>
         )}
       </div>
-
         <div className={`accordion-Content ${isOpen ? "open" : ""}`}>
         <p className="ContentAcc">{content}</p>
-
       </div>
     </div>
   );

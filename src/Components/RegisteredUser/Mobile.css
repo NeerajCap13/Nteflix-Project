@@ -483,7 +483,7 @@
     .basicCard::before{
         content: "Most Popular";
         position: absolute;
-        width: 92%;
+        width: 90%;
         background-color: #000000B3;
         color: white;
         font-size:10px;

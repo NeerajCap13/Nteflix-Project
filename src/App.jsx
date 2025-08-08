@@ -12,32 +12,31 @@ import Registration from "./Components/Registration/Registration.jsx";
 import Registration2 from "./Components/Registration/Registration2.jsx";
 import UserOne from "./Components/RegisteredUser/UserOne.jsx";
 import Plans from "./Components/RegisteredUser/Plans.jsx";
+import PaymentPicker from "./Components/PaymentZone/PaymentPicker.jsx";
 
 function App() {
   return (
-  
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner />
-              <Slider />
-              <MoreInfo />
-              <Accordion />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/loginHelp" element={<ForgetPass/>}/>
-        <Route path="/newUser" element={<Registration/>}/>
-        <Route path="/nextPage" element={<Registration2 />}/>
-        <Route path="/userOne" element={<UserOne/>}/>
-        <Route path="/newPlan" element={<Plans/>}/>
-        
-      </Routes>
-   
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <>
+            <Banner />
+            <Slider />
+            <MoreInfo />
+            <Accordion />
+            <Footer />
+          </>
+        }
+      />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/loginHelp" element={<ForgetPass />} />
+      <Route path="/newUser" element={<Registration />} />
+      <Route path="/nextPage" element={<Registration2 />} />
+      <Route path="/userOne" element={<UserOne />} />
+      <Route path="/newPlan" element={<Plans />} />
+      <Route path="/paymentGate" element={<PaymentPicker />} />
+    </Routes>
   );
 }
 

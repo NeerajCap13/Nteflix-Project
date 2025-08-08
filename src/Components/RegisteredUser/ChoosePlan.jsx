@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-
 import "../RegisteredUser/ChoosePlan.css";
-
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
 
@@ -152,7 +150,7 @@ function ChoosePlan() {
             </p>
           </div>
           <div className="bottomBtn">
-            <Link to={"/mobileView"} className="cardBtn">
+            <Link to={"/paymentGate"} className="cardBtn">
               {" "}
               <button className="cardBtn">Next</button>
             </Link>

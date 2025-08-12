@@ -10,7 +10,7 @@
   margin: 0 auto;
   /* height: auto; */
   padding-top: 1rem;
-  
+
 }
 
 /* .curvedLine{
@@ -73,6 +73,7 @@
 
 
 
+
 @media (max-width : 768px){
   .slider{
     margin-top: 0rem;
@@ -87,7 +88,7 @@
 }
 
 @media (min-width: 600px) and (max-width: 1024px) {
- 
+
  .slider-container{
   height: 100%,
  } /* styles between 600px and 1024px */

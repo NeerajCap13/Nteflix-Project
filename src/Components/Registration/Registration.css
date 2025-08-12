@@ -134,7 +134,7 @@
 .passTxt2{
     width: 100%;
     height: 56px;
-    margin: 5px 0px 20px 0px;    
+    margin: 5px 0px 20px 0px;
     padding: 10px;
 }
 
@@ -192,6 +192,16 @@
 
 }
 
+.label{
+    color:black;
+    font-size: 1.1rem;
+}
+
+.enteredEmail{
+    color: black;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
 
 
 
@@ -224,13 +234,13 @@
         /* margin: 20px; */
         /* padding: 10px; */
         height: 100%;
-        
+
     }
 
     .regContent , .regContent2{
         padding-left: 0;
         width: 100%;
-        height: 100%;   
+        height: 100%;
     }
 
 
@@ -323,7 +333,7 @@
     .regItems{
         width: 100%;
         margin: 0;
-        
+
     }
     .regList{
         display: grid;

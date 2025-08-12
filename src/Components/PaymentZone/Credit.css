@@ -1,0 +1,183 @@
+.cardPay {
+  background-color: white;
+  color: black;
+  overflow: hidden;
+
+}
+
+
+.centerContainer {
+  height: 980px;
+  width: 980px;
+  margin: 0 auto;
+ padding: 50px;
+}
+
+.cardPayContent {
+  width: 460px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.payStep {
+  font-size: 13px;
+}
+
+.payHead {
+  color: black;
+  font-size: 2rem;
+  text-align: left;
+  margin: 0;
+}
+
+.logos {
+  height: 27px;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.visa,
+.master {
+  height: 27px;
+  width: 40px;
+}
+
+.numIn,
+.txtIn,
+.expIn,
+.cvvIn {
+  height: 56px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 3px 0px;
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.twoInput {
+  display: flex;
+  gap: 5px;
+  position: relative;
+}
+
+.planChosen{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: .5rem;
+}
+
+.dataPlan{
+  display: flex;
+  flex-direction: column;
+}
+.planPrice{
+  font-weight: 600;
+}
+.planName{
+  color: #737373;
+}
+.changeButton{
+  border: none;
+  background-color: #f4f4f4;
+  color: #0071EB;
+  font-size: 16px;
+  font-weight: 700;
+}
+.changeButton:hover{
+  text-decoration: underline;
+}
+.additionalInfo{
+  padding: 0px 7px 0px 0px;
+}
+.info1{
+  margin: 20px 0px;
+  color: #00000099;
+  font-size: 13px;
+}
+.info{
+   color: #00000099;
+   font-size: 13px;
+   text-align: left;
+}
+.checkBox{
+  display: flex;
+  justify-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+.svgIcon{
+  position: absolute;
+  transform: translateX(-40px)translateY(18px);
+  fill: #808080;
+}
+.svgIcon2{
+  position: absolute;
+  fill: #808080;
+  right: 0;
+  transform: translateX(-15px) translateY(18px);
+}
+
+.consent{
+  font-size: 13px;
+  color: #00000099;
+}
+.paySubmit{
+  height: 56px;
+  border-radius: 5px;
+  border:none;
+  width: 100%;
+  margin: 20px 0px;
+  background: rgb(229, 9, 20);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lastLine{
+  color: #00000099;
+  font-size: 13px;
+  padding-right: 5px;
+}
+
+@media (max-width :767px){
+
+  .centerContainer{
+    width: 100%;
+    overflow: hidden;
+    padding: 30px;
+  }
+.cardPayContent{
+  width: 100%;
+}
+#payList{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+}
+.svgIcon{
+  transform: translateX(-46px) translateY(15px);
+}
+.svgIcon2{
+   transform: translateX(-7px) translateY(15px);
+}
+
+}
+
+@media (min-width:768px) and (max-width:1080px){
+
+  .credit-Container{
+      height: 1080px;
+  }
+  .centerContainer{
+    width: 100%;
+    padding: 50px;
+    height: max-content;
+  }
+
+}

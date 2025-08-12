@@ -2,10 +2,6 @@
 import { useState } from "react";
 import "../Slider/Slider.css";
 
-
-
-
-
 const Images = [
   "src/assets/IMG1.webp",
   "src/assets/IMG2.webp",
@@ -40,16 +36,11 @@ const Slider = () => {
 
   return (
     <>
-    
       <div className="slider">
         <div className="slider-container">
           <h2>Trending Now</h2>
-          {/* <div className="customSlider"> */}
 
           <div className="image-slider">
-            {/* <button className="leftBtn" onClick={prevSlide}>
-              &lt;
-            </button> */}
             <div
               className="imageTrack"
               style={{
@@ -64,23 +55,11 @@ const Slider = () => {
                 </div>
               ))}
             </div>
-            {/* {currentIndex <=2 ? (
-              <button className="rightBtn" onClick={nextSlide}>
-                &gt;
-              </button>
-            ) : (
-              <button style={{ display: "hidden" }}></button>
-            )} */}
           </div>
         </div>
-       
       </div>
       {/* </div> */}
-    
-    
-      
     </>
-    
   );
 };
 

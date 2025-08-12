@@ -81,6 +81,7 @@
   height: 64px;
   border-radius: 5px;
   border: 2px solid #ccc;
+  cursor: pointer;
 }
 
 .payOption2{
@@ -92,6 +93,7 @@
   border-radius: 5px;
   border: 2px solid #ccc;
   margin-top: .4rem;
+  cursor: pointer;
 }
 
 .logoContainer {

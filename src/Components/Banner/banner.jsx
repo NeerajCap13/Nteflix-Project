@@ -1,27 +1,24 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../../Components/Banner/banner.css";
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import Bg from "../../assets/BannerNew.jpg";
 
 import { Link, useNavigate } from "react-router-dom";
-
+import EmailContext from "../Context/EmailProvider";
 
 function Banner() {
-  const [email, setEmail] = useState("");
-
+  const [email, setEmail] = useContext(EmailContext);
+  console.log(email);
   const [error, setError] = useState("");
-
   const navigate = useNavigate();
 
   const handleError = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (email === "") {
+    if (!email === "") {
       setError("Type something, it's empty");
     } else if (!emailRegex.test(email)) {
       setError("Not a valid email");
     } else {
-      setError("");
       navigate("./newUser");
     }
   };
@@ -107,16 +104,10 @@ function Banner() {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-            />
-
-           
-
-            
-              {" "}
-              <button type="submit" id="getStartedBtn" onClick={handleError}>
-                Get Started<span>&gt;</span>
-              </button>
-          
+            />{" "}
+            <button type="submit" id="getStartedBtn" onClick={handleError}>
+              Get Started<span>&gt;</span>
+            </button>
           </div>
           {error ? <p>{error}</p> : <p></p>}
         </div>

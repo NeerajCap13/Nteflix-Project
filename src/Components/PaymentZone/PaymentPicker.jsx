@@ -1,8 +1,17 @@
 import React from "react";
 import "./../PaymentZone/Payment.css";
 import IconLogo  from '../../assets/ArrowForward.svg?react' ;
+import { useNavigate } from "react-router-dom";
 
 function PaymentPicker() {
+  const navigate =useNavigate()
+
+  const creditOption = () => {
+    navigate('/creditOption')
+  }
+  const upiPay = () => {
+    navigate('/UPI')
+  }
   return (
     <>
     <div className="Payment">
@@ -41,7 +50,7 @@ function PaymentPicker() {
               </svg>
             </span>
           </div>
-          <div className="payOption1">
+          <div className="payOption1" onClick={creditOption} >
             <div className="option1Container">
               <div className="optionHead">Credit or Debit Card</div>
               <div className="logoContainer">
@@ -55,7 +64,7 @@ function PaymentPicker() {
             </div>
             <IconLogo className="payArrow"  />
           </div>
-          <div className="payOption2">
+          <div className="payOption2" onClick={upiPay}>
             <div className="option2Container">
               <div className="optionHead">UPI AutoPay</div>
               <div className="logoContainer">

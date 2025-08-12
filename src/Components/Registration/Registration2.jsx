@@ -1,44 +1,58 @@
-import React from "react";
-
+import React, { useContext, useState } from "react";
 import "../Registration/Registration.css";
-import { Link } from "react-router-dom";
-
-// import email from "./../Banner/banner.jsx"
+import { Link, useNavigate } from "react-router-dom";
+import EmailContext from "../Context/EmailProvider";
 
 function Registration2() {
-  
+  const navigate = useNavigate();
+  const [email] = useContext(EmailContext);
+  const [pass, setPass] = useState("");
+  const passHandler = () => {
+    if (pass==="") {
+      alert("require password");
+    } else {
+      navigate("/userOne");
+    }
+  };
   return (
-    <div className="mainReg">
-      <div className="regContainer">
-        <div className="regNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo"/>
-          <button className="regBtn">Sign In</button>
+    <>
+      <div className="mainReg">
+        <div className="regContainer">
+          <div className="regNav">
+            <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+            <button className="regBtn">Sign In</button>
+          </div>
         </div>
-      </div>
-      <div className="regContainer2">
-        <div className="regContent2">
+        <div className="regContainer2">
+          <div className="regContent2">
+            <p className="regP" style={{ color: "#333333" }}>
+              STEP 2 OF 4
+            </p>
+            <h1 className="regH2" style={{ color: "#333333" }}>
+              Create a password to start your membership
+            </h1>
+            <p className="regP3" style={{ color: "#000000" }}>
+              Just a few more steps and you're done! We hate paperwork, too.
+            </p>
 
-          <p className="regP" style={{ color: "#333333" }}>
-            STEP 2 OF 4
-          </p>
-          <h1 className="regH2" style={{ color: "#333333" }}>
-            Create a password to start your membership
-          </h1>
-          <p className="regP3" style={{ color: "#000000" }}>
-            Just a few more steps and you're done!
-            We hate paperwork, too.
-          </p>
+            <label className="label">Email</label>
+            <span className="enteredEmail">{email}</span>
+            <input
+              type="Password"
+              placeholder="Add a password"
+              className="passTxt2"
+              value={pass}
+              onChange={(e) => setPass(e.target.value)}
+            />
 
-          <input type="Email" placeholder="Email" className="emailTxt2"/>
-          <input type="Password" placeholder="Add a password" className="passTxt2" />
 
-          <Link to={"/userOne"} className="regNextBtn2" > 
-          <button className="regNextBtn2">Next</button>
-          </Link>
-          
-        </div>   
-      </div>
-      <div className="regFooter">
+              <button className="regNextBtn2" onClick={passHandler}>
+                Next
+              </button>
+
+          </div>
+        </div>
+        <div className="regFooter">
           <div className="regItems">
             <p className="regHead">Questions? Call 000-800-919-1743</p>
             <li className="regList">
@@ -66,7 +80,8 @@ function Registration2() {
             </select>
           </div>
         </div>
-    </div>
+      </div>
+    </>
   );
 }
 

@@ -13,9 +13,15 @@ import Registration2 from "./Components/Registration/Registration2.jsx";
 import UserOne from "./Components/RegisteredUser/UserOne.jsx";
 import Plans from "./Components/RegisteredUser/Plans.jsx";
 import PaymentPicker from "./Components/PaymentZone/PaymentPicker.jsx";
+import { EmailProvider } from "./Components/Context/EmailProvider.jsx";
+import CreditOption from "./Components/PaymentZone/CreditOption.jsx";
+import UPIpay from "./Components/PaymentZone/UPIpay.jsx";
+
+
 
 function App() {
   return (
+    <EmailProvider>
     <Routes>
       <Route
         path="/"
@@ -36,7 +42,10 @@ function App() {
       <Route path="/userOne" element={<UserOne />} />
       <Route path="/newPlan" element={<Plans />} />
       <Route path="/paymentGate" element={<PaymentPicker />} />
+      <Route path="/creditOption" element={<CreditOption />} />
+      <Route path="/UPI" element={<UPIpay />} />
     </Routes>
+    </EmailProvider>
   );
 }
 

@@ -1,0 +1,22 @@
+.upiContainer{
+  background-color: white;
+}
+.UPI_container{
+  height: 680px;
+  padding: 30px;
+}
+.UPIcontent{
+  width: 460px;
+  margin: 0 auto;
+}
+.upiStep{
+  color: black;
+}
+.upiHead{
+  color: black;
+  font-size: 2rem;
+  text-align: left;
+}
+.upiSub{
+  color: #333333;
+}

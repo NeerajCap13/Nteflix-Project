@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "../RegisteredUser/ChoosePlan.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
+import EmailContext from "../Context/EmailProvider";
 
 const PLAN_DETAILS = {
-  mobile: {
+  Mobile: {
     price: "₹149",
     quality: "Fair",
     resolution: "480p",
@@ -12,7 +13,7 @@ const PLAN_DETAILS = {
     household: "1",
     downloadDevices: "1",
   },
-  basic: {
+  Basic: {
     price: "₹199",
     quality: "Good",
     resolution: "720p",
@@ -20,7 +21,7 @@ const PLAN_DETAILS = {
     household: "1",
     downloadDevices: "1",
   },
-  standard: {
+  Standard: {
     price: "₹499",
     quality: "Great",
     resolution: "1080p",
@@ -28,7 +29,7 @@ const PLAN_DETAILS = {
     household: "2",
     downloadDevices: "2",
   },
-  premium: {
+  Premium: {
     price: "₹649",
     quality: "Best",
     resolution: "4K + HDR",
@@ -40,16 +41,16 @@ const PLAN_DETAILS = {
 };
 
 const CARD_DETAILS = [
-  { id: "mobile", label: "Mobile", subLabel: "480p" },
-  { id: "basic", label: "Basic", subLabel: "720p" },
-  { id: "standard", label: "Standard", subLabel: "1080p(HD)" },
-  { id: "premium", label: "Premium", subLabel: "4K + HDR" },
+  { id: "Mobile", label: "Mobile", subLabel: "480p" },
+  { id: "Basic", label: "Basic", subLabel: "720p" },
+  { id: "Standard", label: "Standard", subLabel: "1080p(HD)" },
+  { id: "Premium", label: "Premium", subLabel: "4K + HDR" },
 ];
 
 function ChoosePlan() {
-  const [selectedPlan, setSelectedPlan] = useState("basic");
+  const [selectedPlan, setSelectedPlan] = useContext(EmailContext);
   // Helper to check if plan is selected
-  const isSelected = (card) => selectedPlan === card.id;
+  const isSelected = (card) => selectedPlan.name  === card.id;
 
   return (
     <div className="userMain">
@@ -78,7 +79,7 @@ function ChoosePlan() {
                   className={`${planKey}Plan ${
                     isSelected(card) ? "selected" : ""
                   }`}
-                  onClick={() => setSelectedPlan(planKey)}
+                  onClick={() => setSelectedPlan({ name: planKey, price: PLAN_DETAILS[planKey].price })}
                 >
                   <div className="planHeading">
                     <h3 className="heading1">{card.label}</h3>

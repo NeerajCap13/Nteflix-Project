@@ -1,11 +1,10 @@
-import React from "react";
+import React  from "react";
 
 import "../Registration/Registration.css";
 import { Link } from "react-router-dom";
 
+
 function Registration() {
-
-
   return (
     <div className="mainReg">
       <div className="regContainer">
@@ -18,7 +17,7 @@ function Registration() {
       <div className="regContainer2">
         <div className="regContent">
             <div className="deviceImg"><img src="src/assets/Devices.png" alt="" id="deviceImg" /></div>
-          
+
           <p className="regP" style={{ color: "#333333" }}>
             STEP 1 OF 4
           </p>
@@ -31,11 +30,11 @@ function Registration() {
           </p>
 
           <Link to={"/nextPage"} className="regNextBtn">Next</Link>
-          
-        
-         
-          
-        </div>   
+
+
+
+
+        </div>
       </div>
       <div className="regFooter">
           <div className="regItems">

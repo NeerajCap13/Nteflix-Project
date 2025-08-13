@@ -1,7 +1,52 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./UPI.css";
+import BHIM from "./../../assets/BHIM@2x.png";
+import PayTm from "./../../assets/PAYTM@2x.png";
+import Phonepe from "./../../assets/PHONEPE@2x.png";
+import AmazonPay from "./../../assets/AMAZONPAY@2x.png";
+import GPay from "./../../assets/GPAY@2x.png";
+import Other from "./../../assets/OTHER@2x.png";
+import { Link } from "react-router-dom";
+
+const AppList = [
+  { id: "1", logo: BHIM, label: "BHIM" },
+  { id: "2", logo: PayTm, label: "Paytm" },
+  { id: "3", logo: Phonepe, label: "PhonePe" },
+  { id: "4", logo: AmazonPay, label: "Amazon Pay" },
+  { id: "5", logo: GPay, label: "Google Pay" },
+  { id: "6", logo: Other, label: "Other" },
+];
 
 function UPIpay() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState(null);
+  const [disabled, setDisabled] = useState(true);
+  const dropdownRef = useRef(null);
+
+  const buttonHandler = () => {
+    setIsOpen((prev) => !prev);
+    if (isOpen) {
+      setDisabled(true);
+    }
+  };
+  const onListClick = (app) => {
+    setSelectedOption(app);
+    setIsOpen(false);
+    setDisabled(false);
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <>
       <div className="upiContainer">
@@ -9,15 +54,74 @@ function UPIpay() {
           <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
           <button className="userSignOut">Sign Out</button>
         </div>
-
         <div className="UPI_container">
-          <form className="UPIcontent">
-            <span className="upiStep">STEP <b>4</b> OF <b>4</b> </span>
+          <form className="UPIcontent" ref={dropdownRef}>
+            <span className="upiStep">
+              STEP <b>4</b> OF <b>4</b>{" "}
+            </span>
             <h1 className="upiHead">Set up UPI AutoPay</h1>
-            <p className="upiSub">You can change this recurring payment any time in your settings.</p>
+            <p className="upiSub">
+              You can change this recurring payment any time in your settings.
+            </p>
+            <div className="customWrapper">
+              <button
+                type="button"
+                className="customDropdown"
+                onClick={buttonHandler}
+              >
+                {selectedOption ? (
+                  <div className="selectedOption">
+                    <img
+                      src={selectedOption.logo}
+                      style={{ height: "25px", width: "39px" }}
+                    />
+                    {selectedOption.label}
+                  </div>
+                ) : (
+                  "Select your UPI app"
+                )}
+              </button>
+            </div>
+
+            {isOpen && (
+              <ul className={`ulContainer ${isOpen ? "ulContainerOpen" : ""}`}>
+                {AppList.map((app) => {
+                  const isSelected = selectedOption?.id === app.id;
+                  return (
+                    <li
+                      key={app.id}
+                      className={`dropData ${isSelected ? "active" : ""}`}
+                      onClick={() => onListClick(app)}
+                    >
+                      <img
+                        src={app.logo}
+                        style={{ height: "25px", width: "39px" }}
+                      />
+                      <span style={{ color: "black", fontSize: "16px" }}>
+                        {app.label}
+                      </span>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+            {isOpen ? (
+              ""
+            ) : (
+              <>
+                <input
+                  type="text"
+                  className="upiID"
+                  placeholder="UPI ID"
+                  disabled={disabled}
+                />
+                <Link className="linkTag">How do i find my UPI ID?</Link>
+                <br />
+                <button className="upiBtn">Next</button>
+              </>
+            )}
           </form>
         </div>
-
         <div className="regFooter">
           <div className="regItems">
             <p className="regHead">Questions? Call 000-800-919-1743</p>

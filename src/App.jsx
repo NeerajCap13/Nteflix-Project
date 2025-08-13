@@ -17,8 +17,6 @@ import { EmailProvider } from "./Components/Context/EmailProvider.jsx";
 import CreditOption from "./Components/PaymentZone/CreditOption.jsx";
 import UPIpay from "./Components/PaymentZone/UPIpay.jsx";
 
-
-
 function App() {
   return (
     <EmailProvider>

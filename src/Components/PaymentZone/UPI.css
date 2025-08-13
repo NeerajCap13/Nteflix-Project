@@ -1,22 +1,175 @@
-.upiContainer{
+.upiContainer {
   background-color: white;
 }
-.UPI_container{
+
+.UPI_container {
   height: 680px;
   padding: 30px;
 }
-.UPIcontent{
+
+.UPIcontent {
   width: 460px;
   margin: 0 auto;
 }
-.upiStep{
+
+.upiStep {
   color: black;
 }
-.upiHead{
+
+.upiHead {
   color: black;
   font-size: 2rem;
   text-align: left;
 }
-.upiSub{
+
+.upiSub {
   color: #333333;
+}
+
+.customDropdown {
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  border-radius: none;
+  border: 1px solid;
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+  position: relative;
+}
+
+.customDropdown::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(25px) translateX(-5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid black;
+}
+
+.dropData{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+}
+
+.dropData:hover {
+  cursor: pointer;
+  background-color: #f3f3f3;
+  ;
+}
+
+.ulContainer {
+  border: 1px solid #ccc;
+  margin-top: -1px;
+  position: absolute;
+  width: 460px;
+
+}
+
+.ulContainerOpen {
+  z-index: 1;
+  opacity: 1;
+
+
+}
+
+.selectedOption {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  gap: 7px;
+}
+
+.active {
+  background-color: #f3f3f3;
+  ;
+}
+
+.upiID {
+  margin-top: 10px;
+  width: 100%;
+  height: 60px;
+  border-radius: none;
+  border: 1px solid;
+  background-color: white;
+  text-align: left;
+  padding: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.linkTag {
+  color: #1D63C4;
+  font-size: 16px;
+}
+
+.upiBtn {
+  width: 100%;
+  height: 65px;
+  background-color: #e50914;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+
+.closed {
+  text-emphasis: none;
+}
+
+input:disabled {
+  background-color: #f4f4f4;
+  /* light gray */
+  color: #999;
+  /* dull text */
+  pointer-events: none;
+  opacity: 0.6;
+  /* faded look */
+
+}
+
+@media (max-width:767px){
+  .UPI_container{
+    width: 100%;
+    overflow: hidden;
+  }
+  .UPIcontent{
+    width: 100%;
+    position: relative;
+  }
+ .customDropdown{
+  position: relative;
+ }
+ .ulContainerOpen{
+  position: absolute;
+  width: 100%;
+ }
+}
+@media (min-width:768px) and (max-width:1080px){
+
+  .upiContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  }
+  .customWrapper{
+    position: relative;
+  }
+  .ulContainer{
+    position: absolute;
+  }
+
+
 }

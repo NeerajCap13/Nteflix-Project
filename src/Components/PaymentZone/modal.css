@@ -1,0 +1,82 @@
+.modalOverlay {
+  background-color: white;
+  position: fixed;
+  inset: 0;
+}
+.modalContainer{
+  margin: 0 auto;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.iconClose{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 20px;
+  fill: black;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+}
+.topLable{
+  width: 460px;
+  margin-top: 5rem;
+}
+.label1{
+  font-size: 32px;
+  color: black;
+  font-weight: 700;
+}
+.itemLabel{
+  color: black;
+  text-align: left;
+  width: 460px;
+}
+.ulModal{
+  width: 460px;
+}
+.itemList{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  padding: 30px 0px;
+  margin-top: 2rem;
+}
+.closeModalBtn{
+  width:460px;
+  height: 56px;
+  border: none;
+  color: white;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  margin-top: 20px;
+  background-color: #E50914;
+  cursor: pointer;
+}
+
+@media (max-width:767px) {
+  .modalOverlay{
+    position: fixed;
+    inset: 0;
+  }
+  .modalContainer{
+    width: 100%;
+  }
+  .ulModal{
+    width: 100%;
+  }
+  .itemList{
+    margin-top: 1rem;
+  }
+  .topLable{
+    width: 100%;
+  }
+  .closeModalBtn{
+    width: 100%;
+  }
+
+}

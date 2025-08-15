@@ -4,11 +4,11 @@ import Visa from './../../assets/VISA@2x.png'
 import Master from './../../assets/MASTERCARD@2x.png'
 import CreditCardIcon from "./../../assets/creditCard.svg?react"
 import HelpIcon from "./../../assets/CVV.svg?react"
-import EmailContext from '../Context/EmailProvider'
 import { Link } from 'react-router-dom'
+import Context from '../Context/EmailProvider'
 
 function CreditOption() {
-  const [selectedPlan] = useContext(EmailContext)
+  const {selectedPlan} = useContext(Context)
   return (
     <>
     <div className="cardPay">
@@ -47,7 +47,7 @@ function CreditOption() {
               </div>
               <div className="additionalInfo">
                 <p className='info1'>Any payment above ₹ 2000 will need additional authentication.</p>
-                <p className='info'>By ticking the box below, you agree to our <a style={{color:"blue"}}>Terms of Use</a> and <a style={{color:"blue"}}>Privacy. Statement</a> and confirm that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently ₹199/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.</p>
+                <p className='info'>By ticking the box below, you agree to our <a style={{color:"blue"}}>Terms of Use</a> and <a style={{color:"blue"}}>Privacy. Statement</a> and confirm that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently {`${selectedPlan.price}`}/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.</p>
                 <div className="checkBox">
                   <input type="checkbox" name="check_pay" id="checkPay" />
                   <span className='consent'>I agree.</span>

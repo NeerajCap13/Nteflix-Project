@@ -124,4 +124,7 @@
   "update.mode": "none",
   "extensions.ignoreRecommendations": true,
   "workbench.settings.useSplitJSON": false,
+  "cSpell.words": [
+    "FINDUPI"
+  ],
 }

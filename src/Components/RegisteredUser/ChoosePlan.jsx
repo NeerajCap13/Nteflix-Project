@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "../RegisteredUser/ChoosePlan.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
-import EmailContext from "../Context/EmailProvider";
+import Context from "../Context/EmailProvider";
 
 const PLAN_DETAILS = {
   Mobile: {
@@ -48,7 +48,7 @@ const CARD_DETAILS = [
 ];
 
 function ChoosePlan() {
-  const [selectedPlan, setSelectedPlan] = useContext(EmailContext);
+  const {selectedPlan, setSelectedPlan} = useContext(Context);
   // Helper to check if plan is selected
   const isSelected = (card) => selectedPlan.name  === card.id;
 

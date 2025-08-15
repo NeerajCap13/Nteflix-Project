@@ -37,14 +37,15 @@
   padding: 15px;
   cursor: pointer;
   position: relative;
+  font-size: 16px;
 }
 
-.customDropdown::after {
+.before::before {
   content: "";
   position: absolute;
   right: 0;
   top: 0;
-  transform: translateY(25px) translateX(-5px);
+  transform: translateY(25px) translateX(-10px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +55,22 @@
   border-top: 8px solid black;
 }
 
-.dropData{
+.after::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translateY(25px) translateX(-10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 8px solid black;
+}
+
+.dropData {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -76,13 +92,6 @@
 
 }
 
-.ulContainerOpen {
-  z-index: 1;
-  opacity: 1;
-
-
-}
-
 .selectedOption {
   display: flex;
   align-items: center;
@@ -92,10 +101,10 @@
 
 .active {
   background-color: #f3f3f3;
-  ;
 }
 
 .upiID {
+  font-size: 14px;
   margin-top: 10px;
   width: 100%;
   height: 60px;
@@ -105,12 +114,44 @@
   text-align: left;
   padding: 15px;
   cursor: pointer;
-  margin-bottom: 10px;
+
+}
+.input-group{
+  position: relative;
+  height: 100%;
+}
+.inputLabel{
+  color: #8C8C8C;
+  position: absolute;
+  left: 15px;
+  transform: translateY(30px);
+  width: max-content;
+  transition: font .1s ease, top .1s ease, transform .1s ease;
+  font-weight: 600;
+  pointer-events: none;
+}
+.upiID:focus + .inputLabel,
+.upiID:valid + .inputLabel{
+  top: -15px;
+  font-size: 13px;
+}
+
+.errorMsg{
+  color: #e50914;
+  margin-top: -10px;
+}
+.errorInput{
+  border-color: #e50914;
 }
 
 .linkTag {
   color: #1D63C4;
   font-size: 16px;
+  text-decoration: underline;
+  cursor: pointer;
+  position: relative;
+  margin-top: 10px;
+  width: max-content;
 }
 
 .upiBtn {
@@ -121,53 +162,52 @@
   font-size: 1.5rem;
   border: none;
   border-radius: 3px;
-  margin-top: 2rem;
+  cursor: pointer;
 }
 
-.closed {
-  text-emphasis: none;
-}
-
-input:disabled {
+input:disabled{
   background-color: #f4f4f4;
-  /* light gray */
   color: #999;
-  /* dull text */
   pointer-events: none;
   opacity: 0.6;
-  /* faded look */
-
 }
 
-@media (max-width:767px){
-  .UPI_container{
+
+@media (max-width:767px) {
+  .UPI_container {
     width: 100%;
     overflow: hidden;
   }
-  .UPIcontent{
+
+  .UPIcontent {
     width: 100%;
     position: relative;
   }
- .customDropdown{
-  position: relative;
- }
- .ulContainerOpen{
-  position: absolute;
-  width: 100%;
- }
-}
-@media (min-width:768px) and (max-width:1080px){
 
-  .upiContainer{
+  .customDropdown {
+    position: relative;
+  }
+
+  .ulContainerOpen {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+@media (min-width:768px) and (max-width:1080px) {
+
+  .upiContainer {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content:space-between;
+    justify-content: space-between;
   }
-  .customWrapper{
+
+  .customWrapper {
     position: relative;
   }
-  .ulContainer{
+
+  .ulContainer {
     position: absolute;
   }
 

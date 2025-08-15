@@ -40,7 +40,7 @@ function PaymentPicker() {
               <svg
                 id="secure-server-icon"
                 viewBox="0 0 16 16"
-                class="lockSvg"
+                className="lockSvg"
               >
                 <g fill="none">
                   <g fill="#FFB53F">

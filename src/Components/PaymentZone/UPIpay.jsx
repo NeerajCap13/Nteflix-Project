@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import "./UPI.css";
 import BHIM from "./../../assets/BHIM@2x.png";
 import PayTm from "./../../assets/PAYTM@2x.png";
@@ -6,7 +6,9 @@ import Phonepe from "./../../assets/PHONEPE@2x.png";
 import AmazonPay from "./../../assets/AMAZONPAY@2x.png";
 import GPay from "./../../assets/GPAY@2x.png";
 import Other from "./../../assets/OTHER@2x.png";
+import UPIModal from "./UPIModal";
 import { Link } from "react-router-dom";
+import Context from "../Context/EmailProvider";
 
 const AppList = [
   { id: "1", logo: BHIM, label: "BHIM" },
@@ -22,8 +24,25 @@ function UPIpay() {
   const [selectedOption, setSelectedOption] = useState(null);
   const [disabled, setDisabled] = useState(true);
   const dropdownRef = useRef(null);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const buttonHandler = () => {
+  const {value,setValue} =useContext(Context)
+  const [error ,setError] =useState(false)
+
+const handleBlur = () => {
+  if(value.trim() === ""){
+    setError(true)
+  }
+  else {
+    setError(false)
+  }
+}
+
+  const openModal = () => setModalOpen(true)
+  const closeModal = () => setModalOpen(false)
+
+  const buttonHandler = (e) => {
+    e.preventDefault();
     setIsOpen((prev) => !prev);
     if (isOpen) {
       setDisabled(true);
@@ -41,8 +60,8 @@ function UPIpay() {
         setIsOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
+      document.addEventListener("mousedown", handleClickOutside);
+        return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -65,8 +84,8 @@ function UPIpay() {
             </p>
             <div className="customWrapper">
               <button
-                type="button"
-                className="customDropdown"
+
+                className={`customDropdown ${isOpen ? "after" : "before"}`}
                 onClick={buttonHandler}
               >
                 {selectedOption ? (
@@ -109,15 +128,31 @@ function UPIpay() {
               ""
             ) : (
               <>
+              <div className="input-group" >
                 <input
                   type="text"
-                  className="upiID"
-                  placeholder="UPI ID"
+                  className={`upiID ${error ? "errorInput" : ""}`}
                   disabled={disabled}
+                  required
+                  value={value}
+                  onChange={(e) => setValue(e.target.value)}
+                  onBlur={handleBlur}
                 />
-                <Link className="linkTag">How do i find my UPI ID?</Link>
+                <label className="inputLabel">UPI ID</label>
+                {
+                  error ? <span className="errorMsg">Please enter a valid UPI ID</span> : ""
+                }
+              </div>
+
+                <p className="linkTag" onClick={openModal}>
+                  How do i find my UPI ID?
+                </p>
+                <UPIModal isOpen={modalOpen} onClose={closeModal}/>
                 <br />
+                <Link to={"/upiOrderConfirm"}>
                 <button className="upiBtn">Next</button>
+                </Link>
+
               </>
             )}
           </form>

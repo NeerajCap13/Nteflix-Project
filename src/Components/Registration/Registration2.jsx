@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import "../Registration/Registration.css";
 import { Link, useNavigate } from "react-router-dom";
-import EmailContext from "../Context/EmailProvider";
+import Context from "../Context/EmailProvider";
 
 function Registration2() {
   const navigate = useNavigate();
-  const [email] = useContext(EmailContext);
+  const {email} = useContext(Context);
   const [pass, setPass] = useState("");
   const passHandler = () => {
     if (pass==="") {

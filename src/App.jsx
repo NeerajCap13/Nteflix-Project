@@ -13,13 +13,15 @@ import Registration2 from "./Components/Registration/Registration2.jsx";
 import UserOne from "./Components/RegisteredUser/UserOne.jsx";
 import Plans from "./Components/RegisteredUser/Plans.jsx";
 import PaymentPicker from "./Components/PaymentZone/PaymentPicker.jsx";
-import { EmailProvider } from "./Components/Context/EmailProvider.jsx";
+import { Provider } from "./Components/Context/EmailProvider.jsx";
 import CreditOption from "./Components/PaymentZone/CreditOption.jsx";
 import UPIpay from "./Components/PaymentZone/UPIpay.jsx";
+import UPIModal from "./Components/PaymentZone/UPIModal.jsx";
+import ConfirmUpiPayment from "./Components/PaymentZone/ConfirmUpiPayment.jsx";
 
 function App() {
   return (
-    <EmailProvider>
+    <Provider>
     <Routes>
       <Route
         path="/"
@@ -42,8 +44,10 @@ function App() {
       <Route path="/paymentGate" element={<PaymentPicker />} />
       <Route path="/creditOption" element={<CreditOption />} />
       <Route path="/UPI" element={<UPIpay />} />
+      <Route path="/findUpi" element={<UPIModal />} />
+      <Route path="/upiOrderConfirm" element={<ConfirmUpiPayment />} />
     </Routes>
-    </EmailProvider>
+    </Provider>
   );
 }
 

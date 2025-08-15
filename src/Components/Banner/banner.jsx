@@ -4,11 +4,10 @@ import logo from "../../assets/Netflix_Logo_PMS.png";
 import Bg from "../../assets/BannerNew.jpg";
 
 import { Link, useNavigate } from "react-router-dom";
-import EmailContext from "../Context/EmailProvider";
+import Context from "../Context/EmailProvider";
 
 function Banner() {
-  const [email, setEmail] = useContext(EmailContext);
-  console.log(email);
+  const {email, setEmail} = useContext(Context);
   const [error, setError] = useState("");
   const navigate = useNavigate();
 

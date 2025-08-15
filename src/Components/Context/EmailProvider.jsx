@@ -1,20 +1,25 @@
 import React, { createContext, useState } from "react";
 
-const EmailContext = createContext();
+const Context = createContext();
 
-export const EmailProvider = ({ children }) => {
+export const Provider = ({ children }) => {
   const [email, setEmail] = useState("");
   const [selectedPlan, setSelectedPlan] = useState({
     name: "Basic",
-    price: "199"
+    price: "₹199",
   });
+  const [value, setValue] = useState("");
 
+  const contextValue = {
+    email,
+    setEmail,
+    selectedPlan,
+    setSelectedPlan,
+    value,
+    setValue,
+  };
 
-  return (
-    <EmailContext.Provider value={[ email,setEmail,selectedPlan,setSelectedPlan]}>
-      {children}
-    </EmailContext.Provider>
-  );
+  return <Context.Provider value={contextValue}>{children}</Context.Provider>;
 };
 
-export default EmailContext;
+export default Context;

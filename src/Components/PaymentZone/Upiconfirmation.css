@@ -1,0 +1,84 @@
+.containerUPI{
+  background-color: white;
+  color: black;
+}
+.UPI_Confirmation{
+height: 700px;
+padding-top: 20px;
+}
+.confirmDetails{
+  margin: 0 auto;
+  width: 440px;
+}
+.titleBox{
+  font-size: 2rem;
+  font-weight: 700;
+}
+.subscriptionBox{
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  margin-top: 2rem;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.planBox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.spanTitle{
+  font-weight: 700;
+}
+.spanSubTitle{
+  color: #737373;
+}
+.changePlanBtn{
+  color: #0071EB;
+  font-size: 16px;
+  border: none;
+  background: none;
+  font-weight: 700;
+}
+
+.UPI-IDBox{
+  border-top:1px solid #e6e6e6;
+  display: flex;
+  height: 72px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.paragraph{
+  font-size: 13px;
+  color: #8C8C8C;
+  margin-top: 1rem;
+  padding-left: 3px;
+}
+.consentDiv{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  align-items: center;
+}
+.checkBoxAgree{
+ height: 27px;
+ width: 27px;
+ border-radius: 0%;
+}
+.confirmBtn{
+  color: white;
+  border-radius: 4px;
+  background-color: #E50914;
+  border: none;
+  width: 100%;
+  height: 65px;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}

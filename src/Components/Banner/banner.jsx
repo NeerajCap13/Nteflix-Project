@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import "../../Components/Banner/banner.css";
 import logo from "../../assets/Netflix_Logo_PMS.png";
-import Bg from "../../assets/BannerNew.jpg";
+import BackgroundImage from "../../assets/BannerNew.jpg";
 
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
@@ -26,36 +26,8 @@ function Banner() {
     <>
       {/* Banner background image */}
       <div className="banner">
-        <img
-          src={Bg}
-          alt="Netflix Banner"
-          id="backPic"
-          style={{
-            width: "100%",
-            height: "100vh",
-            objectFit: "cover",
-            position: "absolute",
-            top: 0,
-            left: 0,
-            zIndex: -1,
-            opacity: 1,
-          }}
-        />
-        {/* Overlay for dark effect */}
-        <div
-          id="card-overlay"
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100vh",
-            background: "rgba(0,0,0,0.75)",
-            zIndex: -1,
-          }}
-        />
+        <div className="cardOverlap"/>
 
-        {/* Header with logo and sign-in */}
         <header>
           <img src={logo} alt="" id="logo" />
           {/* Sign-in section */}
@@ -79,8 +51,6 @@ function Banner() {
             </Link>
           </div>
         </header>
-
-        {/* Banner main content section */}
         <div className="section">
           {/* Banner text content */}
           <div className="banner-content">

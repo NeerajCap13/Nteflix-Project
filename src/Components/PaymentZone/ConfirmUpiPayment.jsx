@@ -1,10 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import "./Upiconfirmation.css"
+import Check from '../../assets/CheckSVG.svg?react'
 import Context from '../Context/EmailProvider'
 
 function ConfirmUpiPayment() {
   const {selectedPlan,value}  = useContext(Context)
-  console.log(selectedPlan)
+
+  const[onCheck,setCheck] = useState(false)
+  const errorCheck = () => setCheck((prev) => !prev)
   return (
     <div className="containerUPI">
        <div className="userNav">
@@ -37,9 +40,20 @@ function ConfirmUpiPayment() {
                   By checking the checkbox below, you agree to our Terms of Use, Privacy Statement, and that you are over 18. Netflix will automatically continue your membership and charge the membership fee (currently {`${selectedPlan.price}`}/month) to your payment method until you cancel. You may cancel at any time to avoid future charges.
                 </div>
                 <div className="consentDiv">
-                  <input type="checkbox" name="consentBox" className='checkBoxAgree' />
+                  <div className="checkBox1" onClick={errorCheck}>
+                    {
+                      onCheck ? (
+                      <Check fill={"#0071eb"} className="checkMark" />
+                    ) : ""
+                    }
+
+                  </div>
                   <span className='labelCheckBox'>I agree.</span>
                 </div>
+                {
+                 ! onCheck ? (<span className='errorMessage'>You must acknowledge that you have read and agree to the Terms of Use to continue.</span>) : ""
+                }
+
                 <button className='confirmBtn'>Next</button>
               </div>
           </form>

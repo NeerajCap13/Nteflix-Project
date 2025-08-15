@@ -7,8 +7,10 @@ import AmazonPay from "./../../assets/AMAZONPAY@2x.png";
 import GPay from "./../../assets/GPAY@2x.png";
 import Other from "./../../assets/OTHER@2x.png";
 import UPIModal from "./UPIModal";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
+
+
 
 const AppList = [
   { id: "1", logo: BHIM, label: "BHIM" },
@@ -25,16 +27,19 @@ function UPIpay() {
   const [disabled, setDisabled] = useState(true);
   const dropdownRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
-
   const {value,setValue} =useContext(Context)
   const [error ,setError] =useState(false)
 
-const handleBlur = () => {
+  const navigate = useNavigate();
+
+const handleBlur = (e) => {
+  e.preventDefault();
   if(value.trim() === ""){
     setError(true)
   }
   else {
-    setError(false)
+    setError(false);
+    navigate('/upiOrderConfirm')
   }
 }
 
@@ -74,7 +79,7 @@ const handleBlur = () => {
           <button className="userSignOut">Sign Out</button>
         </div>
         <div className="UPI_container">
-          <form className="UPIcontent" ref={dropdownRef}>
+          <form className="UPIcontent" ref={dropdownRef} onSubmit={handleBlur}>
             <span className="upiStep">
               STEP <b>4</b> OF <b>4</b>{" "}
             </span>
@@ -84,7 +89,7 @@ const handleBlur = () => {
             </p>
             <div className="customWrapper">
               <button
-
+                required
                 className={`customDropdown ${isOpen ? "after" : "before"}`}
                 onClick={buttonHandler}
               >
@@ -149,9 +154,8 @@ const handleBlur = () => {
                 </p>
                 <UPIModal isOpen={modalOpen} onClose={closeModal}/>
                 <br />
-                <Link to={"/upiOrderConfirm"}>
-                <button className="upiBtn">Next</button>
-                </Link>
+
+                <button type="submit" className="upiBtn">Next</button>
 
               </>
             )}

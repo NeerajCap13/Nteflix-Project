@@ -1,198 +1,70 @@
-
-
-.title {
+.cardContainer {
     width: 83%;
     margin: 0 auto;
-    margin-top: 2rem;
-
-}
-
-.container {
-    width: 83%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     margin-top: 1rem;
-    
-    
 }
+.cardLabel{
+    font-size: 24px;
+    font-weight: 700;
 
-.flex-container {
-
-    width: 21rem;
-    height: 16rem;
-    border-radius: 20px;
+}
+.cardWrapper{
+    margin-top: 1rem;
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    padding: 20px;
+    gap: 10px;
+
+}
+.contentCard {
+    position: relative;
+    padding: 20px 15px;
+    width: 21.5rem;
+    height: 16rem;
+    border-radius: 18px;
     background: linear-gradient(149deg, rgb(25, 34, 71) 0%, rgb(33, 14, 23) 96.86%);
-  
-
+}
+.labelHeadings{
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.subContent{
+    font-size: 16px;
+    color: #FFFFFFB3;
+    margin-top: 1rem;
+    font-weight: 400;
 }
 
-
-p{
-    color: rgba(255, 255, 255, 0.7);
-}
-
-.svg {
-    display: flex;
-    justify-content: end;
+.bottomSVG{
+    position: absolute;
+    right: 0;
+    bottom:0;
+    padding: 0px 10px;
+    margin-top: 2rem;
 }
 
 
 /* For Mobile Devices */
 
-@media(min-width:360px) and (max-width:430px) {
-
-    .container {
-        width: 90%;
+@media (max-width:767px){
+    .cardWrapper{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    
-    }
-        svg{
-            height: 30px;
-            width: 40px;
-            
-        }
-
-        .flex-container{
-            width: 100%;
-        display: flex;
-        flex-direction: column;
-        }
-}
-/* @media(max-width:414px) {
-
-    .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-     
-    }
-
-}
-@media(max-width:430px) {
-
-    .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-     
-    }
-
-} */
-@media(max-width:540px) {
-
-    .container {
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .flex-container {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 200px;
-
     }
-
-
+    .contentCard{
+       width: 100%;
+    }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
-    /* styles between 600px and 1024px */
 
-    .container {
-
+@media (min-width:768px) and (max-width:1080px){
+    .cardWrapper{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 12px;
-    }
-
-    .flex-container {
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 182px;
-
     }
-
-}
-
-@media (min-width: 1024px) and (max-width: 1280px) {
-    .container {    
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        gap: 12px;
-        margin-bottom: 1rem;
-    }
-
-    .flex-container {
-        width: 426px;
-        display: flex;
-        justify-content: center;
-        
-        height: 210px;
-
-       
-    }
-     
-}
-
-
-@media(max-width:800px){
-
-    .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .flex-container {
+    .contentCard{
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 182px;
+        height: 180px;
     }
-}
-
-@media (max-width:344px){
-    .container {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        height: 900px;
-    
-    }
-        
-
-        .flex-container{
-            width: 100%;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        }
 }

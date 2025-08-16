@@ -160,11 +160,26 @@ h3 {
   height: 4.5rem;
   /* Set height */
   gap: 0.5rem;
+  position: relative;
   /* Space between children */
+  margin-bottom: 2px;
+}
+.bannerError{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 5px;
+  top: 80%;
+  color: #e50914;
+}
+.emailError{
+  /* border-color: #e50914; */
+  outline: 2px solid #e50914;
+  outline-offset: -2px;
 }
 
 /* Email input styles */
-#emailTxt {
+.emailTxt {
   width: 25rem;
   /* Set width */
   height: 3.5rem;
@@ -276,7 +291,7 @@ h3 {
   }
   /* Section height for mobile */
   .section {
-    height: max-content;  
+    height: max-content;
     width: 100%;
     padding: 40px;
   }
@@ -311,6 +326,7 @@ h3 {
     justify-content: center;
     align-items: center;
     height: 130px;
+    position: relative;
 
   }
 
@@ -327,6 +343,11 @@ h3 {
     height: 50px;
     width: 160px;
   }
+}
+
+.bannerError{
+  position: absolute;
+
 }
 
 @media (max-width : 540px) {

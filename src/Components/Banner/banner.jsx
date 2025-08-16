@@ -1,8 +1,6 @@
 import React, { useContext, useState } from "react";
 import "../../Components/Banner/banner.css";
 import logo from "../../assets/Netflix_Logo_PMS.png";
-import BackgroundImage from "../../assets/BannerNew.jpg";
-
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
 
@@ -14,7 +12,7 @@ function Banner() {
   const handleError = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!email === "") {
-      setError("Type something, it's empty");
+      setError("Email is required");
     } else if (!emailRegex.test(email)) {
       setError("Not a valid email");
     } else {
@@ -68,7 +66,7 @@ function Banner() {
             <input
               type="email"
               name="email"
-              id="emailTxt"
+              className={`emailTxt ${error ? "emailError":""}`}
               placeholder="Email address"
               required
               value={email}
@@ -77,8 +75,9 @@ function Banner() {
             <button type="submit" id="getStartedBtn" onClick={handleError}>
               Get Started<span>&gt;</span>
             </button>
+            {error ? <p className="bannerError">{error}</p> : <p></p>}
           </div>
-          {error ? <p>{error}</p> : <p></p>}
+
         </div>
       </div>
     </>

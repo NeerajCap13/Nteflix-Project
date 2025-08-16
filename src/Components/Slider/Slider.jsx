@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "../Slider/Slider.css";
 
 const Images = [
@@ -16,49 +16,57 @@ const Images = [
 ];
 
 const Slider = () => {
+  const containerRef =useRef(null)
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleCount = 6;
 
-  // const nextSlide = () => {
-  //   if (currentIndex - visibleCount < Images.length) {
-  //     setCurrentIndex(currentIndex + 1);
-  //   }
-  //   if (currentIndex >= 9) {
-  //     setCurrentIndex(0);
-  //   }
-  // };
+  const nextSlide = () => {
+    if (currentIndex < Images.length - visibleCount ) {
+      setCurrentIndex(currentIndex + 4);
+    }
+    if (currentIndex >= 9) {
+      setCurrentIndex(0);
+    }
+  };
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 3);
+    }
+  };
 
-  // const prevSlide = () => {
-  //   if (currentIndex > 0) {
-  //     setCurrentIndex(currentIndex - 1);
-  //   }
-  // };
-
+  useEffect(()=>{
+    const container = containerRef.current;
+    if(container){
+      const scrollAmount = currentIndex * (180 + 50);
+      container.scrollTo({
+        left : scrollAmount,
+        behavior : "smooth"
+      })
+    }
+  },[currentIndex])
   return (
     <>
       <div className="slider">
         <div className="slider-container">
-          <h2>Trending Now</h2>
-
-          <div className="image-slider">
-            <div
-              className="imageTrack"
-              style={{
-                transform: `translateX(-${
-                  (100 / visibleCount) * currentIndex
-                }%)`,
-              }}
-            >
-              {Images.map((src, index) => (
-                <div className="carouselImage" key={index}>
-                  <img src={src} alt={`${index}`} />
-                </div>
-              ))}
-            </div>
+          <h2 className="sliderHead">Trending Now</h2>
+        </div>
+        <div className="sliderContained">
+          <div className="leftSlider">
+            <button className="leftButton" onClick={prevSlide}>{"<"}</button>
           </div>
+          <div className="rightSlider">
+            <button className="rightButton" onClick={nextSlide}>{">"}</button>
+          </div>
+          <ul className="image-slider" ref={containerRef}>
+            {Images.map((src, index) => (
+              <li className="carouselImage" key={index} >
+                <span datatype={index+1} className="number" ></span>
+                <img src={src} alt={`${index}`} className="img" />
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
-      {/* </div> */}
     </>
   );
 };

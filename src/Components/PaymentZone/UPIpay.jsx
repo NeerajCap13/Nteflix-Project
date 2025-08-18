@@ -10,8 +10,6 @@ import UPIModal from "./UPIModal";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
 
-
-
 const AppList = [
   { id: "1", logo: BHIM, label: "BHIM" },
   { id: "2", logo: PayTm, label: "Paytm" },
@@ -27,24 +25,23 @@ function UPIpay() {
   const [disabled, setDisabled] = useState(true);
   const dropdownRef = useRef(null);
   const [modalOpen, setModalOpen] = useState(false);
-  const {value,setValue} =useContext(Context)
-  const [error ,setError] =useState(false)
+  const { value, setValue } = useContext(Context);
+  const [error, setError] = useState(false);
 
   const navigate = useNavigate();
 
-const handleBlur = (e) => {
-  e.preventDefault();
-  if(value.trim() === ""){
-    setError(true)
-  }
-  else {
-    setError(false);
-    navigate('/upiOrderConfirm')
-  }
-}
+  const handleBlur = (e) => {
+    e.preventDefault();
+    if (value.trim() === "") {
+      setError(true);
+    } else {
+      setError(false);
+      navigate("/upiOrderConfirm");
+    }
+  };
 
-  const openModal = () => setModalOpen(true)
-  const closeModal = () => setModalOpen(false)
+  const openModal = () => setModalOpen(true);
+  const closeModal = () => setModalOpen(false);
 
   const buttonHandler = (e) => {
     e.preventDefault();
@@ -65,8 +62,8 @@ const handleBlur = (e) => {
         setIsOpen(false);
       }
     };
-      document.addEventListener("mousedown", handleClickOutside);
-        return () => {
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
@@ -133,30 +130,34 @@ const handleBlur = (e) => {
               ""
             ) : (
               <>
-              <div className="input-group" >
-                <input
-                  type="text"
-                  className={`upiID ${error ? "errorInput" : ""}`}
-                  disabled={disabled}
-                  required
-                  value={value}
-                  onChange={(e) => setValue(e.target.value)}
-                  onBlur={handleBlur}
-                />
-                <label className="inputLabel">UPI ID</label>
-                {
-                  error ? <span className="errorMsg">Please enter a valid UPI ID</span> : ""
-                }
-              </div>
+                <div className="input-group">
+                  <input
+                    type="text"
+                    className={`upiID ${error ? "errorInput" : ""}`}
+                    disabled={disabled}
+                    required
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                    onBlur={handleBlur}
+                  />
+                  <label className="inputLabel">UPI ID</label>
+                  {error ? (
+                    <span className="errorMsg">
+                      Please enter a valid UPI ID
+                    </span>
+                  ) : (
+                    ""
+                  )}
+                </div>
 
                 <p className="linkTag" onClick={openModal}>
                   How do i find my UPI ID?
                 </p>
-                <UPIModal isOpen={modalOpen} onClose={closeModal}/>
+                <UPIModal isOpen={modalOpen} onClose={closeModal} />
                 <br />
-
-                <button type="submit" className="upiBtn">Next</button>
-
+                <button type="submit" className="upiBtn">
+                  Next
+                </button>
               </>
             )}
           </form>

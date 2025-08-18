@@ -36,13 +36,11 @@ const Items = [
 ];
 function Accordion() {
   const [openIndexes, setOpenIndexes] = useState(
-    Array(Items.length).fill(false)
+    null
   );
 
   const openHandler = (idx) => {
-    setOpenIndexes((prev) =>
-      prev.map((isOpen, index) => (index === idx ? !isOpen : isOpen))
-    );
+    setOpenIndexes(openIndexes === idx ? null : idx);
   };
 
   return (
@@ -54,13 +52,13 @@ function Accordion() {
             <div className="contentBar">
               <li className="accordionLink" onClick={() => openHandler(index)}>
                 {item.title}
-                <Plus className="toggleIcon" />
+                <Plus className={`toggleIcon ${openIndexes===index ? "clickedIcon" :""}`} />
               </li>
-              {openIndexes[index] && (
+              {openIndexes === index ? (
               <div className="container_content">
                 <span className="accContent">{item.content}</span>
               </div>
-            )}
+            ): ""}
             </div>
           </>
         ))}

@@ -2,16 +2,13 @@
   width: 100%;
   background: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%, rgba(0, 0, 0, 0.1) 100%), black;
 }
-
 .slider-container {
   width: 83%;
   margin: 0 auto;
 }
-
 .sliderHead {
   padding-top: 1rem;
 }
-
 .image-slider {
   width: 83%;
   margin: 0 auto;
@@ -26,26 +23,21 @@
   scrollbar-width: none;
   padding: 10px;
 }
-
 .carouselImage {
   list-style: none;
   scroll-snap-align: start;
 }
-
 .img {
   border-radius: 0.5rem;
-  height: 250px;
-  width: 180px;
+  height: 15.625rem;
+  width: 11.25rem;
   cursor: pointer;
   z-index: 1;
 }
-
-
 .carouselImage:hover .number::before {
   transform: scale(1.08);
   transition: 0.4s ease transform;
 }
-
 .carouselImage:hover {
   transform: scale(1.08);
   transition: 0.4s ease transform;
@@ -63,7 +55,8 @@
   align-items: center;
   justify-content: flex-end;
   z-index: 1;
-    width: 140px;
+  width:8rem;
+  transition: 0.5s ease-in all;
 }
 
 .leftButton {
@@ -97,7 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  width: 140px;
+  width: 8rem;
   z-index: 1;
 
 }
@@ -125,25 +118,49 @@
 }
 
 
-@media (max-width : 768px) {
+@media (max-width:767px) {
   .slider {
     margin-top: 0rem;
   }
-
-  .image-slider {
-    margin-top: 0.10rem;
+  .image-slider{
+    gap: 30px;
+    align-items: center;
   }
-
   h2 {
     font-size: 1.3rem;
   }
+  .leftSlider{
+    width:2rem;
+     padding-bottom: 30px;
+  }
+  .rightSlider{
+    width: 2rem;
+    padding-bottom: 30px;
+  }
+  .img {
+  border-radius: 0.5rem;
+  height: 11.625rem;
+  width: 8.25rem;
+  cursor: pointer;
+  z-index: 1;
+}
 }
 
-@media (min-width: 600px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 
   .slider-container {
     height: 100%,
   }
+  .leftSlider{
+    width:3rem;
+  }
+  .rightSlider{
+    width: 3rem;
+  }
 
-  /* styles between 600px and 1024px */
+.image-slider{
+    gap: 30px;
+    align-items: center;
+  }
+
 }

@@ -14,15 +14,26 @@ const Images = [
   "src/assets/IMG9.webp",
   "src/assets/IMG10.webp",
 ];
+function useWindowWidth() {
+  const [width, setWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return width;
+}
 
 const Slider = () => {
-  const containerRef =useRef(null)
+  const containerRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCount = 6;
+  const width = useWindowWidth();
+  const visibleCount = width <= 767 ? 4 : width >= 768 ? 5 : 6;
 
   const nextSlide = () => {
-    if (currentIndex < Images.length - visibleCount ) {
-      setCurrentIndex(currentIndex + 4);
+    if (currentIndex < Images.length - visibleCount) {
+      setCurrentIndex(currentIndex + 3);
     }
     if (currentIndex >= 9) {
       setCurrentIndex(0);
@@ -33,17 +44,16 @@ const Slider = () => {
       setCurrentIndex(currentIndex - 3);
     }
   };
-
-  useEffect(()=>{
+  useEffect(() => {
     const container = containerRef.current;
-    if(container){
+    if (container) {
       const scrollAmount = currentIndex * (180 + 50);
       container.scrollTo({
-        left : scrollAmount,
-        behavior : "smooth"
-      })
+        left: scrollAmount,
+        behavior: "smooth",
+      });
     }
-  },[currentIndex])
+  }, [currentIndex]);
   return (
     <>
       <div className="slider">
@@ -52,15 +62,23 @@ const Slider = () => {
         </div>
         <div className="sliderContained">
           <div className="leftSlider">
-            <button className="leftButton" onClick={prevSlide}>{"<"}</button>
+            {currentIndex > 0 && (
+              <button className="leftButton" onClick={prevSlide}>
+                {"<"}
+              </button>
+            )}
           </div>
           <div className="rightSlider">
-            <button className="rightButton" onClick={nextSlide}>{">"}</button>
+            {currentIndex < Images.length - visibleCount && (
+              <button className="rightButton" onClick={nextSlide}>
+                {">"}
+              </button>
+            )}
           </div>
           <ul className="image-slider" ref={containerRef}>
             {Images.map((src, index) => (
-              <li className="carouselImage" key={index} >
-                <span datatype={index+1} className="number" ></span>
+              <li className="carouselImage" key={index}>
+                <span datatype={index + 1} className="number"></span>
                 <img src={src} alt={`${index}`} className="img" />
               </li>
             ))}

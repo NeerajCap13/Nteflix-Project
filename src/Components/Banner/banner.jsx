@@ -11,10 +11,10 @@ function Banner() {
 
   const handleError = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!email === "") {
-      setError("Email is required");
-    } else if (!emailRegex.test(email)) {
+    if (!email && emailRegex === "") {
       setError("Not a valid email");
+    } else if (!emailRegex.test(email)) {
+      setError("Email is required");
     } else {
       navigate("./newUser");
     }

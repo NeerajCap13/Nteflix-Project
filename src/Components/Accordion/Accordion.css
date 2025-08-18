@@ -2,45 +2,56 @@
     width: 83%;
     margin: 0 auto;
     margin-top: 3rem;
-
+}
+.listContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 1rem;
 }
 
-
-.accordion-Content{
-    max-height: 0;   
-    overflow: hidden;
-    transition: max-height 1s  ease-in-out ;
-}
-
-
-.accordion-Content.open{
-    max-height: 300px;
-    padding: 0px 20px;   
-    color: white;
-    font-size: 20px;
-    margin: 20px 0px;
-    /* overflow: visible; */
-    transition: max-height 1s  ease-out  ;
-}
-
-
-
-
-.accordion-Item{
+.accordionLink{
     width: 100%;
-    margin: 8px;
-    height: 80px;
+    height: 85px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px;
+    padding: 20px;
     background-color: rgb(45, 45, 45);
     color: rgb(255,255,255);
-    margin-left: 0px;
-   
-    
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
 }
+.accordionLink{
+    list-style: none;
+}
+.accContent{
+    width: 100%;
+    left: 10px;
+    height: max-content;
+    font-size: 1.5rem;
+    color: rgb(255,255,255);
+    margin-top: 10px;
+}
+.container_content{
+    padding: 20px;
+    background-color: rgb(45, 45, 45);
+    width: 100%;
+    margin-top: 1px;
+}
+.contentBar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    flex-direction: column;
 
+}
+.toggleIcon{
+    height: 35px;
+    width: 35px;
+}
 
 @media (min-width:360px) and (max-width : 430px) {
 
@@ -76,9 +87,6 @@
 
     }
 }
-
-
-
 @media (min-width : 540px) and (max-width:720px) {
     .accordion-Item {
         width: 100%;
@@ -111,9 +119,7 @@
 
     }
 }
-
 @media (min-width : 768px) and (max-width:1024px) {
-
 
     .accordion-Item {
         width: 100%;
@@ -144,12 +150,5 @@
 
         background-color: rgb(45, 45, 45);
 
-    }
-}
-
-@media (min-width : 1024px) and (max-width:1280px) {
-    #ContentAcc {
-        font-size: 24px;
-        color: white;
     }
 }

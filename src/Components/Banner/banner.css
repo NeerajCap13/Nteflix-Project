@@ -2,7 +2,7 @@
 
 .banner {
 background-image: url(src/assets/BannerNew.jpg);
-height: 90vh;
+
 z-index: 100;
 position: relative;
 }
@@ -11,7 +11,7 @@ position: relative;
   inset: 0;
   background:rgba(0, 0, 0, 0.75);
   z-index: -1;
-  height: 90vh;
+
 }
 header {
   display: flex;
@@ -230,16 +230,14 @@ h3 {
 }
 
 
-
-
 /* ---------------------- */
 /* Responsive styles for Mobile Devices */
 @media (max-width:767px) {
-
-  /* Header styles for mobile */
+/* Header styles for mobile */
   .banner {
     overflow: hidden;
     background-size: cover;
+
   }
 
   header {
@@ -252,7 +250,6 @@ h3 {
     height: 80px;
     /* Set height */
   }
-
   /* Logo styles for mobile */
   #logo {
     width: 8rem;
@@ -298,6 +295,7 @@ h3 {
   /* Banner content for mobile */
   .banner-content {
     width: 100%;
+    padding: 10px;
   }
   /* Heading for mobile */
   h1 {
@@ -327,12 +325,13 @@ h3 {
     align-items: center;
     height: 130px;
     position: relative;
+    width: 100%;
 
   }
 
   /* Email input for mobile */
-  #emailTxt {
-    width: 336px;
+  .emailTxt {
+    width: 100%;
     height: 50px;
     margin-bottom: 5px;
   }
@@ -343,12 +342,12 @@ h3 {
     height: 50px;
     width: 160px;
   }
-}
-
-.bannerError{
+  .bannerError{
   position: absolute;
-
+  }
 }
+
+
 
 @media (max-width : 540px) {
 

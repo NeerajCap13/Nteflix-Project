@@ -1,29 +1,23 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
 import "../Login/SignIn.css";
 import { Link } from "react-router-dom";
 
 function SignIn() {
   const [change, SetOnChange] = useState(false);
+  const handleChange = () => SetOnChange((prev)=>!prev);
 
-  const handleChange = () => SetOnChange(!change);
+  const [email,setEmail] = useState("")
+  const [password,setPassword] =useState("")
+
 
   return (
     <div className="SignInPageContainer">
-      <img
-                src="src/assets/BannerNew.jpg"
-                alt="Netflix Banner"
-                id="SignInBackground"
-              />
-      <div id="card-overlay1"/>
-      
       <div className="SignInContainer">
-        <div className="headContainer">
+        <div id="card-overlay1"/>
           <div className="logoBar">
             <img src="src/assets/Netflix_Logo_PMS.png" alt="" id="navLogo" />
-          </div>
         </div>
-
         <div className="contentBox">
           <div className="signBox">
             {change ? (
@@ -63,12 +57,16 @@ function SignIn() {
                   name=""
                   id="EmailID"
                   placeholder="Email or Mobile Number"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
                 <input
                   type="password"
                   name=""
                   id="Pwd"
                   placeholder="Password"
+                  value={password}
+                   onChange={(e)=>setPassword(e.target.value)}
                 />
                 <button className="SignBtn1">Sign In</button>
                 <p id="p1">OR</p>
@@ -110,7 +108,6 @@ function SignIn() {
         </div>
       </div>
       <div className="downContainer">
-        
           <div className="bottomItems">
             <h3 id="head1">Questions? Call 000-800-919-1743 (Toll-Free)</h3>
             <li className="itemList1">
@@ -137,9 +134,9 @@ function SignIn() {
               <option value="Hindi">Hindi</option>
             </select>
           </div>
-        </div>
       </div>
-    
+      </div>
+
   );
 }
 

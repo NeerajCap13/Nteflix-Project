@@ -164,20 +164,6 @@ h3 {
   /* Space between children */
   margin-bottom: 2px;
 }
-.bannerError{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  padding-left: 5px;
-  top: 80%;
-  color: #e50914;
-}
-.emailError{
-  /* border-color: #e50914; */
-  outline: 2px solid #e50914;
-  outline-offset: -2px;
-}
-
 /* Email input styles */
 .emailTxt {
   width: 25rem;
@@ -198,6 +184,23 @@ h3 {
   /* White border */
   transition: all 0.3s ease;
   /* Smooth transitions */
+
+}
+.emailTxt:focus{
+  outline: 2px solid white;
+}
+.bannerError{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-left: 5px;
+  top: 80%;
+  color: #e50914;
+}
+.emailError{
+  /* border-color: #e50914; */
+  outline: 2px solid #e50914;
+  outline-offset: -2px;
 }
 
 /* Get Started button styles */

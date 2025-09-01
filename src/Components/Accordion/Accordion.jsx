@@ -47,20 +47,20 @@ function Accordion() {
     <div className="accordion">
       <h2>Frequently asked Questions</h2>
       <ul className="listContainer">
-        {Items.map((item, index) => (
-          <>
-            <div className="contentBar">
+        {Items.map((list, index) => (
+
+            <div className="contentBar" key={index}>
               <li className="accordionLink" onClick={() => openHandler(index)}>
-                {item.title}
+                {list.title}
                 <Plus className={`toggleIcon ${openIndexes===index ? "clickedIcon" :""}`} />
               </li>
               {openIndexes === index ? (
               <div className="container_content">
-                <span className="accContent">{item.content}</span>
+                <span className="accContent">{list.content}</span>
               </div>
             ): ""}
             </div>
-          </>
+    
         ))}
       </ul>
     </div>

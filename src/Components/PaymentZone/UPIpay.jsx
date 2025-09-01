@@ -66,7 +66,7 @@ function UPIpay() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  },[]);
 
   return (
     <>

@@ -149,8 +149,6 @@ input::placeholder{
     color: white;
 }
 
-
-
 @media (max-width:767px) {
     .SignInContainer {
         background: black;
@@ -194,8 +192,4 @@ input::placeholder{
         margin-top: 1rem;
         margin-left: 0px;
     }
-}
-@media (min-width:768px) and (max-width:1080px){
-
-
 }

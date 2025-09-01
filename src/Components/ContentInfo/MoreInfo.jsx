@@ -119,7 +119,7 @@ const CardIcon1 = [
         <stop offset="1" stopColor="#E4A1FA"></stop>
       </radialGradient>
     </defs>
-  </svg>,
+  </svg>
 ];
 const CardIcon2 = [
   <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -255,7 +255,7 @@ const CardIcon2 = [
         <stop offset="1" stopColor="white" stopOpacity="0"></stop>
       </radialGradient>
     </defs>
-  </svg>,
+  </svg>
 ];
 const CardIcon3 = [
   <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -423,7 +423,7 @@ const CardIcon3 = [
         <stop offset="1" stopColor="#792A95"></stop>
       </linearGradient>
     </defs>
-  </svg>,
+  </svg>
 ];
 const CardIcon4 = [
   <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -612,7 +612,7 @@ const CardIcon4 = [
         <stop offset="1" stopColor="#E4A1FA"></stop>
       </radialGradient>
     </defs>
-  </svg>,
+  </svg>
 ];
 
 const CARDS = [
@@ -624,21 +624,21 @@ const CARDS = [
     icon: CardIcon1,
   },
   {
-    id: "card1",
+    id: "card2",
     label: "Download your shows to watch offline",
     discription:
       "Save your favourites easily and always have something to watch.",
     icon: CardIcon2,
   },
   {
-    id: "card1",
+    id: "card3",
     label: "Watch everywhere",
     discription:
       "Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.",
     icon: CardIcon3,
   },
   {
-    id: "card1",
+    id: "card4",
     label: "Create profiles for kids",
     discription:
       "Send kids on adventures with their favourite characters in a space made just for them — free with your membership.",
@@ -651,13 +651,13 @@ function MoreInfo() {
     <div className="cardContainer">
       <label className="cardLabel">More reasons to Join</label>
       <div className="cardWrapper">
-        {CARDS.map((card) => (
-          <div className="contentCard" key={card.id}>
-            <label className="labelHeadings">{card.label}</label>
+        {CARDS.map((source) => (
+          <div className="contentCard" key={source.id}>
+            <label className="labelHeadings">{source.label}</label>
             <p className="subContent">
-             {card.discription}
+             {source.discription}
             </p>
-            <div className="bottomSVG">{card.icon}</div>
+            <div className="bottomSVG">{source.icon}</div>
           </div>
         ))}
       </div>

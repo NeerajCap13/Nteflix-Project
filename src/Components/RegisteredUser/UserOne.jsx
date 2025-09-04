@@ -9,7 +9,9 @@ function UserOne() {
       <div className="regContainer">
         <div className="regNav">
           <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+          <Link to={"/logout"}>
           <button className="userSignOut">Sign Out</button>
+          </Link>
         </div>
       </div>
       <div className="regContainer2">
@@ -96,7 +98,7 @@ function UserOne() {
 
           <Link to={"/newPlan"} className="regNextBtn2"><button className="regNextBtn2">Next</button></Link>
 
-          
+
         </div>
       </div>
       <div className="regFooter">

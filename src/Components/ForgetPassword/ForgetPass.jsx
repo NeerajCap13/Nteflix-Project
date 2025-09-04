@@ -23,7 +23,6 @@ function ForgetPass() {
           <div className="navBar">
             <img src="src/assets/Netflix_Logo_PMS.png" alt="" id="navLogo" />
             <Link to={'/signin'}><button className="signIn2">Sign in</button></Link>
-            
           </div>
         </div>
         <div className="boxContainer">
@@ -57,7 +56,7 @@ function ForgetPass() {
               <button id="emailMe">Message Me</button>
             </div>)
             }
-            
+
 
             <Link style={{ color: "black" }} id="tag2">
               I can't remember my email address or phone number.

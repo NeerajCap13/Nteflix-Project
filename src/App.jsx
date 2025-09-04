@@ -18,6 +18,7 @@ import CreditOption from "./Components/PaymentZone/CreditOption.jsx";
 import UPIpay from "./Components/PaymentZone/UPIpay.jsx";
 import UPIModal from "./Components/PaymentZone/UPIModal.jsx";
 import ConfirmUpiPayment from "./Components/PaymentZone/ConfirmUpiPayment.jsx";
+import SignOut from "./Components/Signout/SignOut.jsx";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
       <Route path="/UPI" element={<UPIpay />} />
       <Route path="/findUpi" element={<UPIModal />} />
       <Route path="/upiOrderConfirm" element={<ConfirmUpiPayment />} />
+      <Route path="/logout" element={<SignOut />} />
     </Routes>
     </Provider>
   );

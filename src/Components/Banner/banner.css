@@ -2,16 +2,15 @@
 
 .banner {
 background-image: url(src/assets/BannerNew.jpg);
-
 z-index: 100;
 position: relative;
 }
+
 .cardOverlap{
   position: absolute;
   inset: 0;
   background:rgba(0, 0, 0, 0.75);
   z-index: -1;
-
 }
 header {
   display: flex;

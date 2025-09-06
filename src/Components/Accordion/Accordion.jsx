@@ -35,9 +35,7 @@ const Items = [
   },
 ];
 function Accordion() {
-  const [openIndexes, setOpenIndexes] = useState(
-    null
-  );
+  const [openIndexes, setOpenIndexes] = useState(null);
 
   const openHandler = (idx) => {
     setOpenIndexes(openIndexes === idx ? null : idx);
@@ -48,7 +46,6 @@ function Accordion() {
       <h2>Frequently asked Questions</h2>
       <ul className="listContainer">
         {Items.map((list, index) => (
-
             <div className="contentBar" key={index}>
               <li className="accordionLink" onClick={() => openHandler(index)}>
                 {list.title}
@@ -60,7 +57,7 @@ function Accordion() {
               </div>
             ): ""}
             </div>
-    
+
         ))}
       </ul>
     </div>

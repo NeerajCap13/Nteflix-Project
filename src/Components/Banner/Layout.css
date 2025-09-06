@@ -1,0 +1,18 @@
+.layout{
+  width: 1280px;
+  margin: 0 auto;
+}
+
+@media (max-width:768px){
+  .layout{
+    width: 100%;
+    padding:0px 20px;
+  }
+}
+
+@media (min-width:768px) and (max-width:1080px){
+  .layout{
+    width: 100%;
+    padding: 0px 40px;
+  }
+}

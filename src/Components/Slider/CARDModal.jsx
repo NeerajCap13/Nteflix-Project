@@ -1,4 +1,4 @@
-import CloseIcon from "../../assets/closeIcon.svg?react";
+import CloseIcon from '../../assets/closeIcon.svg?react';
 import "./CardModal.css";
 
 function CARDModal({ isOpen, onClose, cardData }) {

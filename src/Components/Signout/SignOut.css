@@ -53,6 +53,7 @@
 }
 .goNow{
   height: 45px;
+  width: 100%;
   cursor: pointer;
   border: none;
   outline: none;

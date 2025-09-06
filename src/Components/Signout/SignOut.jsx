@@ -30,7 +30,9 @@ function SignOut() {
           <p className="descriptionBox">
             You'll be redirected to Netflix.com in 30 seconds.
           </p>
+          <Link to={"/"}>
           <button className="goNow">Go Now</button>
+          </Link>
         </div>
       </section>
       <footer className="FooterBox">

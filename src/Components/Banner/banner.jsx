@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import { useContext, useState } from "react";
 import "../../Components/Banner/banner.css";
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import { Link, useNavigate } from "react-router-dom";
@@ -25,7 +25,6 @@ function Banner() {
       {/* Banner background image */}
       <div className="banner">
         <div className="cardOverlap"/>
-
         <header>
           <img src={logo} alt="" id="logo" />
           {/* Sign-in section */}

@@ -4,14 +4,13 @@
   margin-bottom: 4rem;
 }
 .slider-container {
-  width: 83%;
+
   margin: 0 auto;
 }
 .sliderHead {
   padding-top: 1rem;
 }
 .image-slider {
-  width: 83%;
   margin: 0 auto;
   margin-top: 2rem;
   display: flex;

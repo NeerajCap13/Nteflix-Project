@@ -2,7 +2,7 @@ import React from "react";
 import "./../ContentInfo/More.css";
 
 const CardIcon1 = [
-  <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" key="1">
     <g id="television-core-small">
       <path
         id="Vector"
@@ -122,7 +122,7 @@ const CardIcon1 = [
   </svg>
 ];
 const CardIcon2 = [
-  <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" key="2">
     <g id="download-core-small">
       <path
         id="Vector"
@@ -258,7 +258,7 @@ const CardIcon2 = [
   </svg>
 ];
 const CardIcon3 = [
-  <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" key="3">
     <g id="telescope-core-small">
       <path
         id="Vector"
@@ -426,7 +426,7 @@ const CardIcon3 = [
   </svg>
 ];
 const CardIcon4 = [
-  <svg width="72" height="72" viewBox="0 0 72 72" fill="none">
+  <svg width="72" height="72" viewBox="0 0 72 72" fill="none" key="4">
     <g id="profiles-core-small">
       <path
         id="Vector"

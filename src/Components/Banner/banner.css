@@ -19,7 +19,7 @@ header {
   /* Space out children */
   align-items: center;
   /* Vertically center items */
-  width: 86%;
+  width: 1380px;
   /* Set header width */
   margin: 0 auto;
   /* Center header horizontally */
@@ -59,7 +59,6 @@ img {
   /* Set width */
   height: 2rem;
   /* Set height */
-  margin-right: 2rem;
   /* Space to the right */
   background-color: #e50914;
   /* Netflix red */

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
+import { Link } from "react-router-dom";
 
 const PLAN_DETAILS = {
   mobile: {
@@ -157,7 +158,9 @@ function ChoosePlanMobile() {
           </p>
         </div>
         <div className="cardBottomBtn">
+          <Link to={"/paymentGate"}>
           <button className="mCardBtn">Next</button>
+          </Link>
         </div>
       </div>
       <div className="regFooter">

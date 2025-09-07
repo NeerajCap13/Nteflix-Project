@@ -154,7 +154,9 @@
         background: black;
         width: 100%;
     }
-
+    .contentBox{
+        width: 100%;
+    }
     .signBox {
         height: 100%;
         padding: 0;

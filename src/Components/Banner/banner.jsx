@@ -43,9 +43,7 @@ function Banner() {
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>
             </select>
-            <Link to={"/signin"}>
-              <button className="SignInBtn">Sign In</button>
-            </Link>
+            <Link to="/signin" className="SignInBtn">Sign In</Link>
           </div>
         </header>
         <div className="section">

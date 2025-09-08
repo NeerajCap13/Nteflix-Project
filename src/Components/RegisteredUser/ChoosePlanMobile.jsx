@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
+import logo from "../../assets/Netflix_Logo_PMS.png"
 
 const PLAN_DETAILS = {
   mobile: {
@@ -52,7 +53,7 @@ function ChoosePlanMobile() {
   return (
     <div className="mobileView">
       <div className="mHeader">
-        <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+        <img src={logo} className="regLogo" />
         <button className="userSignOut" style={{ fontSize: "14px" }}>
           Sign Out
         </button>

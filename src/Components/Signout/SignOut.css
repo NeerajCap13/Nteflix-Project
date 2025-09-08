@@ -1,12 +1,17 @@
 .logoutContainer{
-  background-image: url("src/assets/NewBackground.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  position: relative;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 100vh;
+}
+.logBack{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
 }
 .topBar{
   margin: 0;

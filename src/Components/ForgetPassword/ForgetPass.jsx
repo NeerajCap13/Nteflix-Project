@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "../ForgetPassword/Forget.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/Netflix_Logo_PMS.png"
+import background from '../../assets/NewBackground.jpg'
 
 function ForgetPass() {
 
@@ -19,9 +21,10 @@ function ForgetPass() {
   return (
     <div className="mainContainer" >
       <div className="topContainer" >
+        <img src={background} className="backgroundImage"/>
         <div className="navContainer">
           <div className="navBar">
-            <img src="src/assets/Netflix_Logo_PMS.png" alt="" id="navLogo" />
+            <img src={logo} alt="" id="navLogo" />
             <Link to={'/signin'}><button className="signIn2">Sign in</button></Link>
           </div>
         </div>

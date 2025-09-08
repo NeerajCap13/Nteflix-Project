@@ -1,14 +1,14 @@
 import React from "react";
-
 import "../RegisteredUser/UserOne.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/Netflix_Logo_PMS.png"
 
 function UserOne() {
   return (
     <div className="mainReg">
       <div className="regContainer">
         <div className="regNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+          <img src={logo} className="regLogo" />
           <Link to={"/logout"}>
           <button className="userSignOut">Sign Out</button>
           </Link>

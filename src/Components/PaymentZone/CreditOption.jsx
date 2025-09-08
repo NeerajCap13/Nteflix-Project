@@ -6,6 +6,8 @@ import CreditCardIcon from "./../../assets/creditCard.svg?react"
 import HelpIcon from "./../../assets/CVV.svg?react"
 import { Link } from 'react-router-dom'
 import Context from '../Context/EmailProvider'
+import logo from '../../assets/Netflix_Logo_PMS.png'
+
 
 function CreditOption() {
   const {selectedPlan} = useContext(Context)
@@ -13,7 +15,7 @@ function CreditOption() {
     <>
     <div className="cardPay">
       <div className="userNav">
-        <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+        <img src={logo} className="regLogo" />
         <button className="userSignOut">Sign Out</button>
       </div>
       <div className="credit-Container">

@@ -3,6 +3,7 @@ import "../RegisteredUser/ChoosePlan.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
 import Context from "../Context/EmailProvider";
+import logo from "../../assets/Netflix_Logo_PMS.png"
 
 const PLAN_DETAILS = {
   Mobile: {
@@ -55,7 +56,7 @@ function ChoosePlan() {
   return (
     <div className="userMain">
       <div className="userNav">
-        <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+        <img src={logo} className="regLogo" />
         <button className="userSignOut">Sign Out</button>
       </div>
 

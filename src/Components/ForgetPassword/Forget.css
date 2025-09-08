@@ -1,22 +1,28 @@
-
-
-.topContainer{
-    background-image: url("src/assets/NewBackground.jpg");
-    background-size: cover;
-    
+.topContainer {
+    position: relative;
 }
 
-.navContainer{
-    border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);    
+.backgroundImage {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: 100%;
+    object-fit: cover;
 }
-.navBar{
+
+.navContainer {
+    border-bottom: 0.0625rem solid rgba(128, 128, 128, 0.2);
+}
+
+.navBar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 78%;
     margin: 0 auto;
 }
-.signIn2{
+
+.signIn2 {
     background-color: rgb(229, 9, 20);
     height: 32px;
     width: 76px;
@@ -29,44 +35,46 @@
     cursor: pointer;
 }
 
-.boxContainer{
+.boxContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 88%;
-    
+
 }
 
-#tag{
+#tag {
     color: black;
     font-size: 16px;
     margin-bottom: 1rem;
 }
-.information{
+
+.information {
     width: 480px;
-    height: 532px; 
+    height: 532px;
     height: 60px;
     margin-top: 0.5rem;
     font-size: 13px;
 }
-.boxForget{
+
+.boxForget {
     width: 480px;
-    height: 532px;  
+    height: 532px;
     background-color: #f3f3f3;
     color: black;
     padding: 35px;
-    
+
 
 }
 
-.radioButtons{
+.radioButtons {
     display: flex;
     flex-direction: column;
-    
+
 }
 
-.heading{
+.heading {
     font-size: 32px;
     font-weight: 800;
     color: black;
@@ -74,22 +82,24 @@
     text-align: left;
 }
 
-.radioButtons{
+.radioButtons {
     margin: 20px;
 }
 
-.Box1{
+.Box1 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 20px ;
+    gap: 20px;
 }
-#emailInput{
+
+#emailInput {
     height: 48px;
     padding-left: 20px;
-    
+
 }
-#emailMe{
+
+#emailMe {
     background-color: rgb(229, 9, 20);
     height: 48px;
     color: white;
@@ -99,15 +109,15 @@
     margin: 8px 0px;
     font-size: 1rem;
     cursor: pointer;
-    margin-bottom:2rem;
+    margin-bottom: 2rem;
 }
 
 
-.footerContainer{
+.footerContainer {
     background-color: #161616;
 }
 
-.radioButtons{
+.radioButtons {
     user-select: none;
 }
 
@@ -162,10 +172,10 @@
     .boxForget {
         width: 100%;
         padding: 30px;
-       
-        
+
+
     }
-   
+
 
     .information {
         width: 100%;
@@ -192,30 +202,31 @@
     }
 }
 
-@media (min-width:768px) and (max-width:1280px){
-    
-    
-  .bottomContainer{
-    margin: 0;
-  }
-  .itemList1{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 15px;
-    margin-top: 2rem;
-  }
+@media (min-width:768px) and (max-width:1280px) {
+
+
+    .bottomContainer {
+        margin: 0;
+    }
+
+    .itemList1 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        margin-top: 2rem;
+    }
 }
 
-@media(min-width:1024px){
-    .itemList1{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-    margin-top: 2rem;
-  }
+@media(min-width:1024px) {
+    .itemList1 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        margin-top: 2rem;
+    }
 }
 
-@media (max-width:344px){
+@media (max-width:344px) {
     .mainContainer {
         width: 100%;
         background-color: black;
@@ -262,7 +273,7 @@
     .boxForget {
         width: 100%;
         padding: 30px;
-        
+
     }
 
     .information {
@@ -288,12 +299,12 @@
 
     }
 
-    
+
 }
 
 
-@media(min-width:768px){
-    .topContainer{
+@media(min-width:768px) {
+    .topContainer {
         height: 90vh;
     }
 }

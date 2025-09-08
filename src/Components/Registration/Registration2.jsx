@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import "../Registration/Registration.css";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
+import logo from "../../assets/Netflix_Logo_PMS.png"
 
 function Registration2() {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ function Registration2() {
       <div className="mainReg">
         <div className="regContainer">
           <div className="regNav">
-            <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+            <img src={logo} className="regLogo" />
             <button className="regBtn">Sign In</button>
           </div>
         </div>

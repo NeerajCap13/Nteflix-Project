@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../Login/SignIn.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
+import logo from '../../assets/Netflix_Logo_PMS.png'
+
 
 function SignIn() {
   const [change, SetOnChange] = useState(false);
@@ -29,7 +31,7 @@ function SignIn() {
       <div className="SignInContainer">
         <div id="card-overlay1" />
         <div className="logoBar">
-          <img src="src/assets/Netflix_Logo_PMS.png" alt="" id="navLogo" />
+          <img src={logo} alt="" id="navLogo" />
         </div>
         <div className="contentBox">
           <div className="signBox">

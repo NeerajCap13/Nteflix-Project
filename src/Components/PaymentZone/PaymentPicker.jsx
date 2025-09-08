@@ -2,6 +2,15 @@ import React from "react";
 import "./../PaymentZone/Payment.css";
 import IconLogo  from '../../assets/ArrowForward.svg?react' ;
 import { useNavigate } from "react-router-dom";
+import logo from '../../assets/Netflix_Logo_PMS.png'
+import Visa from './../../assets/VISA@2x.png'
+import Master from './../../assets/MASTERCARD@2x.png'
+import BHIM from "./../../assets/BHIM@2x.png";
+import PayTm from "./../../assets/PAYTM@2x.png";
+import Phonepe from "./../../assets/PHONEPE@2x.png";
+import AmazonPay from "./../../assets/AMAZONPAY@2x.png";
+import GPay from "./../../assets/GPAY@2x.png";
+
 
 function PaymentPicker() {
   const navigate =useNavigate()
@@ -16,7 +25,7 @@ function PaymentPicker() {
     <>
     <div className="Payment">
       <div className="userNav">
-        <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+        <img src={logo} className="regLogo" />
         <button className="userSignOut">Sign Out</button>
       </div>
 
@@ -54,9 +63,9 @@ function PaymentPicker() {
             <div className="option1Container">
               <div className="optionHead">Credit or Debit Card</div>
               <div className="logoContainer">
-                <img src="src/assets/VISA@2x.png" alt="" className="logoDiv" />
+                <img src={Visa} alt="" className="logoDiv" />
                 <img
-                  src="src/assets/MASTERCARD@2x.png"
+                  src={Master}
                   alt=""
                   className="logoDiv"
                 />
@@ -68,24 +77,24 @@ function PaymentPicker() {
             <div className="option2Container">
               <div className="optionHead">UPI AutoPay</div>
               <div className="logoContainer">
-                <img src="src/assets/BHIM@2x.png" alt="" className="logoDiv" />
+                <img src={BHIM} alt="" className="logoDiv" />
                 <img
-                  src="src/assets/PAYTM@2x.png"
+                  src={PayTm}
                   alt=""
                   className="logoDiv"
                 />
                 <img
-                  src="src/assets/PHONEPE@2x.png"
+                  src={Phonepe}
                   alt=""
                   className="logoDiv"
                 />
                 <img
-                  src="src/assets/AMAZONPAY@2x.png"
+                  src={AmazonPay}
                   alt=""
                   className="logoDiv"
                 />
                 <img
-                  src="src/assets/GPAY@2x.png"
+                  src={GPay}
                   alt=""
                   className="logoDiv"
                 />

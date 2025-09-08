@@ -9,6 +9,9 @@ import Other from "./../../assets/OTHER@2x.png";
 import UPIModal from "./UPIModal";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
+import logo from '../../assets/Netflix_Logo_PMS.png'
+
+
 
 const AppList = [
   { id: "1", logo: BHIM, label: "BHIM" },
@@ -72,7 +75,7 @@ function UPIpay() {
     <>
       <div className="upiContainer">
         <div className="userNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+          <img src={logo} className="regLogo" />
           <button className="userSignOut">Sign Out</button>
         </div>
         <div className="UPI_container">

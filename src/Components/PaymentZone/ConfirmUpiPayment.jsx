@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react'
 import "./Upiconfirmation.css"
 import Check from '../../assets/CheckSVG.svg?react'
 import Context from '../Context/EmailProvider'
+import logo from '../../assets/Netflix_Logo_PMS.png'
+
 
 function ConfirmUpiPayment() {
   const {selectedPlan,value}  = useContext(Context)
@@ -11,7 +13,7 @@ function ConfirmUpiPayment() {
   return (
     <div className="containerUPI">
        <div className="userNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo" />
+          <img src={logo} className="regLogo" />
           <button className="userSignOut">Sign Out</button>
         </div>
         <div className="UPI_Confirmation">

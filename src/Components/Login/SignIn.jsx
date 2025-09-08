@@ -3,6 +3,7 @@ import "../Login/SignIn.css";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import logo from '../../assets/Netflix_Logo_PMS.png'
+import cover from '../../assets/BannerNew.jpg'
 
 
 function SignIn() {
@@ -29,6 +30,7 @@ function SignIn() {
   return (
     <div className="SignInPageContainer">
       <div className="SignInContainer">
+        <img src={cover} className="signinCover"/>
         <div id="card-overlay1" />
         <div className="logoBar">
           <img src={logo} alt="" id="navLogo" />

@@ -2,9 +2,7 @@
 
 .banner {
 position: relative;
-
 }
-
 .netBanner{
 position: absolute;
 top: 0;
@@ -13,7 +11,6 @@ z-index: -1;
 object-fit: cover;
 width: 100%;
 height: 100%;
-
 }
 
 .cardOverlap{
@@ -53,7 +50,7 @@ img {
   /* White text */
 }
 /* Sign In container styles */
-.SignIn {
+.SignIn{
   width: 6.25rem;
   /* Set width */
   height: 1.875rem;
@@ -61,24 +58,19 @@ img {
 }
 /* Sign In button styles */
 .SignInBtn {
-  /* Set height */
-  /* Space to the right */
   background-color: #e50914;
   /* Netflix red */
   color: white;
   /* White text */
-  border: none;
-  /* Remove border */
-  border-radius: 0.1875rem;
-  /* Rounded corners */
+  width: 3rem;
   cursor: pointer;
-  /* Pointer on hover */
-  font-weight: 800;
-  /* Bold text */
-  font-size: 0.9rem;
+  padding: 5px 20px;
   text-decoration: none;
-  padding: .35rem 0.9rem;
-  /* Set font size */
+  border:none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
 }
 /* Main heading styles */
 h1 {
@@ -257,15 +249,9 @@ h3 {
   }
   /* Sign In container for mobile */
   #SignIn {
-    display: flex;
     width: 15rem;
   }
-  /* Language select for mobile */
-  select {
-    width: 62px;
-    height: 32px;
-  }
-  /* Language selector for mobile */
+
   #language {
     background-color: rgba(0, 0, 0, 0.7);
     opacity: 0.7;
@@ -273,17 +259,17 @@ h3 {
   }
   /* Sign In button for mobile */
   .SignInBtn {
-
-    /* Smaller width */
-    height: 2rem;
-    margin-right: 2rem;
     background-color: #e50914;
     color: white;
-    border: none;
-    border-radius: 0.1875rem;
-    cursor: pointer;
-    font-weight: 800;
-    font-size: 0.74rem;
+    width: 2rem;
+  cursor: pointer;
+  padding: 5px 20px;
+  text-decoration: none;
+  border:none;
+  outline: none;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 14px;
   }
   /* Section height for mobile */
   .section {

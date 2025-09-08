@@ -147,6 +147,9 @@ a {
         /* Font size */
         font-weight: 800;
     }
+    #getStartedBtn{
+        width: 100%;
+    }
 }
 
 @media (min-width : 768px) and (max-width:1024px){

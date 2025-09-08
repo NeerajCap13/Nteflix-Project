@@ -1,4 +1,3 @@
-
 import IMG1 from "../../assets/IMG1.jpg";
 import IMG2 from "../../assets/IMG2.jpg";
 import IMG3 from "../../assets/IMG3.jpg";
@@ -12,8 +11,8 @@ import IMG10 from "../../assets/IMG10.jpg";
 
 const Images = [
   IMG1,
-  IMG3 ,
   IMG2 ,
+  IMG3 ,
   IMG4 ,
   IMG5 ,
   IMG6 ,

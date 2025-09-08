@@ -20,7 +20,7 @@ function Footer() {
               placeholder="Email address"
               required
             />
-            <button type="submit" id="getStartedBtn">
+            <button type="submit" id="fStartedBtn">
               Get Started<span>&gt;</span>
             </button>
           </div>
@@ -80,7 +80,7 @@ function Footer() {
           <button className="footerBtn">Get Started</button>
         </div>
 
-        
+
       </div>
     </>
   );

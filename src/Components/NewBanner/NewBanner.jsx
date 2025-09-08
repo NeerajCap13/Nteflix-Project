@@ -34,13 +34,6 @@ function NewBanner() {
             <select
               name="language"
               id="language"
-              style={{
-                width: "130px",
-                height: "32px",
-                padding: "0 10px 0 10px",
-                marginRight: "10px",
-                borderRadius: "3px",
-              }}
             >
               <option value="English">English</option>
               <option value="Hindi">Hindi</option>

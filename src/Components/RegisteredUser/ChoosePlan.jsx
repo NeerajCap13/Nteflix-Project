@@ -135,7 +135,7 @@ function ChoosePlan() {
             })}
           </div>
 
-          <div className="bottomContainer">
+          <div className="detailContainer">
             <p className="P1">
               HD (720p), Full HD (1080p), Ultra HD (4K) and HDR availability
               subject to your internet service and device capabilities. Not all

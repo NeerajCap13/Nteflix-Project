@@ -229,7 +229,6 @@ h3 {
   .banner {
     overflow: hidden;
     background-size: cover;
-
   }
 
   header {
@@ -266,7 +265,7 @@ h3 {
   }
   /* Sign In button for mobile */
   .SignInBtn {
-    width: 4rem;
+
     /* Smaller width */
     height: 2rem;
     margin-right: 2rem;
@@ -276,7 +275,7 @@ h3 {
     border-radius: 0.1875rem;
     cursor: pointer;
     font-weight: 800;
-    font-size: 0.9rem;
+    font-size: 0.74rem;
   }
   /* Section height for mobile */
   .section {
@@ -318,9 +317,7 @@ h3 {
     height: 130px;
     position: relative;
     width: 100%;
-
   }
-
   /* Email input for mobile */
   .emailTxt {
     width: 100%;

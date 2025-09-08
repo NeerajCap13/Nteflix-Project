@@ -3,6 +3,7 @@ import '../NewBanner/NewBanner.css'
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
+import Banner from '../../assets/BannerNew.jpg'
 
 function NewBanner() {
   const {email, setEmail} = useContext(Context);
@@ -23,7 +24,8 @@ function NewBanner() {
   return (
     <>
       {/* Banner background image */}
-      <div className="banner">
+      <div className="banner" >
+        <img src={Banner} className="netBanner"/>
         <div className="cardOverlap"/>
         <header>
           <img src={logo} alt="" id="logo" />

@@ -1,11 +1,19 @@
 /* Header styles */
 
 .banner {
-background-image: url(src/assets/Bannerimage.png);
-background-size: cover;
-background-repeat: no-repeat;
-z-index: 100;
 position: relative;
+
+}
+
+.netBanner{
+position: absolute;
+top: 0;
+left: 0;
+z-index: -1;
+object-fit: cover;
+width: 100%;
+height: 100%;
+
 }
 
 .cardOverlap{

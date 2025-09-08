@@ -2,6 +2,7 @@ import React  from "react";
 
 import "../Registration/Registration.css";
 import { Link } from "react-router-dom";
+import logo from "../../assets/Netflix_Logo_PMS.png";
 
 
 function Registration() {
@@ -9,7 +10,7 @@ function Registration() {
     <div className="mainReg">
       <div className="regContainer">
         <div className="regNav">
-          <img src="src/assets/Netflix_Logo_PMS.png" className="regLogo"/>
+          <img src={logo} className="regLogo"/>
           <button className="regBtn">Sign In</button>
         </div>
       </div>

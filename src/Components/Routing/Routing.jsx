@@ -3,7 +3,7 @@ import { Provider } from '../Context/EmailProvider'
 import { Route, Routes } from 'react-router-dom'
 import SignIn from '../Login/SignIn'
 import ForgetPass from '../ForgetPassword/ForgetPass'
-import Banner from '../Banner/Banner'
+import NewBanner from '../NewBanner/NewBanner'
 import Registration from '../Registration/Registration'
 import Registration2 from '../Registration/Registration2'
 import UserOne from '../RegisteredUser/UserOne'
@@ -14,7 +14,8 @@ import UPIpay from '../PaymentZone/UPIpay'
 import UPIModal from '../PaymentZone/UPIModal'
 import ConfirmUpiPayment from '../PaymentZone/ConfirmUpiPayment'
 import SignOut from '../Signout/SignOut'
-import Layout from '../Banner/Layout'
+import NewLayout from '../NewBanner/NewLayout'
+
 
 function Routing() {
   return (
@@ -25,8 +26,8 @@ function Routing() {
         element={
           //Homepage
           <>
-            <Banner />
-            <Layout/>
+            <NewBanner/>
+            <NewLayout/>
           </>
           //Homepage
         }

@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
-import "../../Components/Banner/banner.css";
+import '../NewBanner/NewBanner.css'
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
 
-function Banner() {
+function NewBanner() {
   const {email, setEmail} = useContext(Context);
   const [error, setError] = useState("");
   const navigate = useNavigate();
@@ -81,4 +81,4 @@ function Banner() {
   );
 }
 
-export default Banner;
+export default NewBanner;

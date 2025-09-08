@@ -3,9 +3,9 @@ import Slider from '../Slider/Slider'
 import MoreInfo from '../ContentInfo/MoreInfo'
 import Accordion from '../Accordion/Accordion'
 import Footer from '../Footer/Footer'
-import '../Banner/Layout.css'
+import '../NewBanner/NewLayout.css'
 
-function Layout() {
+function NewLayout() {
   return (
     <div className='layout'>
             <Slider />
@@ -16,4 +16,4 @@ function Layout() {
   )
 }
 
-export default Layout
+export default NewLayout

@@ -2,6 +2,7 @@ import React from "react";
 import "../RegisteredUser/UserOne.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Netflix_Logo_PMS.png"
+import Checkmark from '../../assets/Checkmark.png'
 
 function UserOne() {
   return (
@@ -17,7 +18,7 @@ function UserOne() {
       <div className="regContainer2">
         <div className="userContent">
           <div className="SVG">
-            <img src="src/assets/Checkmark.png" alt="" className="tickSvg" />
+            <img src={Checkmark} alt="" className="tickSvg" />
           </div>
 
           <p className="userP" style={{ color: "#333333" }}>

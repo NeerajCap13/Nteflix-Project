@@ -10,6 +10,7 @@ import PayTm from "./../../assets/PAYTM@2x.png";
 import Phonepe from "./../../assets/PHONEPE@2x.png";
 import AmazonPay from "./../../assets/AMAZONPAY@2x.png";
 import GPay from "./../../assets/GPAY@2x.png";
+import LOCK from '../../assets/Lock.png'
 
 
 function PaymentPicker() {
@@ -32,7 +33,7 @@ function PaymentPicker() {
       <div className="payContainer">
         <div className="payContent">
           <div className="lockIcon">
-            <img src="src/assets/Lock.png" className="iconLock" />
+            <img src={LOCK} className="iconLock" />
           </div>
           <div className="payStep">STEP 4 OF 4</div>
           <h1 className="payHeading">Choose how to pay</h1>

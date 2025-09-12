@@ -1,56 +1,16 @@
-import React, { useContext } from "react";
+import React, { useContext} from "react";
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Netflix_Logo_PMS.png"
+import CARD_DETAILS from './CARD_DETAILS'
+import PLAN_DETAILS from './PLAN_DETAILS'
 import Context from "../Context/EmailProvider";
-
-const PLAN_DETAILS = {
-  mobile: {
-    price: "₹149",
-    quality: "Fair",
-    resolution: "480p",
-    devices: "Mobile phone, tablet",
-    household: "1",
-    downloadDevices: "1",
-  },
-  basic: {
-    price: "₹199",
-    quality: "Good",
-    resolution: "720p",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "1",
-    downloadDevices: "1",
-  },
-  standard: {
-    price: "₹499",
-    quality: "Great",
-    resolution: "1080p",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "2",
-    downloadDevices: "2",
-  },
-  premium: {
-    price: "₹649",
-    quality: "Best",
-    resolution: "4K + HDR",
-    audio :"Included",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "4",
-    downloadDevices: "6",
-  },
-};
-const CARD_DETAILS = [
-  { id: "mobile", label: "Mobile", subLabel: "480p" },
-  { id: "basic", label: "Basic", subLabel: "720p" },
-  { id: "standard", label: "Standard", subLabel: "1080p(HD)" },
-  { id: "premium", label: "Premium", subLabel: "4K + HDR" },
-];
 
 function ChoosePlanMobile() {
   const {selectedPlan, setSelectedPlan} = useContext(Context);
-  const isSelected = (card) => selectedPlan === card.id;
-  const content = PLAN_DETAILS[selectedPlan];
+  const isSelected = (card) => selectedPlan.name === card.id;
+  const content = PLAN_DETAILS[selectedPlan.name]
   return (
     <div className="mobileView">
       <div className="mHeader">
@@ -74,13 +34,14 @@ function ChoosePlanMobile() {
         <div className="mobileViewCards">
           {CARD_DETAILS.map((card, index) => {
             const planKey = card.id;
+            console.log(planKey)
             return (
               <div
                 key={index}
                 className={`${planKey}Card ${
-                    isSelected(card) ? "selected" : "notSelected"
+                    isSelected(card)? "selected" : "notSelected"
                 }`}
-                onClick={() => setSelectedPlan(planKey)}
+                onClick={() => setSelectedPlan({name:planKey,price:PLAN_DETAILS[planKey].price})}
               >
                 <div className="cardContent">
                   <h3

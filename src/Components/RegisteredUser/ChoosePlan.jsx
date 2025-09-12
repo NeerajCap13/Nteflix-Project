@@ -4,54 +4,13 @@ import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
 import Context from "../Context/EmailProvider";
 import logo from "../../assets/Netflix_Logo_PMS.png"
-
-const PLAN_DETAILS = {
-  Mobile: {
-    price: "₹149",
-    quality: "Fair",
-    resolution: "480p",
-    devices: "Mobile phone, tablet",
-    household: "1",
-    downloadDevices: "1",
-  },
-  Basic: {
-    price: "₹199",
-    quality: "Good",
-    resolution: "720p",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "1",
-    downloadDevices: "1",
-  },
-  Standard: {
-    price: "₹499",
-    quality: "Great",
-    resolution: "1080p",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "2",
-    downloadDevices: "2",
-  },
-  Premium: {
-    price: "₹649",
-    quality: "Best",
-    resolution: "4K + HDR",
-    audio: "Included",
-    devices: "TV, computer, mobile phone, tablet",
-    household: "4",
-    downloadDevices: "6",
-  },
-};
-
-const CARD_DETAILS = [
-  { id: "Mobile", label: "Mobile", subLabel: "480p" },
-  { id: "Basic", label: "Basic", subLabel: "720p" },
-  { id: "Standard", label: "Standard", subLabel: "1080p(HD)" },
-  { id: "Premium", label: "Premium", subLabel: "4K + HDR" },
-];
+import CARD_DETAILS from './CARD_DETAILS'
+import PLAN_DETAILS from './PLAN_DETAILS'
 
 function ChoosePlan() {
   const {selectedPlan, setSelectedPlan} = useContext(Context);
   // Helper to check if plan is selected
-  const isSelected = (card) => selectedPlan.name  === card.id;
+  const isSelected = (card) => selectedPlan.name === card.id;
 
   return (
     <div className="userMain">
@@ -74,6 +33,7 @@ function ChoosePlan() {
             {CARD_DETAILS.map((card, index) => {
               const planKey = card.id;
               const plan = PLAN_DETAILS[planKey];
+              console.log(plan)
               return (
                 <div
                   key={index}

@@ -11,6 +11,7 @@ import logo from '../../assets/Netflix_Logo_PMS.png'
 
 function CreditOption() {
   const {selectedPlan} = useContext(Context)
+  console.log(selectedPlan)
   return (
     <>
     <div className="cardPay">

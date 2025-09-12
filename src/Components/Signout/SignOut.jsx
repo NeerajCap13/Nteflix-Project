@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./../Signout/SignOut.css";
 import { useEffect } from "react";
 import logo from '../../assets/Netflix_Logo_PMS.png'
-import Background from '../../assets/newBackground.jpg'
+import Background from '../../assets/NewBackground.jpg'
 
 function SignOut() {
   const navigate = useNavigate();

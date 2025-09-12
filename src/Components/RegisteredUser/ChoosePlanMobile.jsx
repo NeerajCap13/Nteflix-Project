@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/Netflix_Logo_PMS.png"
+import Context from "../Context/EmailProvider";
 
 const PLAN_DETAILS = {
   mobile: {
@@ -47,7 +48,7 @@ const CARD_DETAILS = [
 ];
 
 function ChoosePlanMobile() {
-  const [selectedPlan, setSelectedPlan] = useState("basic");
+  const {selectedPlan, setSelectedPlan} = useContext(Context);
   const isSelected = (card) => selectedPlan === card.id;
   const content = PLAN_DETAILS[selectedPlan];
   return (

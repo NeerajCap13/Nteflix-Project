@@ -2,7 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./../Signout/SignOut.css";
 import { useEffect } from "react";
 import logo from '../../assets/Netflix_Logo_PMS.png'
-import background from '../../assets/NewBackground.jpg'
+import Background from '../../assets/newBackground.jpg'
 
 function SignOut() {
   const navigate = useNavigate();
@@ -16,7 +16,7 @@ function SignOut() {
 
   return (
     <div className="logoutContainer">
-      <img src={background} alt="image" className="logBack" />
+      <img src={Background} alt="image" className="logBack" />
       <header className="topBar">
         <img src={logo} alt="" className="logopng" />
         <Link to={"/signin"}>

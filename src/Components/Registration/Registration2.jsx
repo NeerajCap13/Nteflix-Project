@@ -1,18 +1,31 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "../Registration/Registration.css";
 import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
-import logo from "../../assets/Netflix_Logo_PMS.png"
+import logo from "../../assets/Netflix_Logo_PMS.png";
+import apiClient from "../API/APIclient.js";
 
 function Registration2() {
   const navigate = useNavigate();
-  const {email} = useContext(Context);
-  const [pass, setPass] = useState("");
-  const passHandler = () => {
-    if (pass==="") {
-      alert("require password");
-    } else {
-      navigate("/userOne");
+  const { email, password, setPassword } = useContext(Context);
+
+  const passHandler = async () => {
+    if (!email || !password) {
+      alert("Please enter both email and password");
+      return;
+    }
+    try {
+      const res = await apiClient.post("/register", {
+        email,
+        password,
+      });
+      if(res.status===201){
+       navigate("/userOne");
+      }
+
+    } catch (error) {
+      console.log("Registration Failed", error.response?.data || error.message);
+      alert(error.response?.data?.message || "Registration failed. Try again.");
     }
   };
   return (
@@ -42,15 +55,13 @@ function Registration2() {
               type="Password"
               placeholder="Add a password"
               className="passTxt2"
-              value={pass}
-              onChange={(e) => setPass(e.target.value)}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
 
-
-              <button className="regNextBtn2" onClick={passHandler}>
-                Next
-              </button>
-
+            <button className="regNextBtn2" onClick={passHandler}>
+              Next
+            </button>
           </div>
         </div>
         <div className="regFooter">

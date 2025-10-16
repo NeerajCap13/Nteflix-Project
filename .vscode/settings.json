@@ -12,13 +12,13 @@
   "material-icon-theme.hidesExplorerArrows": true,
   "workbench.tree.enableStickyScroll": false,
   "workbench.tree.renderIndentGuides": "none",
-  "workbench.tree.indent": 8,
+  "workbench.tree.indent": 10,
   "explorer.compactFolders": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "explorer.decorations.badges": false,
   "git.decorations.enabled": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0.5,
   "window.customTitleBarVisibility": "never",
   "window.titleBarStyle": "native",
   "custom-ui-style.electron": {
@@ -76,9 +76,9 @@
     }
   },
   "editor.fontFamily": "Dank Mono",
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.fontLigatures": true,
-  "editor.lineHeight": 2.2,
+  "editor.lineHeight": 2,
   "editor.tokenColorCustomizations": {
     "textMateRules": [
       {

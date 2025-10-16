@@ -1,16 +1,37 @@
 import React, { useContext } from "react";
 import "../RegisteredUser/ChoosePlan.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Context from "../Context/EmailProvider";
 import logo from "../../assets/Netflix_Logo_PMS.png"
 import CARD_DETAILS from './CARD_DETAILS'
 import PLAN_DETAILS from './PLAN_DETAILS'
+import apiClient from "../API/APIclient.js";
 
 function ChoosePlan() {
-  const {selectedPlan, setSelectedPlan} = useContext(Context);
+  const navigate = useNavigate()
+  const {selectedPlan, setSelectedPlan,verifiedEmail} = useContext(Context);
   // Helper to check if plan is selected
   const isSelected = (card) => selectedPlan.name === card.id;
+ 
+  const planHandler = async () => {
+  try {
+    const res = await apiClient.post('/subscribe', {
+      verifiedEmail,
+      selectedPlan
+    });
+
+    if (res.status === 201) {
+      navigate('/paymentGate'); // ✅ move to payment page after successful subscription
+    } else {
+      alert(res.data?.message || "Unexpected response");
+    }
+
+  } catch (error) {
+    console.error("Subscription error:", error);
+    alert(error.response?.data?.message || "Failed to create subscription");
+  }
+};
 
   return (
     <div className="userMain">
@@ -33,7 +54,6 @@ function ChoosePlan() {
             {CARD_DETAILS.map((card, index) => {
               const planKey = card.id;
               const plan = PLAN_DETAILS[planKey];
-              console.log(plan)
               return (
                 <div
                   key={index}
@@ -45,7 +65,6 @@ function ChoosePlan() {
                   <div className="planHeading">
                     <h3 className="heading1">{card.label}</h3>
                     <p className="subHeading">{card.subLabel}</p>
-
                     {isSelected(card) && (
                       <div className="checkCircle">
                         <CheckCircleIcon className="circle" />
@@ -55,7 +74,7 @@ function ChoosePlan() {
                   <div className="planDetails">
                     <div className="specificDetails">
                       <p className="headTitle">Monthly price</p>
-                      <p className="subHeading1">{plan.price}</p>
+                      <p className="subHeading1">₹{plan.price}</p>
                     </div>
                     <div className="specificDetails">
                       <p className="headTitle">Video and sound quality</p>
@@ -112,9 +131,9 @@ function ChoosePlan() {
             </p>
           </div>
           <div className="bottomBtn">
-            <Link to={"/paymentGate"} className="cardBtn">
+            <Link className="cardBtn">
               {" "}
-              <button className="cardBtn">Next</button>
+              <button className="cardBtn" onClick={planHandler} >Next</button>
             </Link>
           </div>
         </div>

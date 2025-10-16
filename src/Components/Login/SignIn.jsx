@@ -1,31 +1,52 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "../Login/SignIn.css";
-import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import logo from '../../assets/Netflix_Logo_PMS.png'
 import cover from '../../assets/BannerNew.jpg'
+import apiClient from "../API/APIclient";
+import Context from "../Context/EmailProvider";
 
 
 function SignIn() {
+  const navigate = useNavigate()
   const [change, SetOnChange] = useState(false);
   const handleChange = () => SetOnChange((prev) => !prev);
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function useDebounce(value, time) {
-    const [debouncedValue, setDebouncedValue] = useState(value);
-    useEffect(() => {
-      const id = setTimeout(() => setDebouncedValue(value), time);
-      return () => clearTimeout(id);
-    },[value, time]);
-    return debouncedValue;
-  }
+  const {setVerifiedEmail} = useContext(Context)
 
-  const maiDebounce = useDebounce(email, 500);
-  useEffect(() => {
-    console.log(maiDebounce);
-  }, [maiDebounce]);
+ const signInHandler = async () => {
+    if (!email || !password) {
+      alert("Please enter your email and password.");
+      return;
+    }
+    try {
+      const res = await apiClient.post("/login", { email, password });
+
+      // ✅ Extract user email from backend response
+
+
+      if (res.status === 200 || res.status === 201) {
+        const userEmail = res?.data?.email;
+      if (userEmail) {
+        setVerifiedEmail(userEmail);
+      }
+        navigate("/newPlan");
+      } else {
+        alert("Unexpected response. Please try again.");
+      }
+
+      // Reset fields
+      setEmail("");
+      setPassword("");
+    } catch (error) {
+      console.error("Login error:", error);
+      const message = error.response?.data?.message || "Login failed. Please try again.";
+      alert(message);
+    }
+  };
 
   return (
     <div className="SignInPageContainer">
@@ -85,7 +106,7 @@ function SignIn() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                 />
-                <button className="SignBtn1">Sign In</button>
+                <button className="SignBtn1" onClick={signInHandler}>Sign In</button>
                 <p id="p1">OR</p>
                 <button className="codeSign" onClick={handleChange}>
                   Use a sign-in code

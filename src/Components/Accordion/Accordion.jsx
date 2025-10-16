@@ -57,7 +57,6 @@ function Accordion() {
               </div>
             ): ""}
             </div>
-
         ))}
       </ul>
     </div>

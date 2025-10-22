@@ -33,7 +33,7 @@ function SignIn() {
       if (userEmail) {
         setVerifiedEmail(userEmail);
       }
-        navigate("/newPlan");
+        navigate("/userProfile");
       } else {
         alert("Unexpected response. Please try again.");
       }

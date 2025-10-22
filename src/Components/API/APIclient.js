@@ -7,4 +7,22 @@ const apiClient = axios.create({
 })
 
 
+apiClient.interceptors.request.use((config)=>{
+  console.log("",config.url)
+  return config ;
+},
+(error)=>{
+return Promise.reject(error)
+})
+
+apiClient.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 403 || error.response?.status===401) {
+      console.log("Unauthorized! Token may have expired");
+    }
+    return Promise.reject(error);
+  }
+);
+
 export default apiClient

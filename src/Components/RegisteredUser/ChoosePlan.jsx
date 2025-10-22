@@ -10,19 +10,19 @@ import apiClient from "../API/APIclient.js";
 
 function ChoosePlan() {
   const navigate = useNavigate()
-  const {selectedPlan, setSelectedPlan,verifiedEmail} = useContext(Context);
+  const {selectedPlan, setSelectedPlan,verifiedEmail,email} = useContext(Context);
   // Helper to check if plan is selected
   const isSelected = (card) => selectedPlan.name === card.id;
- 
+
   const planHandler = async () => {
   try {
     const res = await apiClient.post('/subscribe', {
-      verifiedEmail,
+      verifiedEmail: verifiedEmail || email,
       selectedPlan
     });
 
     if (res.status === 201) {
-      navigate('/paymentGate'); // ✅ move to payment page after successful subscription
+      navigate('/userProfile'); // ✅ move to payment page after successful subscription
     } else {
       alert(res.data?.message || "Unexpected response");
     }

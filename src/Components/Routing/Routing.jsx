@@ -15,6 +15,7 @@ import UPIModal from '../PaymentZone/UPIModal'
 import ConfirmUpiPayment from '../PaymentZone/ConfirmUpiPayment'
 import SignOut from '../Signout/SignOut'
 import NewLayout from '../NewBanner/NewLayout'
+import Profile from '../Userprofile/Profile'
 
 
 function Routing() {
@@ -43,6 +44,7 @@ function Routing() {
       <Route path="/UPI" element={<UPIpay />} />
       <Route path="/findUpi" element={<UPIModal />} />
       <Route path="/upiOrderConfirm" element={<ConfirmUpiPayment />} />
+      <Route path="/userProfile" element={<Profile />} />
       <Route path="/logout" element={<SignOut />} />
       </Routes>
     </Provider>

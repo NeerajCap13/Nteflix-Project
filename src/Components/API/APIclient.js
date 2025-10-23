@@ -2,7 +2,7 @@ import axios from "axios";
 
 
 const apiClient = axios.create({
-  baseURL : "http://localhost:8000/api/netflix",
+  baseURL : ["https://nteflix-backend-project.vercel.app/api/netflix","http://localhost:8000/api/netflix"],
   withCredentials : true,
 })
 

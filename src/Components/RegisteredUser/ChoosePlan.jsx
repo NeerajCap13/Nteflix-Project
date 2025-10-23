@@ -11,18 +11,17 @@ import apiClient from "../API/APIclient.js";
 function ChoosePlan() {
   const navigate = useNavigate()
   const {selectedPlan, setSelectedPlan,verifiedEmail,email} = useContext(Context);
-  // Helper to check if plan is selected
   const isSelected = (card) => selectedPlan.name === card.id;
 
   const planHandler = async () => {
   try {
     const res = await apiClient.post('/subscribe', {
-      verifiedEmail: verifiedEmail || email,
+      verifiedEmail: email || verifiedEmail,
       selectedPlan
     });
 
-    if (res.status === 201) {
-      navigate('/userProfile'); // ✅ move to payment page after successful subscription
+    if (res.status === 201){
+      navigate('/userProfile');
     } else {
       alert(res.data?.message || "Unexpected response");
     }
@@ -60,7 +59,7 @@ function ChoosePlan() {
                   className={`${planKey}Plan ${
                     isSelected(card) ? "selected" : ""
                   }`}
-                  onClick={() => setSelectedPlan({ name: planKey, price: PLAN_DETAILS[planKey].price })}
+                  onClick={() => setSelectedPlan({ name: planKey, ...PLAN_DETAILS[planKey] })}
                 >
                   <div className="planHeading">
                     <h3 className="heading1">{card.label}</h3>

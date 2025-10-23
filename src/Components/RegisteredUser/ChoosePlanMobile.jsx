@@ -1,16 +1,39 @@
 import React, { useContext} from "react";
 import "./Mobile.css";
 import CheckCircleIcon from "../../assets/check_circle.svg?react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Netflix_Logo_PMS.png"
 import CARD_DETAILS from './CARD_DETAILS'
 import PLAN_DETAILS from './PLAN_DETAILS'
 import Context from "../Context/EmailProvider";
+import apiClient from "../API/APIclient";
 
 function ChoosePlanMobile() {
-  const {selectedPlan, setSelectedPlan} = useContext(Context);
+  const {selectedPlan, setSelectedPlan,email,verifiedEmail} = useContext(Context);
   const isSelected = (card) => selectedPlan.name === card.id;
   const content = PLAN_DETAILS[selectedPlan.name]
+
+  const navigate = useNavigate()
+
+  const planHandler = async () => {
+  try {
+    const res = await apiClient.post('/subscribe', {
+      verifiedEmail: email || verifiedEmail,
+      selectedPlan,
+    });
+    console.log(res)
+
+    if (res.status === 201){
+      navigate('/userProfile');
+    } else {
+      alert(res.data?.message || "Unexpected response");
+    }
+
+  } catch (error) {
+    console.error("Subscription error:", error);
+    alert(error.response?.data?.message || "Failed to create subscription");
+  }
+};
   return (
     <div className="mobileView">
       <div className="mHeader">
@@ -34,14 +57,13 @@ function ChoosePlanMobile() {
         <div className="mobileViewCards">
           {CARD_DETAILS.map((card, index) => {
             const planKey = card.id;
-            console.log(planKey)
             return (
               <div
                 key={index}
                 className={`${planKey}Card ${
                     isSelected(card)? "selected" : "notSelected"
                 }`}
-                onClick={() => setSelectedPlan({name:planKey,price:PLAN_DETAILS[planKey].price})}
+                onClick={() => setSelectedPlan({name:planKey,...PLAN_DETAILS[planKey]})}
               >
                 <div className="cardContent">
                   <h3
@@ -121,9 +143,9 @@ function ChoosePlanMobile() {
           </p>
         </div>
         <div className="cardBottomBtn">
-          <Link to={"/paymentGate"}>
-          <button className="mCardBtn">Next</button>
-          </Link>
+
+          <button className="mCardBtn" onClick={planHandler}>Next</button>
+
         </div>
       </div>
       <div className="regFooter">

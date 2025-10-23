@@ -25,20 +25,25 @@ function SignIn() {
     try {
       const res = await apiClient.post("/login", { email, password });
 
-      // ✅ Extract user email from backend response
-
-
       if (res.status === 200 || res.status === 201) {
         const userEmail = res?.data?.email;
       if (userEmail) {
         setVerifiedEmail(userEmail);
       }
-        navigate("/userProfile");
-      } else {
-        alert("Unexpected response. Please try again.");
-      }
 
-      // Reset fields
+      const profileRes = await apiClient.get("/profile");
+      const userSubscription = profileRes.data.subscription;
+
+      if (!userSubscription) {
+        // User has no subscription → go to choose plan
+        navigate("/newPlan");
+      } else {
+        // User already has a subscription → go to profile
+        navigate("/userProfile");
+      }
+    } else {
+      alert("Unexpected response. Please try again.");
+    } // Reset fields
       setEmail("");
       setPassword("");
     } catch (error) {

@@ -1,18 +1,30 @@
 import { Link, useNavigate } from "react-router-dom";
 import "./../Signout/SignOut.css";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import logo from '../../assets/Netflix_Logo_PMS.png'
 import Background from '../../assets/NewBackground.jpg'
+import Context from "../Context/EmailProvider";
 
 function SignOut() {
   const navigate = useNavigate();
+  const {setEmail,setVerifiedEmail,setPassword} = useContext(Context)
 
   useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/");
+      setEmail('');
+      setVerifiedEmail('');
+      setPassword('');
     }, 30000);
     return () => clearTimeout(timer);
   }, [navigate]);
+
+  const goNowHandler = () => {
+    navigate('/')
+    setEmail('');
+    setVerifiedEmail('');
+    setPassword('');
+  }
 
   return (
     <div className="logoutContainer">
@@ -34,7 +46,7 @@ function SignOut() {
             You'll be redirected to Netflix.com in 30 seconds.
           </p>
           <Link to={"/"}>
-          <button className="goNow">Go Now</button>
+          <button className="goNow" onClick={goNowHandler}>Go Now</button>
           </Link>
         </div>
       </section>

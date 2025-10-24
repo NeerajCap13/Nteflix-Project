@@ -1,8 +1,23 @@
-import React from "react";
-
+import React, { useContext ,useState} from "react";
+import { Link, useNavigate } from "react-router-dom";
 import "./../Footer/Footer.css";
+import Context from "../Context/EmailProvider";
 
 function Footer() {
+  const {email,setEmail} = useContext(Context)
+  const [error, setError] = useState("");
+ const navigate = useNavigate()
+
+  const handleError = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!email && emailRegex === "") {
+      setError("Not a Valid Email");
+    } else if (!emailRegex.test(email)) {
+      setError("Email is Required");
+    } else {
+      navigate("./newUser");
+    }
+  };
   return (
     <>
       <div className="footer">
@@ -19,10 +34,13 @@ function Footer() {
               id="emailTxt2"
               placeholder="Email address"
               required
+              value={email}
+              onChange={(e)=>setEmail(e.target.value)}
             />
-            <button type="submit" id="fStartedBtn">
+            <button type="submit"  id="fStartedBtn" onClick={handleError}>
               Get Started<span>&gt;</span>
             </button>
+             {error ? <p className="fError">{error}</p> : <p></p>}
           </div>
         </div>
 

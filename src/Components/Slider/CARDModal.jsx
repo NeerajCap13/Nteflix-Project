@@ -1,7 +1,9 @@
+import { useNavigate } from 'react-router-dom';
 import CloseIcon from '../../assets/closeIcon.svg?react';
 import "./CardModal.css";
 
 function CARDModal({ isOpen, onClose, cardData }) {
+  const navigate = useNavigate()
   if (!isOpen) return null;
   const { cardImage, cardTitle, cardDiscription, cardContent } = cardData;
   const { year, certificate, type, genre } = cardDiscription;
@@ -26,7 +28,7 @@ function CARDModal({ isOpen, onClose, cardData }) {
             ))}
           </div>
           <span className="Summary">{cardContent}</span>
-          <button className="cardButton">Get Started {" > "}</button>
+          <button className="cardButton" onClick={()=>navigate('/nextPage')}>Get Started {" > "}</button>
         </div>
       </div>
     </div>

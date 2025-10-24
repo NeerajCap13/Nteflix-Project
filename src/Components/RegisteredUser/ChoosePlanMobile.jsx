@@ -38,7 +38,7 @@ function ChoosePlanMobile() {
     <div className="mobileView">
       <div className="mHeader">
         <img src={logo} className="regLogo" />
-        <button className="userSignOut" style={{ fontSize: "14px" }}>
+        <button className="userSignOut" style={{ fontSize: "14px" }} onClick={()=>navigate('/logout')}>
           Sign Out
         </button>
       </div>

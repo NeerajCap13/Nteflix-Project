@@ -7,7 +7,7 @@ import apiClient from "../API/APIclient.js";
 
 function Registration2() {
   const navigate = useNavigate();
-  const { email, password, setPassword } = useContext(Context);
+  const { email, setEmail, password, setPassword } = useContext(Context);
 
   const passHandler = async () => {
     if (!email || !password) {
@@ -19,13 +19,14 @@ function Registration2() {
         email,
         password,
       });
-      if(res.status===201){
-       navigate("/userOne");
+      if (res.status === 201) {
+        navigate("/userOne");
       }
-
     } catch (error) {
       console.log("Registration Failed", error.response?.data || error.message);
       alert(error.response?.data?.message || "Registration failed. Try again.");
+      setEmail("");
+      setPassword("");
     }
   };
   return (
@@ -34,7 +35,9 @@ function Registration2() {
         <div className="regContainer">
           <div className="regNav">
             <img src={logo} className="regLogo" />
-            <button className="regBtn">Sign In</button>
+            <button className="regBtn" onClick={() => navigate("/signin")}>
+              Sign In
+            </button>
           </div>
         </div>
         <div className="regContainer2">
@@ -49,8 +52,23 @@ function Registration2() {
               Just a few more steps and you're done! We hate paperwork, too.
             </p>
 
-            <label className="label">Email</label>
-            <span className="enteredEmail">{email}</span>
+            {!email ? (
+              <input
+                type="Email"
+                placeholder="Enter Your Email"
+                className="emailtxt"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            ) : (
+             <input
+                type="Email"
+                className="emailtxt"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            )}
+
             <input
               type="Password"
               placeholder="Add a password"

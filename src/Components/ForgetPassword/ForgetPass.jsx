@@ -15,7 +15,6 @@ function ForgetPass() {
     if(data==="text"){
       SetRadioChange(true)
     }
-
   }
 
   return (

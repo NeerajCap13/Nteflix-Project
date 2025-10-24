@@ -36,7 +36,7 @@ function ChoosePlan() {
     <div className="userMain">
       <div className="userNav">
         <img src={logo} className="regLogo" />
-        <button className="userSignOut">Sign Out</button>
+        <button className="userSignOut" onClick={()=>navigate('/logout')}>Sign Out</button>
       </div>
 
       <div className="plan-Container">

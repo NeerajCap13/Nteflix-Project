@@ -65,7 +65,7 @@ function NewBanner() {
               onChange={(e) => setEmail(e.target.value)}
             />{" "}
             <button type="submit" id="getStartedBtn" onClick={handleError}>
-              Get Started<span>&gt;</span>
+              Get Started<span>{" "}&gt;</span>
             </button>
             {error ? <p className="bannerError">{error}</p> : <p></p>}
           </div>

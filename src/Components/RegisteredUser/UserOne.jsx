@@ -82,7 +82,7 @@ function UserOne() {
                 height="24"
                 data-icon="CheckmarkStandard"
                 aria-hidden="true"
-                class=" "
+                className=" "
               >
                 <path
                   fillRule="evenodd"

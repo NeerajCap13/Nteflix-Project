@@ -14,7 +14,8 @@
 .inputField2 {
     display: flex;
     justify-content: center;
-    width: 100%;
+
+    position: relative;
 }
 
 #emailTxt2 {
@@ -35,6 +36,16 @@
     border: 1px solid white;
     /* White border */
     transition: all 0.3s ease;
+}
+#emailTxt2::placeholder{
+    color: white;
+}
+.fError{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(22px);
+    color: red;
 }
 
 .call {
@@ -125,6 +136,7 @@ a {
         width: 100%;
         height: 3.5rem;
         margin-bottom: 1rem;
+
     }
 
     .list {
@@ -165,13 +177,24 @@ a {
         font-size: 1.2rem;
         /* Font size */
         font-weight: 800;
+        
     }
     #fStartedBtn{
         width: 55%;
         font-size: 20px;
         height: 2.8rem;
-
+        position: relative;
+        margin-top: 10px;
     }
+    .inputField2{
+    width: 100%;
+  }
+  .fError{
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    transform: translateY(56px);
+  }
 }
 
 @media (min-width : 768px) and (max-width:1024px){

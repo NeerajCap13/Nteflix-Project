@@ -1,16 +1,17 @@
 import React from "react";
 import "../Registration/Registration.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import logo from "../../assets/Netflix_Logo_PMS.png";
 import Devices from "../../assets/Devices.png";
 
 function Registration() {
+  const navigate = useNavigate()
   return (
     <div className="mainReg">
       <div className="regContainer">
         <div className="regNav">
           <img src={logo} className="regLogo" />
-          <button className="regBtn">Sign In</button>
+          <button className="regBtn" onClick={()=>navigate('/signin')}>Sign In</button>
         </div>
       </div>
 

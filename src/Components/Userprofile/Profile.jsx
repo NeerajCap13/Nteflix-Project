@@ -22,7 +22,7 @@ const Profile = () => {
         setProfile(res.data);
       } catch (err) {
         console.error("Error fetching profile:", err);
-        navigate("/");
+        
       } finally {
         setLoading(false);
       }
